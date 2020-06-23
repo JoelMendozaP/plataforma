@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+import './Login.css'
+import Classes from '../Layout/Header/Header.module.css'
+import Aux from '../../hoc/Auxiliar'
+
 export default class Registration extends Component {
     constructor(props) {
         super(props);
@@ -26,12 +30,11 @@ export default class Registration extends Component {
             withCredentials: true
         }
         ).then(response => {
-            if(response.data.logged_in) {
+            if (response.data.logged_in) {
                 this.props.handleSuccessfulAuth(response.data);
             }
         }).catch(error => {
             console.error("login error", error);
-
         })
         event.preventDefault();
     }
@@ -43,26 +46,37 @@ export default class Registration extends Component {
     }
     render() {
         return (
-            <div>
-                <h3>Iniciar sesión</h3>
+            <Aux>
+                <h2>INICIAR SESIÓN</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <input
-                        type="text"
-                        name="username"
-                        placeholder="Username or Email"
-                        value={this.state.username}
-                        onChange={this.handleChange}
-                        required />
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.handleChange}
-                        required />
-                    <button type="submit">Register</button>
+                    <div className='formInput'>
+                        <label className='formLabel'>Username</label>
+                        <input
+                            className='formControl'
+                            type="text"
+                            name="username"
+                            placeholder="Username or Email"
+                            value={this.state.username}
+                            onChange={this.handleChange}
+                            required />
+                    </div>
+                    <div className='formInput'>
+                        <label className='formLabel'>Password</label>
+                        <input
+                            className='formControl'
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                            required />
+                    </div>
+                    <button className={Classes.btn} type="submit">Register</button>
+                    <p className="forgotPassword">
+                        ¿Olvidaste tu <a href="...">contraseña?</a>
+                    </p>
                 </form>
-            </div>
+            </Aux>
         )
     }
 }

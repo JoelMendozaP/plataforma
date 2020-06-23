@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
 
 import Layout from '../components/Layout/Layout'
-import Registration from '../components/Auth/Registration'
-import Login from '../components/Auth/Login'
+// import Registration from '../components/Auth/Registration'
+// import Login from '../components/Auth/Login'
+import Auth from '../components/Auth/Auth';
+
 import './App.css';
+import Aux from '../hoc/Auxiliar'
 
 class App extends Component {
 
-  handleSuccessfulAuth(data) {
-    this.props.handleLogin(data);
-    this.props.history.push("/dashboard");
-  }
-
   render() {
     return (
-      <div>
+      <Aux>
         <Layout>
-          <p>Test</p>
         </Layout>
-        <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
-        <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
-      </div>
+        {/* <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
+        <Login handleSuccessfulAuth={this.handleSuccessfulAuth} /> */}
+        <Auth />
+      </Aux>
     )
   }
 }

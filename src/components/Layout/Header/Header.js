@@ -8,7 +8,7 @@ class Header extends Component {
 
     return (
       <div className={Classes.Header}>
-        <img alt="..." src={require("../../../assets/img/capacitalogo.jpeg")}></img>
+        <img className={Classes.Logo} alt="..." src={require("../../../assets/img/capacitalogo.png")}></img>
         <div className={Classes.dropdown}>
           <button className={Classes.dropbtn}>Categorías</button>
           <div className={Classes.dropdownContent}>
@@ -17,7 +17,7 @@ class Header extends Component {
             <a href="...">Categoría 3</a>
           </div>
         </div> 
-        <input type="text"></input>
+        <input className={Classes.formControl} type="text"></input>
         <button className={Classes.btn}>Mis cursos</button>
         <button className={Classes.btn}>Intereses</button>
         <button className={Classes.btn}>Ingresar</button>
