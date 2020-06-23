@@ -37,6 +37,9 @@ export default class Registration extends Component {
         }
         ).then(response => {
             console.log("registration response", response);
+            // if(response.data.status === "created") {
+            //     this.props.handleSuccessfulAuth(response.data);
+            // }
         }).catch(error => {
             console.error("registration error", error);
 
@@ -96,7 +99,7 @@ export default class Registration extends Component {
                         value={this.state.password_confirmation}
                         onChange={this.handleChange}
                         required />
-                    <button type="submit">Register</button>
+                    <button type="submit">Login</button>
                 </form>
             </div>
         )
