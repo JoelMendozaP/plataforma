@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
+// import browserHistory from "react-router"
+
 import Classes from './Header.module.css'
 
 class Header extends Component {
   state = {
   }
-  render() {
 
+  onNavigateHome() {
+    // Route.push("/home");
+  }
+
+  render() {
     return (
       <div className={Classes.Header}>
         <img className={Classes.Logo} alt="..." src={require("../../../assets/img/capacitalogo.png")}></img>
@@ -16,11 +23,15 @@ class Header extends Component {
             <a href="...">Categoría 2</a>
             <a href="...">Categoría 3</a>
           </div>
-        </div> 
+        </div>
         <input className={Classes.formControl} type="text"></input>
         <button className={Classes.btn}>Mis cursos</button>
-        <button className={Classes.btn}>Intereses</button>
-        <button className={Classes.btn}>Ingresar</button>
+        <Link to={"/sign-up"}>
+          <button className={Classes.btn}>Registrarse</button>
+        </Link>
+        <Link to={"/sign-in"}>
+          <button className={Classes.btn}>Iniciar sesión</button>
+        </Link>
       </div>
     )
   }
