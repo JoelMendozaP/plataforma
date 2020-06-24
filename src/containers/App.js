@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Layout from '../components/Layout/Layout'
-// import Registration from '../components/Auth/Registration'
-// import Login from '../components/Auth/Login'
-import Auth from '../components/Auth/Auth';
+import Registration from '../containers/Auth/Registration'
+import Login from '../containers/Auth/Login'
 
 import './App.css';
 import Aux from '../hoc/Auxiliar'
@@ -11,14 +11,16 @@ import Aux from '../hoc/Auxiliar'
 class App extends Component {
 
   render() {
-    return (
+    return (<Router>
       <Aux>
         <Layout>
         </Layout>
-        {/* <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
-        <Login handleSuccessfulAuth={this.handleSuccessfulAuth} /> */}
-        <Auth />
-      </Aux>
+        <Switch>
+          <Route exact path='/' component={Login} />
+          <Route path="/sign-in" component={Login} />
+          <Route path="/sign-up" component={Registration} />
+        </Switch>
+      </Aux></Router>
     )
   }
 }
