@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import browserHistory from "react-router"
 
 import Classes from './Header.module.css'
+import Button from '../../Buttons/NormalButton'
 
 class Header extends Component {
   state = {
@@ -25,12 +26,12 @@ class Header extends Component {
           </div>
         </div>
         <input className={Classes.formControl} type="text"></input>
-        <button className={Classes.btn}>Mis cursos</button>
+        <Button>Mis cursos</Button>
         <Link to={"/sign-up"}>
-          <button className={Classes.btn}>Registrarse</button>
+          <Button>Registrarse</Button>
         </Link>
         <Link to={"/sign-in"}>
-          <button className={Classes.btn}>Iniciar sesión</button>
+          <Button>Iniciar sesión</Button>
         </Link>
       </div>
     )

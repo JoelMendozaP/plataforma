@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import './Login.css'
-import Classes from '../../components/Layout/Header/Header.module.css'
+import Button from '../../components/Buttons/NormalButton'
 import ScreenCenter from '../../components/Layout/ScreenCenter/ScreenCenter'
 
 export default class Registration extends Component {
@@ -71,7 +71,8 @@ export default class Registration extends Component {
               onChange={this.handleChange}
               required />
           </div>
-          <button className={Classes.btn} type="submit">Ingresar</button>
+          {/* <button className={Classes.btn} type="submit">Ingresar</button> */}
+          <Button>Ingresar</Button>
           <p className="forgotPassword">
             ¿Olvidaste tu <a href="...">contraseña?</a>
           </p>
