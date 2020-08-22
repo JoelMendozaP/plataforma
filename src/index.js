@@ -9,6 +9,10 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+  <script>
+  {document.cookie = 'same-site-cookie=foo; SameSite=Lax'}
+  {document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure'}
+  </script>,
   document.getElementById('root')
 );
 

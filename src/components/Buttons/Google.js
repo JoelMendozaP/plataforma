@@ -41,7 +41,7 @@ class Google extends Component {
         />
       );
     }
-    return <div>{googleContent}</div>;
+    return (<div>{googleContent}</div>)
   }
 }
 export default Google;
