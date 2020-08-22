@@ -85,7 +85,7 @@ export default class Registration extends Component {
           </p>
         </form>
         <br />
-        {/* <Facebook /> */}
+        <Facebook />
         <Google />
       </ScreenCenter>
     );

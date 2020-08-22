@@ -11,6 +11,13 @@ class Google extends Component {
   responseGoogle = (response) => {
     console.log(response);
     console.log(response.profileObj);
+    this.setState({
+        isLoggedIn: true,
+        userID: response.profileObj.googleId,
+        name: response.profileObj.name + response.profileObj.familyName,
+        email: response.profileObj.email,
+        urlImage: response.profileObj.imageUrl,
+      });
   };
 
   render() {
