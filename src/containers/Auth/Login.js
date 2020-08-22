@@ -5,8 +5,8 @@ import "./Login.css";
 import Button from "../../components/Buttons/NormalButton";
 import ScreenCenter from "../../components/Layout/ScreenCenter/ScreenCenter";
 
-import Facebook from '../../components/Buttons/Facebook';
-
+import Facebook from "../../components/Buttons/Facebook";
+import Google from "../../components/Buttons/Google";
 export default class Registration extends Component {
   constructor(props) {
     super(props);
@@ -85,7 +85,8 @@ export default class Registration extends Component {
           </p>
         </form>
         <br />
-        <Facebook />
+        {/* <Facebook /> */}
+        <Google />
       </ScreenCenter>
     );
   }
