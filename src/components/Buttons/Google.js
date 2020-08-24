@@ -39,7 +39,7 @@ class Google extends Component {
           onFailure={this.responseGoogle}
           // theme="light"
           // cookiePolicy={"single_host_origin"}
-          cookiePolicy="https://plataforma-wine.vercel.app=None"
+          cookiePolicy="none"
           // cookiePolicy="None"
         />
       );
