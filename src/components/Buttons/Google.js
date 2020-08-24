@@ -37,10 +37,8 @@ class Google extends Component {
           buttonText="Google"
           onSuccess={this.responseGoogle}
           onFailure={this.responseGoogle}
-          // theme="light"
           // cookiePolicy={"single_host_origin"}
           cookiePolicy="none"
-          // cookiePolicy="None"
         />
       );
     }
