@@ -12,12 +12,12 @@ class Google extends Component {
     console.log(response);
     console.log(response.profileObj);
     this.setState({
-        isLoggedIn: true,
-        userID: response.profileObj.googleId,
-        name: response.profileObj.name + response.profileObj.familyName,
-        email: response.profileObj.email,
-        urlImage: response.profileObj.imageUrl,
-      });
+      isLoggedIn: true,
+      userID: response.profileObj.googleId,
+      name: response.profileObj.name + response.profileObj.familyName,
+      email: response.profileObj.email,
+      urlImage: response.profileObj.imageUrl,
+    });
   };
 
   render() {
@@ -34,14 +34,16 @@ class Google extends Component {
       googleContent = (
         <GoogleLogin
           clientId="510643267486-phub6ol9cpq7lq01nacs8sft7kj5d0mt.apps.googleusercontent.com"
-          buttonText="Login"
+          buttonText="Google"
           onSuccess={this.responseGoogle}
           onFailure={this.responseGoogle}
-          cookiePolicy={"single_host_origin"}
+          // theme="light"
+          // cookiePolicy={"single_host_origin"}
+          cookiePolicy="None"
         />
       );
     }
-    return (<div>{googleContent}</div>)
+    return <div>{googleContent}</div>;
   }
 }
 export default Google;
