@@ -38,8 +38,8 @@ class Google extends Component {
           onSuccess={this.responseGoogle}
           onFailure={this.responseGoogle}
           // theme="light"
-          // cookiePolicy={"single_host_origin"}
-          cookiePolicy="None"
+          cookiePolicy={"single_host_origin"}
+          // cookiePolicy="None"
         />
       );
     }
