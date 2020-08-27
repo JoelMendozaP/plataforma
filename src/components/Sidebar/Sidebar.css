@@ -1,0 +1,6 @@
+.itemSidebar {
+  background-color: var(--background);
+  color: var(--text);
+  text-align: center;
+  padding: 20px 0;
+}

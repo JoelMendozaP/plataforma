@@ -1,0 +1,59 @@
+.containerGrid {
+  height: 100vh;
+  display: grid;
+  grid-template: 100px 1fr / 100px 1fr 1fr 1fr;
+  grid-template-areas:
+    "Sidebar Navbar Navbar Navbar"
+    "Sidebar Conten Conten Inf";
+  gap: 10px;
+}
+.itemnav {
+  grid-area: Navbar;
+  background-color: var(--primary);
+}
+.itemSidebar {
+  /* background-color: var(--secondary); */
+  grid-area: Sidebar;
+}
+.itemContent {
+  background-color: var(--text);
+  grid-area: Conten;
+  /* height: 100vh; */
+}
+.itemInformation {
+  background-color: var(--backgroundSecondary);
+  grid-area: Inf;
+}
+@media screen and (max-width: 768px) {
+  .containerGrid {
+    height: auto;
+    grid-template: 100px 1fr 1fr / 100px 1fr;
+    grid-template-areas:
+      "Sidebar Navbar"
+      "Sidebar Conten"
+      "Sidebar Inf";
+  }
+  .itemContent {
+    /* height: 100vh; */
+  }
+  .itemInformation {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 375px) {
+  .containerGrid {
+    gap: 0px;
+    height: auto;
+    grid-template: 50px 1fr 1fr / 50px 1fr;
+    grid-template-areas:
+      "Sidebar Navbar"
+      "Conten Conten"
+      "Inf Inf";
+  }
+  .itemContent {
+    height: 100vh;
+  }
+  .itemInformation {
+    height: 100vh;
+  }
+}
