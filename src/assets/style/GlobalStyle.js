@@ -7,8 +7,10 @@ const GlobalStyle = createGlobalStyle`
         --text: ${(props) => props.color.text};
         --backgroundSecondary: ${(props) => props.color.backgroundSecondary};
         --background: ${(props) => props.color.background};
+        --transition-speed: 600ms;
         /* --text: ${(props) =>
           props.color.text ? props.color.text : "orange"}; */
+
     }
 `;
 export default GlobalStyle;

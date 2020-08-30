@@ -8,7 +8,7 @@ class theme extends Component {
       primary: "green",
       secondary: "#000",
       text: "white",
-      backgroundSecondary: "red",
+      backgroundSecondary: "#23232e",
       background: "orange",
     },
   };

@@ -1,7 +1,7 @@
 .containerGrid {
   height: 100vh;
   display: grid;
-  grid-template: 100px 1fr / 100px 1fr 1fr 1fr;
+  grid-template: 100px 1fr / 80px 1fr 1fr 1fr;
   grid-template-areas:
     "Sidebar Navbar Navbar Navbar"
     "Sidebar Conten Conten Inf";
@@ -12,7 +12,6 @@
   background-color: var(--primary);
 }
 .itemSidebar {
-  /* background-color: var(--secondary); */
   grid-area: Sidebar;
 }
 .itemContent {
@@ -27,14 +26,12 @@
 @media screen and (max-width: 768px) {
   .containerGrid {
     height: auto;
-    grid-template: 100px 1fr 1fr / 100px 1fr;
+    grid-template: 100px 1fr 1fr 65px / 1fr;
     grid-template-areas:
-      "Sidebar Navbar"
-      "Sidebar Conten"
-      "Sidebar Inf";
-  }
-  .itemContent {
-    /* height: 100vh; */
+      "Navbar"
+      "Conten"
+      "Inf"
+      "Sidebar";
   }
   .itemInformation {
     height: 100vh;
@@ -42,13 +39,14 @@
 }
 @media screen and (max-width: 375px) {
   .containerGrid {
-    gap: 0px;
+    /* gap: 0px; */
     height: auto;
-    grid-template: 50px 1fr 1fr / 50px 1fr;
+    grid-template: 80px 1fr 1fr 65px / 1fr;
     grid-template-areas:
-      "Sidebar Navbar"
-      "Conten Conten"
-      "Inf Inf";
+      " Navbar"
+      " Conten"
+      " Inf"
+      "Sidebar ";
   }
   .itemContent {
     height: 100vh;
