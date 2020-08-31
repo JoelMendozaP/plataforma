@@ -11,43 +11,52 @@ function palette(props) {
         <div id="theme4"></div>
         <div id="theme5"></div>
       </div>
-
-      <div>
-        <input
-          onChange={props.onChangeColor}
-          value={props.colorValue.primary}
-          name="primary"
-          type="text"
-        />
-        <br />
-        <input
-          onChange={props.onChangeColor}
-          value={props.colorValue.secondary}
-          name="secondary"
-          type="text"
-        />
-        <br />
-        <input
-          onChange={props.onChangeColor}
-          value={props.colorValue.text}
-          name="text"
-          type="text"
-        />
-        <br />
-        <input
-          onChange={props.onChangeColor}
-          value={props.colorValue.backgroundSecondary}
-          name="backgroundSecondary"
-          type="text"
-        />
-        <br />
-        <input
-          onChange={props.onChangeColor}
-          value={props.colorValue.background}
-          name="background"
-          type="text"
-        />
-        <br />
+      <div className="ChangeColor">
+        <div className="ChangeColor__input">
+          <input
+            type="color"
+            value={props.colorValue.primary}
+            name="primary"
+            onChange={props.onChangeColor}
+          />
+          <p>Color Primario: {props.colorValue.primary}</p>
+        </div>
+        <div className="ChangeColor__input">
+          <input
+            type="color"
+            value={props.colorValue.secondary}
+            name="secondary"
+            onChange={props.onChangeColor}
+          />
+          <p>Color Secundario: {props.colorValue.secondary}</p>
+        </div>
+        <div className="ChangeColor__input">
+          <input
+            type="color"
+            value={props.colorValue.text}
+            name="text"
+            onChange={props.onChangeColor}
+          />
+          <p>Color de texto: {props.colorValue.text}</p>
+        </div>
+        <div className="ChangeColor__input">
+          <input
+            type="color"
+            value={props.colorValue.backgroundSecondary}
+            name="backgroundSecondary"
+            onChange={props.onChangeColor}
+          />
+          <p>Color de fondo: {props.colorValue.backgroundSecondary}</p>
+        </div>
+        <div className="ChangeColor__input">
+          <input
+            type="color"
+            value={props.colorValue.background}
+            name="background"
+            onChange={props.onChangeColor}
+          />
+          <p>Color de fondo2: {props.colorValue.background}</p>
+        </div>
       </div>
     </div>
   );

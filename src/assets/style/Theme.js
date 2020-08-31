@@ -6,8 +6,8 @@ class theme extends Component {
   state = {
     color: {
       primary: "#723489",
-      secondary: "#000",
-      text: "white",
+      secondary: "#000000",
+      text: "#ffffff",
       backgroundSecondary: "#23232e",
       background: "#F2F1F1",
     },
