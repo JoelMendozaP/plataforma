@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import "./Translate.css";
 function Translate() {
   const { i18n } = useTranslation();
   const [locale, setLocale] = useState("es");
@@ -11,7 +11,7 @@ function Translate() {
   };
 
   return (
-    <div>
+    <div className="selectTranslate">
       <select
         value={locale}
         onChange={(e) => handleChangeLocale(e.target.value)}

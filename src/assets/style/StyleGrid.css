@@ -9,7 +9,6 @@
 }
 .itemnav {
   grid-area: Navbar;
-  background-color: var(--primary);
 }
 .itemSidebar {
   grid-area: Sidebar;
@@ -17,10 +16,8 @@
 .itemContent {
   background-color: var(--text);
   grid-area: Conten;
-  /* height: 100vh; */
 }
 .itemInformation {
-  background-color: var(--backgroundSecondary);
   grid-area: Inf;
 }
 @media screen and (max-width: 768px) {
@@ -41,11 +38,11 @@
   .containerGrid {
     /* gap: 0px; */
     height: auto;
-    grid-template: 80px 1fr 1fr 65px / 1fr;
+    grid-template: 60px 1fr 1fr 65px / 1fr;
     grid-template-areas:
-      " Navbar"
-      " Conten"
-      " Inf"
+      "Navbar"
+      "Conten"
+      "Inf"
       "Sidebar ";
   }
   .itemContent {

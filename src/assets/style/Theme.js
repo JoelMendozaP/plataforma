@@ -5,11 +5,11 @@ import App from "../../App";
 class theme extends Component {
   state = {
     color: {
-      primary: "green",
+      primary: "#723489",
       secondary: "#000",
       text: "white",
       backgroundSecondary: "#23232e",
-      background: "orange",
+      background: "#F2F1F1",
     },
   };
   onChangeHeader = (e) => {

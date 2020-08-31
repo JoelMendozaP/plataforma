@@ -1,12 +1,21 @@
 import React from "react";
 import "./Navbar.css";
-import Translate from "../Buttons/Translate";
-
+import Search from "../inputs/Search";
+import ListOption from "../Buttons/HeaderOption";
 function navbar(props) {
   return (
     <div className="itemnav">
-      <h3>navbar</h3>
-      <Translate />
+      <div className="navlist">
+        <div className="itemlistTitle">
+          <h1>Bienvenido</h1>
+        </div>
+        <div className="itemlistInput">
+          <Search />
+        </div>
+        <div className="itemlistIcons">
+          <ListOption />
+        </div>
+      </div>
     </div>
   );
 }

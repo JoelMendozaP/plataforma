@@ -10,9 +10,9 @@
   height: 20px;
   border-radius: 4px;
   margin: 2px 10px;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   display: inline-block;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 .themeOption div.active {
   opacity: 1;

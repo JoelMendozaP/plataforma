@@ -4,7 +4,7 @@ import Prueba from "../Prueba";
 function information(props) {
   return (
     <div className="itemInformation">
-      <h3>information</h3>
+      <h2>Categorias</h2>
       <Prueba />
     </div>
   );
