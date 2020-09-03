@@ -3,7 +3,7 @@ import "./Palette.css";
 
 function palette(props) {
   return (
-    <div>
+    <React.Fragment>
       <div className="themeOption">
         <div id="theme1"></div>
         <div id="theme2"></div>
@@ -58,7 +58,7 @@ function palette(props) {
           <p>Color de fondo2: {props.colorValue.background}</p>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -17,15 +17,10 @@ class theme extends Component {
       color: {
         ...this.state.color,
         [e.target.name]: e.target.value,
-        // text: e.target.value,
       },
     });
   };
   render() {
-    // const styleObj = {
-    //   background: `var(--text)`,
-    //   color: `var(--secondary)`,
-    // };
     return (
       <div>
         <GlobalStyle color={this.state.color} />

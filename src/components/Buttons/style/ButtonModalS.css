@@ -1,0 +1,17 @@
+.ButtonModalS {
+  border: none;
+  background: var(--primary);
+  padding: 0 15px;
+  border-radius: 50px;
+  color: var(--text);
+  font-size: 16px;
+  height: 40px;
+}
+.ButtonModalS__text {
+  margin-right: 5px;
+}
+@media screen and (max-width: 1029px) {
+  .ButtonModalS__text {
+    display: none;
+  }
+}

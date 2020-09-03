@@ -4,14 +4,14 @@ class Search extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="buscar-caja">
-          <a className="buscar-btn" href="/">
+        <div className="searchContainer">
+          <a className="searchContainer__icon" href="/">
             <i className="fas fa-search"></i>
           </a>
           <input
             type="text"
             name=""
-            className="buscar-txt"
+            className="searchContainer__input"
             placeholder="Buscar..."
           />
         </div>

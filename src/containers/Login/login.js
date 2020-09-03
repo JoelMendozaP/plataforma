@@ -1,9 +1,11 @@
-import React, { Component } from "react";
-
-class login extends Component {
-  render() {
-    return <div>login</div>;
-  }
+import React from "react";
+import Modal from "../../components/Modal/Modal";
+function Login(props) {
+  return (
+    <Modal isOpen={props.isOpen} onClose={props.onClose}>
+      Login
+    </Modal>
+  );
 }
 
-export default login;
+export default Login;

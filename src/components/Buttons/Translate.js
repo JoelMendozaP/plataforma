@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import "./Translate.css";
+import "./style/Translate.css";
 function Translate() {
   const { i18n } = useTranslation();
   const [locale, setLocale] = useState("es");

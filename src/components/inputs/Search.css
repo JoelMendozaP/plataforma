@@ -1,4 +1,4 @@
-.buscar-caja {
+.searchContainer {
   margin-top: 10px;
   margin-right: 10px;
   background: #f2f1f1;
@@ -8,17 +8,17 @@
   align-content: center;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.16);
 }
-.buscar-btn {
+.searchContainer__icon {
   color: #b2b1b9;
 }
 
-.buscar-btn > i {
+.searchContainer__icon > i {
   font-size: 25px;
 }
-.buscar-caja a {
+.searchContainer a {
   text-decoration: none;
 }
-.buscar-txt {
+.searchContainer__input {
   border: none;
   background: none;
   outline: none;

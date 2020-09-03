@@ -1,15 +1,17 @@
 import React from "react";
 import Translate from "./Translate";
-import "./HeaderOption.css";
+import "./style/HeaderOption.css";
+import ButtonModalS from "./ButtonModalS";
+
 function HeaderOption(props) {
   return (
     <div className="optionList">
       <ul className="optionList__ul">
         <li>
-          <button className="btnUser">
-            <span className="textUser">Ingresar</span>
-            <i className="fas fa-user-circle"></i>
-          </button>
+          <ButtonModalS
+            onCloseModal={props.onCloseModal}
+            modalIsOpen={props.modalIsOpen}
+          />
         </li>
         <li>
           <Translate />
