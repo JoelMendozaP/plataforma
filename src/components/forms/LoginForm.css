@@ -1,0 +1,28 @@
+.form__Input {
+  width: 90%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 5px 0;
+  margin: 15px 0;
+  border-bottom: 1px solid purple;
+}
+.form__Input i {
+  width: 26px;
+  float: right;
+  text-align: center;
+}
+.form__Input .formControl {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 15px;
+  width: 82%;
+}
+.LoginForm__form button {
+  margin: 15px 0;
+  width: 90%;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  color: var(--text);
+}

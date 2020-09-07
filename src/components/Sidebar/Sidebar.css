@@ -25,10 +25,6 @@
   width: 100%;
 }
 
-.nav__item:last-child {
-  margin-top: auto;
-}
-
 .nav__link {
   display: flex;
   align-items: center;
@@ -75,7 +71,7 @@
   .navbar {
     bottom: 0;
     width: 100vw;
-    height: 65px;
+    height: 20px;
   }
   .nav__logo {
     display: none;
@@ -113,6 +109,9 @@
     display: inline;
   }
 
+  .nav__item:last-child {
+    margin-top: auto;
+  }
   .navbar:hover .nav__linkIcon img {
     margin-left: 11rem;
   }

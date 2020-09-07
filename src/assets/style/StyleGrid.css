@@ -52,3 +52,27 @@
     height: 100vh;
   }
 }
+
+/* GridLogin */
+.containerLogin__form {
+  display: grid;
+  grid-template: 50px 1fr 50px / 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "formLR LoginGF"
+    "changeLR changeLR";
+  gap: 10px;
+}
+.LoginForm__title {
+  grid-area: title;
+}
+.LoginForm__form {
+  grid-area: formLR;
+}
+.LoginForm__fg {
+  grid-area: LoginGF;
+}
+.LoginForm__change {
+  grid-area: changeLR;
+  text-align: center;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./Modal.css";
+import { Link } from "react-router-dom";
 
 function Modal(props) {
   if (!props.isOpen) {
@@ -9,9 +10,9 @@ function Modal(props) {
   return ReactDOM.createPortal(
     <div className="Modal">
       <div className="Modal__container">
-        <button onClick={props.onClose} className="Modal__close-button">
+        <Link to="/" onClick={props.onClose} className="Modal__close-button">
           X
-        </button>
+        </Link>
         {props.children}
       </div>
     </div>,
