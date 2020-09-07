@@ -1,7 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import { registerUser } from "../../services/actions/UsuarioAction";
-
+import "./Register.css";
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -46,8 +46,7 @@ class Register extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className="formInput">
-          <label className="formLabel">Usuario</label>
+        <div className="form__Input">
           <input
             className="formControl"
             type="text"
@@ -57,9 +56,9 @@ class Register extends Component {
             onChange={this.handleChange}
             required
           />
+          <i class="fas fa-user"></i>
         </div>
-        <div className="formInput">
-          <label className="formLabel">Correo electrónico</label>
+        <div className="form__Input">
           <input
             className="formControl"
             type="email"
@@ -69,9 +68,9 @@ class Register extends Component {
             onChange={this.handleChange}
             required
           />
+          <i class="fas fa-envelope"></i>
         </div>
-        <div className="formInput">
-          <label className="formLabel">Contraseña</label>
+        <div className="form__Input">
           <input
             className="formControl"
             type="password"
@@ -81,9 +80,9 @@ class Register extends Component {
             onChange={this.handleChange}
             required
           />
+          <i class="fas fa-lock"></i>
         </div>
-        <div className="formInput">
-          <label className="formLabel">Confirmar contraseña</label>
+        <div className="form__Input">
           <input
             className="formControl"
             type="password"
@@ -93,6 +92,7 @@ class Register extends Component {
             onChange={this.handleChange}
             required
           />
+          <i class="fas fa-lock"></i>
         </div>
         <button type="submit">Crear cuenta</button>
       </form>
