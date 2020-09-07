@@ -8,12 +8,17 @@ export const registerUser = (usuario) => {
     });
   });
 };
-
+// dispatch
 export const loginUsuario = (usuario) => {
   return new Promise((resolve, eject) => {
     HttpClient.post("/auth/login", usuario).then((response) => {
+      // dispatch({
+      //   type: "INICIAR_SESION",
+      //   sesion: response.data,
+      //   autenticado: true,
+      // });
       resolve(response);
-      console.log(response);
+      console.log("logged", response.data.rolsAssigned[0].user);
     });
   });
 };
