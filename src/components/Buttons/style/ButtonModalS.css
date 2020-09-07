@@ -1,11 +1,12 @@
 .ButtonModalS {
   border: none;
   background: var(--primary);
-  padding: 0 15px;
+  padding: 10px 15px;
   border-radius: 50px;
   color: var(--text);
   font-size: 16px;
   height: 40px;
+  text-decoration: none;
 }
 .ButtonModalS__text {
   margin-right: 5px;

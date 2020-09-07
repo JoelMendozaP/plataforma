@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { loginUsuario } from "../../services/actions/UsuarioAction";
-import "./LoginForm.css";
+import "./Login.css";
 class LoginForm extends Component {
   constructor(props) {
     super(props);

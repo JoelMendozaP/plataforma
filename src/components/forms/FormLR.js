@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Facebook from "../Buttons/Facebook";
 import Google from "../Buttons/Google";
-import LoginForm from "./LoginForm";
+import Login from "./Login";
 import Register from "./Register";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 class FormLR extends Component {
@@ -17,8 +17,7 @@ class FormLR extends Component {
             <p>Iniciar Sesion</p>
             <Switch>
               <Route path="/auth/register" component={Register} />
-              <Route component={LoginForm} />
-              <Route path="/auth/login" component={LoginForm} />
+              <Route path="/auth/login" component={Login} />
             </Switch>
           </div>
           <div className="LoginForm__fg">

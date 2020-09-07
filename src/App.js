@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Home from "./containers/Home/Home";
+import Home from "./view/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import "./assets/style/StyleGrid.css";

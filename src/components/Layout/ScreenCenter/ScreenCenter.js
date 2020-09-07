@@ -1,7 +1,7 @@
 // import React, { Component } from 'react'
-// import Login from '../../../containers/Auth/Login'
+// import Login from '../../../view/Auth/Login'
 
-import './ScreenCenter.css'
+import "./ScreenCenter.css";
 
 // export default class Auth extends Component {
 
@@ -21,17 +21,14 @@ import './ScreenCenter.css'
 //     }
 // }
 
-import React from 'react';
+import React from "react";
 
 const ScreenCenter = (props) => {
-
   return (
     <div className="authWrapper">
-      <div className="authInner">
-        {props.children}
-      </div>
+      <div className="authInner">{props.children}</div>
     </div>
   );
-}
+};
 
 export default ScreenCenter;

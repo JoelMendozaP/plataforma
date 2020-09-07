@@ -1,11 +1,9 @@
 import React from "react";
-import Modal from "../../components/Modal/Modal";
+import Modal from "../../view/Modal/Modal";
 import LogoRosa from "../../assets/img/LogoRosa.png";
-import FormLR from "../../components/forms/FormLR";
-// import LoginForm from "../../components/forms/LoginForm";
-// import Register from "../../components/forms/Register";
-import "./Login.css";
-function Login(props) {
+import FormLR from "../forms/FormLR";
+import "./GetIn.css";
+function GetIn(props) {
   return (
     <Modal isOpen={props.isOpen} onClose={props.onClose}>
       <div className="containerLogin">
@@ -30,4 +28,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export default GetIn;
