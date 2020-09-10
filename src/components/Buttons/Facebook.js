@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
+import "./style/Facebook.css";
+// import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 
 class facebook extends Component {
   state = {
@@ -16,13 +18,18 @@ class facebook extends Component {
       userID: response.userID,
       name: response.name,
       email: response.email,
-      urlImage: response.picture.data.url,
+      // urlImage: response.picture.data.url,
     });
   };
 
   componentClicked = () => console.log("clicked");
 
   render() {
+    let fbButton = (
+      <span>
+        Facebook<i className="fab fa-facebook-f"></i>
+      </span>
+    );
     let fbContent;
     if (this.state.isLoggedIn) {
       fbContent = (
@@ -38,8 +45,9 @@ class facebook extends Component {
           appId="1026030154520877"
           autoLoad={false}
           fields="name,email,picture"
-          onClick={this.componentClicked}
           callback={this.responseFacebook}
+          cssClass="btnFacebook"
+          textButton={fbButton}
         />
       );
     }

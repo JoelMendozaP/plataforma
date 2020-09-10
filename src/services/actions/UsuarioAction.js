@@ -1,24 +1,29 @@
 import HttpClient from "../HttpClient";
 
-export const registerUser = (usuario) => {
+export const registerUser = (usuario, dispatch) => {
   return new Promise((resolve, eject) => {
     HttpClient.post("/auth/register", usuario).then((response) => {
+      dispatch({
+        type: "INICIAR_SESION",
+        sesion: response.data.userToReturn,
+        autenticado: true,
+      });
       resolve(response);
-      console.log(response);
+      console.log(response.data.userToReturn);
     });
   });
 };
-// dispatch
-export const loginUsuario = (usuario) => {
+
+export const loginUsuario = (usuario, dispatch) => {
   return new Promise((resolve, eject) => {
     HttpClient.post("/auth/login", usuario).then((response) => {
-      // dispatch({
-      //   type: "INICIAR_SESION",
-      //   sesion: response.data,
-      //   autenticado: true,
-      // });
+      dispatch({
+        type: "INICIAR_SESION",
+        sesion: response.data.rolsAssigned[0].user,
+        autenticado: true,
+      });
       resolve(response);
-      console.log("logged", response.data.rolsAssigned[0].user);
+      console.log("logueado", response.data.rolsAssigned[0].user);
     });
   });
 };

@@ -31,8 +31,3 @@ class App extends Component {
 }
 
 export default App;
-
-/* <Home
-            onChangeColor={this.props.onChangeColor}
-            colorValue={this.props.colorValue}
-          /> */

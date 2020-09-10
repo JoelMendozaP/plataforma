@@ -4,12 +4,14 @@
   font-size: 20px;
   padding: 5px 0;
   margin: 15px 0;
-  border-bottom: 1px solid purple;
+  border-bottom: 1px solid var(--secondary);
 }
 .form__Input i {
   width: 26px;
   float: right;
   text-align: center;
+  color: var(--secondary);
+  filter: grayscale(20%) opacity(1);
 }
 .form__Input .formControl {
   border: none;
@@ -18,11 +20,27 @@
   font-size: 15px;
   width: 82%;
 }
-.LoginForm__form button {
-  margin: 15px 0;
-  width: 90%;
-  border-radius: 5px;
-  border: none;
-  height: 30px;
+.form__Link {
+  padding: 8px 57px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: linear-gradient(var(--secondary), #405267);
   color: var(--text);
+  font-size: 14px;
+}
+.form__span {
+  color: var(--secondary);
+  font-weight: bolder;
+  filter: grayscale(20%) opacity(1);
+  text-shadow: 0 0 28px var(--secondary);
+}
+.forgotPassword {
+  color: var(--backgroundSecondary);
+  margin-top: 20px;
+}
+.forgotPassword a {
+  color: var(--secondary);
+  filter: grayscale(20%) opacity(1);
+  font-weight: bolder;
+  text-decoration: none;
 }

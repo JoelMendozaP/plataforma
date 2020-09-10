@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GoogleLogin from "react-google-login";
+import "./style/Google.css";
 class Google extends Component {
   state = {
     isLoggedIn: false,
@@ -34,12 +35,30 @@ class Google extends Component {
       googleContent = (
         <GoogleLogin
           clientId="510643267486-phub6ol9cpq7lq01nacs8sft7kj5d0mt.apps.googleusercontent.com"
+          render={(renderProps) => (
+            <button
+              className="btnGoogle"
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+            >
+              Google
+              <i className="fab fa-google"></i>
+            </button>
+          )}
           buttonText="Google"
           onSuccess={this.responseGoogle}
           onFailure={this.responseGoogle}
-          // cookiePolicy={"single_host_origin"}
-          cookiePolicy="none"
+          cookiePolicy={"single_host_origin"}
         />
+
+        // <GoogleLogin
+        //   clientId="510643267486-phub6ol9cpq7lq01nacs8sft7kj5d0mt.apps.googleusercontent.com"
+        //   buttonText="Google"
+        //   onSuccess={this.responseGoogle}
+        //   onFailure={this.responseGoogle}
+        //   // cookiePolicy={"single_host_origin"}
+        //   cookiePolicy="none"
+        // />
       );
     }
     return <div>{googleContent}</div>;

@@ -1,0 +1,22 @@
+.btnFacebook {
+  margin: 15px 0;
+  width: 60%;
+  height: 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  border: none;
+  background: linear-gradient(var(--secondary), #405267);
+  text-align: start;
+  padding: 0 15px;
+}
+.btnFacebook i {
+  float: right;
+  margin-left: 10px;
+}
+@media screen and (max-width: 375px) {
+  .btnFacebook {
+    width: 100%;
+  }
+}

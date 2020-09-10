@@ -1,9 +1,13 @@
-import React from "react";
-import { loginUsuario } from "../../services/actions/UsuarioAction";
 import "./Login.css";
-import { useState } from "react";
+import React, { useState } from "react";
+import { loginUsuario } from "../../services/actions/UsuarioAction";
+import { useStateValue } from "../../services/context/store";
+import { Link } from "react-router-dom";
 
-const Login = () => {
+function Login(props) {
+  const [{ sesionUsuario }, dispatch] = useStateValue();
+  // const [dispatch] = useStateValue();
+
   const [usuario, setUsuario] = useState({
     UsernameOrEmail: "",
     password: "",
@@ -17,16 +21,18 @@ const Login = () => {
   };
   const loginUsuarioButton = (e) => {
     e.preventDefault();
-    loginUsuario(usuario).then((response) => {
+    loginUsuario(usuario, dispatch).then((response) => {
       console.log("login exitoso", response);
       window.localStorage.setItem("token_seguridad", response.data.token);
+      props.onClose();
     });
   };
 
   return (
     <React.Fragment>
-      <form onSubmit={loginUsuarioButton}>
-        <p>l1</p>
+      <form>
+        <span className="form__span">Iniciar Sesion</span>
+        {/* <p>{sesionUsuario ? sesionUsuario.usuario.username : "no data"}</p> */}
         <div className="form__Input">
           <input
             className="formControl"
@@ -51,12 +57,20 @@ const Login = () => {
           />
           <i className="fas fa-lock"></i>
         </div>
-        <button type="submit">Ingresar</button>
-        <p className="forgotPassword">
-          ¿Olvidaste tu <a href="...">contraseña?</a>
-        </p>
+        <Link to="/" className="form__Link" onClick={loginUsuarioButton}>
+          Iniciar Sesion
+        </Link>
+        {/* <Link className="form__Link" onClick={loginUsuarioButton}>
+          Iniciar Sesion
+        </Link> */}
+        <br />
+        <br />
+        <span className="forgotPassword">
+          ¿Olvidaste tu <a href="...">contraseña</a>?
+        </span>
+        {sesionUsuario ? sesionUsuario.usuario.username : null}
       </form>
     </React.Fragment>
   );
-};
+}
 export default Login;

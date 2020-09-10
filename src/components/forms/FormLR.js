@@ -3,25 +3,56 @@ import Facebook from "../Buttons/Facebook";
 import Google from "../Buttons/Google";
 import Login from "./Login";
 import Register from "./Register";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
+import "./FormLR.css";
 class FormLR extends Component {
   render() {
     return (
       <BrowserRouter>
         <React.Fragment>
           <div className="LoginForm__title">
-            <Link to="/auth/login">Iniciar Sesion</Link>/
-            <Link to="/auth/register">Registro</Link>
+            <NavLink
+              exact
+              to="/auth/login"
+              className="title__option"
+              activeClassName="LoginForm__titleAc"
+            >
+              Iniciar Sesion
+            </NavLink>
+            <span className="LoginForm__titleSpan"> / </span>
+            <NavLink
+              exact
+              to="/auth/register"
+              className="title__option"
+              activeClassName="LoginForm__titleAc"
+            >
+              Registro
+            </NavLink>
           </div>
           <div className="LoginForm__form">
-            <p>Iniciar Sesion</p>
             <Switch>
-              <Route path="/auth/register" component={Register} />
-              <Route path="/auth/login" component={Login} />
+              <Route
+                path="/auth/register"
+                render={() => (
+                  <Register
+                    isOpen={this.props.isOpen}
+                    onClose={this.props.onClose}
+                  />
+                )}
+              />
+              <Route
+                path="/auth/login"
+                render={() => (
+                  <Login
+                    isOpen={this.props.isOpen}
+                    onClose={this.props.onClose}
+                  />
+                )}
+              />
             </Switch>
           </div>
           <div className="LoginForm__fg">
-            <p>Iniciar Sesion Usando:</p>
+            <span className="form__span">Iniciar Sesion Usando:</span>
             <Facebook />
             <Google />
           </div>

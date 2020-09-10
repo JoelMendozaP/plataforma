@@ -1,3 +1,22 @@
-.LoginForm__form {
-  padding: 15px;
+.title__option {
+  color: var(--secondary);
+  filter: grayscale(100%) opacity(0.4);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: larger;
+}
+.title__option:hover {
+  filter: grayscale(0%) opacity(1);
+  /* text-shadow: 0px 0px 10px var(--secondary); */
+  text-shadow: 0px 0px 20px rgba(245, 9, 180, 0.5);
+}
+.LoginForm__titleAc {
+  filter: grayscale(0%) opacity(1);
+  text-shadow: 0px 0px 15px var(--secondary);
+}
+.LoginForm__titleSpan {
+  color: var(--secondary);
+  filter: grayscale(100%) opacity(0.4);
+  font-size: larger;
+  font-weight: bold;
 }

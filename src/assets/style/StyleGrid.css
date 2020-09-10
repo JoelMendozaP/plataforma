@@ -61,7 +61,7 @@
     "title title"
     "formLR LoginGF"
     "changeLR changeLR";
-  gap: 10px;
+  gap: 20px;
 }
 .LoginForm__title {
   grid-area: title;
@@ -74,5 +74,26 @@
 }
 .LoginForm__change {
   grid-area: changeLR;
-  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .Modal__container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .containerLogin__form {
+    display: grid;
+    grid-template: auto / 375px;
+    grid-template-areas:
+      "title"
+      "formLR"
+      "LoginGF"
+      "changeLR";
+    gap: 10px;
+
+    justify-items: center;
+  }
+  .LoginForm__fg {
+    /* justify-self: center; */
+  }
 }

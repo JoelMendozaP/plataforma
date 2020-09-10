@@ -6,10 +6,10 @@ class theme extends Component {
   state = {
     color: {
       primary: "#723489",
-      secondary: "#000000",
+      secondary: "#F509B4",
       text: "#ffffff",
       backgroundSecondary: "#23232e",
-      background: "#F2F1F1",
+      background: "#F509B4",
     },
   };
   onChangeHeader = (e) => {

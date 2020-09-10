@@ -21,7 +21,7 @@ function GetIn(props) {
           <p>- Lorem Ipsum is simply dummy text of</p>
         </div>
         <div className="containerLogin__form">
-          <FormLR />
+          <FormLR isOpen={props.isOpen} onClose={props.onClose} />
         </div>
       </div>
     </Modal>

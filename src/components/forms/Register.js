@@ -1,9 +1,10 @@
-import React from "react";
-import { registerUser } from "../../services/actions/UsuarioAction";
 import "./Register.css";
-import { useState } from "react";
-
-const Register = () => {
+import { registerUser } from "../../services/actions/UsuarioAction";
+import React, { useState } from "react";
+import { useStateValue } from "../../services/context/store";
+import { Link } from "react-router-dom";
+function Register(props) {
+  const [{ sesionUsuario }, dispatch] = useStateValue();
   const [usuario, setUsuario] = useState({
     username: "",
     email: "",
@@ -19,15 +20,16 @@ const Register = () => {
   };
   const registrarUsuario = (e) => {
     e.preventDefault();
-    registerUser(usuario).then((response) => {
+    registerUser(usuario, dispatch).then((response) => {
       console.log("Se registro exitosamente", response);
       window.localStorage.setItem("token_seguridad", response.data.token);
+      props.onClose();
     });
   };
 
   return (
-    <form onSubmit={registrarUsuario}>
-      <p>r1</p>
+    <form>
+      <span className="form__span">Registarse</span>
       <div className="form__Input">
         <input
           className="formControl"
@@ -76,8 +78,11 @@ const Register = () => {
         />
         <i className="fas fa-lock"></i>
       </div>
-      <button type="submit">Crear cuenta</button>
+      <Link to="/" className="form__Link" onClick={registrarUsuario}>
+        Crear cuenta
+      </Link>
+      {sesionUsuario ? sesionUsuario.usuario.username : null}
     </form>
   );
-};
+}
 export default Register;
