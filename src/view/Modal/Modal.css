@@ -13,8 +13,8 @@
 
 .Modal__container {
   position: relative;
-  top: 2rem;
   background-color: #ffffff;
+  height: 100%;
   /* padding: 1rem; */
   /* width: 400px; */
 }
@@ -27,4 +27,10 @@
   background-color: #f5f5f5;
   padding: 0.5rem 1rem;
   text-decoration: none;
+}
+@media (min-width: 60em) {
+  .Modal__container {
+    top: 2rem;
+    height: auto;
+  }
 }
