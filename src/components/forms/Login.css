@@ -44,3 +44,9 @@
   font-weight: bolder;
   text-decoration: none;
 }
+.Change_text {
+  margin: 10px 0;
+  font-weight: bolder;
+  font-size: 15px;
+  color: gray;
+}

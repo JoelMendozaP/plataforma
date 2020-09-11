@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Facebook from "../Buttons/Facebook";
 import Google from "../Buttons/Google";
 import Login from "./Login";
+import Recover from "./Recover";
 import Register from "./Register";
 import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
 import "./FormLR.css";
@@ -44,6 +45,15 @@ class FormLR extends Component {
                 path="/auth/login"
                 render={() => (
                   <Login
+                    isOpen={this.props.isOpen}
+                    onClose={this.props.onClose}
+                  />
+                )}
+              />
+              <Route
+                path="/auth/recover"
+                render={() => (
+                  <Recover
                     isOpen={this.props.isOpen}
                     onClose={this.props.onClose}
                   />

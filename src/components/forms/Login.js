@@ -66,7 +66,7 @@ function Login(props) {
         <br />
         <br />
         <span className="forgotPassword">
-          ¿Olvidaste tu <a href="...">contraseña</a>?
+          ¿Olvidaste tu <Link to="/auth/recover">contraseña</Link>?
         </span>
         {sesionUsuario ? sesionUsuario.usuario.username : null}
       </form>

@@ -81,8 +81,6 @@
   }
   .containerLogin__form {
     margin: auto;
-    column-gap: 10px;
-    row-gap: 60px;
   }
 }
 @media screen and (max-width: 425px) {

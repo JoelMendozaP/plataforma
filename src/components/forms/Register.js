@@ -1,4 +1,3 @@
-import "./Register.css";
 import { registerUser } from "../../services/actions/UsuarioAction";
 import React, { useState } from "react";
 import { useStateValue } from "../../services/context/store";
