@@ -15,8 +15,8 @@
   margin-left: 10px;
   float: right;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .btnGoogle {
-    width: 100%;
+    width: 90%;
   }
 }

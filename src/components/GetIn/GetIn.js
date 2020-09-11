@@ -6,22 +6,9 @@ import "./GetIn.css";
 function GetIn(props) {
   return (
     <Modal isOpen={props.isOpen} onClose={props.onClose}>
-      <div id="google" class="modaloverlay">
-        <div class="modal">
-          {/* <a href="#close" class="close">
-            &times;
-          </a> */}
-          <div>
-            <h1>Here is some content inside the Modal.</h1>
-            <p>
-              If the modal shrinks below the breakpoint then the modal goes full
-              screen for mobile use.
-            </p>
-          </div>
-        </div>
-      </div>
+      <div className="containerLog">
+        {/* <div class="modal"></div> */}
 
-      {/* <div className="containerLogin">
         <div className="containerLogin__img">
           <img src={LogoRosa} alt="" />
           <p>
@@ -38,7 +25,7 @@ function GetIn(props) {
         <div className="containerLogin__form">
           <FormLR isOpen={props.isOpen} onClose={props.onClose} />
         </div>
-      </div> */}
+      </div>
     </Modal>
   );
 }

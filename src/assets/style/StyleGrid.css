@@ -79,21 +79,30 @@
   .Modal__container {
     width: 100%;
   }
-}
-@media screen and (max-width: 375px) {
   .containerLogin__form {
-    display: grid;
-    grid-template: auto / 375px;
+    margin: auto;
+    column-gap: 10px;
+    row-gap: 60px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .containerLogin__form {
+    grid-template-columns: 250px;
+    grid-template-rows: auto;
     grid-template-areas:
       "title"
       "formLR"
       "LoginGF"
       "changeLR";
-    gap: 10px;
-
-    justify-items: center;
+    margin: auto;
+    gap: 40px;
+    width: 250px;
+    padding-left: 25px;
   }
-  .LoginForm__fg {
-    /* justify-self: center; */
+  .Modal__container {
+    margin: 0 auto;
+  }
+  .form__Link {
+    padding: 8px 70px;
   }
 }

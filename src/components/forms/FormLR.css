@@ -20,3 +20,14 @@
   font-size: larger;
   font-weight: bold;
 }
+.LoginForm__change {
+  color: gray;
+}
+@media screen and (max-width: 425px) {
+  .LoginForm__title {
+    justify-self: start;
+  }
+  .title__option {
+    color: white;
+  }
+}
