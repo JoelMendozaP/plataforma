@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 50em) {
   .containerLog {
-    background-image: url("../../assets/img/wire.png");
+    background-image: none;
     background-repeat: no-repeat;
     background-size: cover;
     grid-template-columns: 1fr;
@@ -37,8 +37,5 @@
   }
   .containerLogin__img {
     display: none;
-  }
-  .title__option {
-    color: white;
   }
 }
