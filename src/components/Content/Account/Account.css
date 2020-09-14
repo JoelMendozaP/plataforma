@@ -1,0 +1,20 @@
+.Account__titleBtn {
+  padding: 6px 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: linear-gradient(var(--secondary), #405267);
+  color: var(--text);
+  font-size: 14px;
+  float: right;
+  border: none;
+}
+.Account__titleSpn {
+  color: var(--secondary);
+  font-weight: bold;
+  font-size: 1.6em;
+  /* margin-left: 100px; */
+}
+.Account__title {
+  margin-bottom: 30px;
+}

@@ -31,7 +31,7 @@
       "Sidebar";
   }
   .itemInformation {
-    height: 100vh;
+    /* height: 100vh; */
   }
 }
 @media screen and (max-width: 375px) {
@@ -49,7 +49,7 @@
     height: 100vh;
   }
   .itemInformation {
-    height: 100vh;
+    /* height: 100vh; */
   }
 }
 

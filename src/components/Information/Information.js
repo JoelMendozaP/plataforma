@@ -1,13 +1,16 @@
 import React from "react";
 import "./Information.css";
-import Prueba from "../Prueba";
-function information(props) {
+import { useStateValue } from "../../services/context/store";
+// import Prueba from "../Prueba";
+function Information(props) {
+  const [{ informationR }] = useStateValue();
+
+  const categoria = <h2>Categorias</h2>;
   return (
     <div className="itemInformation">
-      <h2>Categorias</h2>
-      <Prueba />
+      {informationR ? informationR.information : categoria}
     </div>
   );
 }
 
-export default information;
+export default Information;

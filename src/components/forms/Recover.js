@@ -1,11 +1,10 @@
 import "./Login.css";
 import React, { useState } from "react";
 // import { loginUsuario } from "../../services/actions/UsuarioAction";
-import { useStateValue } from "../../services/context/store";
+// import { useStateValue } from "../../services/context/store";
 import { Link } from "react-router-dom";
 
 function Recover(props) {
-  const [{ sesionUsuario }, dispatch] = useStateValue();
   // const [dispatch] = useStateValue();
 
   const [usuario, setUsuario] = useState({
@@ -54,7 +53,6 @@ function Recover(props) {
         <Link to="/" className="form__Link">
           Enviar Correo
         </Link>
-        {sesionUsuario ? sesionUsuario.usuario.username : null}
       </form>
     </React.Fragment>
   );

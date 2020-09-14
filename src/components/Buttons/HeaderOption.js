@@ -2,6 +2,7 @@ import React from "react";
 import Translate from "./Translate";
 import "./style/HeaderOption.css";
 import ButtonModalS from "./ButtonModalS";
+import { Link } from "react-router-dom";
 
 function HeaderOption(props) {
   return (
@@ -17,9 +18,9 @@ function HeaderOption(props) {
           <Translate />
         </li>
         <li>
-          <a href="/" className="iconHeader">
+          <Link to="/theme" className="iconHeader">
             <i className="fas fa-moon"></i>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

@@ -5,4 +5,16 @@
   padding: 20px 0;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.16);
   border-radius: 35px 35px 0 0;
+  overflow-y: scroll;
+}
+.itemContent::-webkit-scrollbar {
+  width: 0.15rem;
+}
+.itemContent::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 50px;
+  margin: 30px 0;
+}
+.itemContent::-webkit-scrollbar-thumb {
+  background: #dbd0db;
 }
