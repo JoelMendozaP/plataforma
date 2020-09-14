@@ -4,16 +4,19 @@ import { Link } from "react-router-dom";
 import user from "../../assets/img/user.jpg";
 import { useStateValue } from "../../services/context/store";
 import "./Perfil.css";
-
+import ChangeImage from "./ChangeImage";
 const Perfil = () => {
-  const [{ sesionUsuario }] = useStateValue();
+  const [{ sesionUsuario, informationR }, dispatch] = useStateValue();
+  function ChangeImg() {
+    dispatch({ data: <ChangeImage /> });
+  }
   return (
     <div className="Perfil">
       <div className="Perfil__photo">
         <img className="Perfil__photoImg" src={user} alt="" />
-        <Link to="/Account" className="Perfil__photoBtn">
-          Subir Foto
-        </Link>
+        <button className="Perfil__photoBtn" onClick={ChangeImg}>
+          Cambiar Foto
+        </button>
       </div>
       <div className="Perfil__hr"></div>
       <div className="Perfil__information">
