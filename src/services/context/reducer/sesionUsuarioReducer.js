@@ -1,9 +1,16 @@
 export const initialState = {
   usuario: {
+    id: "",
     username: "",
+    name: "",
+    lastname: "",
     email: "",
+    phone: "",
+    dateN: "",
+    gender: "",
+    direction: "",
+    postalCode: "",
     foto: "",
-    nombreCompleto: "",
   },
   autenticado: false,
 };

@@ -7,6 +7,7 @@ import "./Perfil.css";
 import ChangeImage from "./ChangeImage";
 const Perfil = () => {
   const [{ sesionUsuario, informationR }, dispatch] = useStateValue();
+
   function ChangeImg() {
     dispatch({ data: <ChangeImage /> });
   }
@@ -21,11 +22,16 @@ const Perfil = () => {
       <div className="Perfil__hr"></div>
       <div className="Perfil__information">
         <h3>
-          Usuario: {sesionUsuario ? sesionUsuario.usuario.username : "no data"}
+          <span>
+            Usuario:{" "}
+            {sesionUsuario ? sesionUsuario.usuario.username : "no data"}
+          </span>
         </h3>
         <h3>
-          Nombre Completo:{" "}
-          {sesionUsuario ? sesionUsuario.usuario.name : "no data"}
+          <span>
+            Nombre Completo:{" "}
+            {sesionUsuario ? sesionUsuario.usuario.name : "no data"}
+          </span>
         </h3>
         <h3>
           Correo: {sesionUsuario ? sesionUsuario.usuario.email : "no data"}

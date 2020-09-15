@@ -50,7 +50,7 @@ function Login(props) {
     <React.Fragment>
       <form>
         <span className="form__span">Iniciar Sesion</span>
-        {/* <p>{sesionUsuario ? sesionUsuario.usuario.username : "no data"}</p> */}
+        {/* <p>{sesionUsuario ? sesionUsuario.usuario.id : "no data"}</p> */}
         <div className="form__Input">
           <input
             className="formControl"

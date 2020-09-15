@@ -104,3 +104,14 @@
     padding: 8px 70px;
   }
 }
+
+/* Perfil */
+
+@media screen and (min-width: 768px) {
+  .Perfil__photoBtn {
+    /* margin: 0 2em; */
+  }
+  .Perfil__information {
+    /* margin-left: 1em; */
+  }
+}

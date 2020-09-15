@@ -36,6 +36,19 @@ export const loginUsuario = (usuario, dispatch) => {
   });
 };
 
+export const changeImg = (file, id) => {
+  return new Promise((resolve, eject) => {
+    HttpClient.post(`/users/${id}/photos`, file)
+      .then((response) => {
+        resolve(response);
+        console.log("change", response);
+      })
+      .catch((error) => {
+        resolve(error.response);
+      });
+  });
+};
+
 // export const obtenerUsuarioActual = () => {
 //   return new Promise((resolve, eject) => {});
 // };

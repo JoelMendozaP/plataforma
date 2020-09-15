@@ -28,6 +28,7 @@
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 10px;
+  border: none;
 }
 .imageUp i {
   margin-left: 5px;
