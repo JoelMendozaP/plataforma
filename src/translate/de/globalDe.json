@@ -2,5 +2,10 @@
   "info": {
     "welcomeToReact": "Texto en Aleman",
     "HelloEvery": "Aleman"
+  },
+  "header": {
+    "welcomeHead": "Bienvenido",
+    "searchHead": "Buscar...",
+    "enterHead": "Ingresar"
   }
 }
