@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import user from "../../assets/img/user.jpg";
 import { changeImg } from "../../services/actions/UsuarioAction";
+import { useTranslation } from "react-i18next";
 import { useStateValue } from "../../services/context/store";
 import "./ChangeImage.css";
 function ChangeImage(props) {
   const [imgPreview, setImgPreview] = useState(null);
   const [{ sesionUsuario }, dispatch] = useStateValue();
+  const { t } = useTranslation("ChangeImg");
   const [name, setname] = useState(null);
 
   const handleImageChange = (e) => {
@@ -38,7 +40,7 @@ function ChangeImage(props) {
   return (
     <div className="change">
       <div className="change__container">
-        <h2 className="change__containerh1">Cambia foto de perfil</h2>
+        <h2 className="change__containerh1">{t("ciChange")}</h2>
         <div
           style={{
             backgroundImage: imgPreview
@@ -52,7 +54,8 @@ function ChangeImage(props) {
         <input type="file" id="inputFile" onChange={handleImageChange} />
         <div className="label">
           <label htmlFor="inputFile" className="imageUp">
-            Escoger imagen<i className="fas fa-file-import"></i>
+            {t("ciSelect")}
+            <i className="fas fa-file-import"></i>
           </label>
         </div>
         <button
@@ -61,7 +64,7 @@ function ChangeImage(props) {
           disabled={!imgPreview}
           onClick={(e) => handleUpload(e)}
         >
-          Guardar Cambios
+          {t("ciSave")}
         </button>
       </form>
     </div>

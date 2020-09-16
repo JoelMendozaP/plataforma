@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import "./style/Translate.css";
 function Translate() {
   const { i18n } = useTranslation();
+  const { t } = useTranslation("language");
   const [locale, setLocale] = useState("es");
 
   const handleChangeLocale = (lan) => {
@@ -16,10 +17,10 @@ function Translate() {
         value={locale}
         onChange={(e) => handleChangeLocale(e.target.value)}
       >
-        <option value="es">Español</option>
-        <option value="en">Ingles</option>
-        <option value="de">Aleman</option>
-        <option value="fr">frances</option>
+        <option value="es">{t("esLanguage")}</option>
+        <option value="en">{t("enLanguage")}</option>
+        <option value="de">{t("deLanguage")}</option>
+        <option value="fr">{t("frLanguage")}</option>
       </select>
     </div>
   );

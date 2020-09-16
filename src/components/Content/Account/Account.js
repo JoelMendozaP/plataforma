@@ -1,10 +1,12 @@
-import React, { useState } from "react";
 import Perfil from "../../Perfil/Perfil";
-import { useStateValue } from "../../../services/context/store";
-import InformationPersonal from "../../Perfil/InformationPersonal";
 import EditPerfil from "../../Perfil/EditPerfil";
+import InformationPersonal from "../../Perfil/InformationPersonal";
+import React, { useState } from "react";
+import { useStateValue } from "../../../services/context/store";
+import { useTranslation } from "react-i18next";
 import "./Account.css";
 function Account(props) {
+  const { t } = useTranslation("account");
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const [usuario, setUsuario] = useState({
     username: `${sesionUsuario ? validar(sesionUsuario.usuario.username) : ""}`,
@@ -36,7 +38,7 @@ function Account(props) {
     }));
   };
 
-  function llamar() {
+  function toCall() {
     dispatch({
       data: <EditPerfil user={usuario} handleChange={handleChange} />,
     });
@@ -45,9 +47,9 @@ function Account(props) {
   return (
     <React.Fragment>
       <div className="Account__title">
-        <span className="Account__titleSpn">Perfil de Usuario</span>
-        <button className="Account__titleBtn" onClick={llamar}>
-          Editar Perfil
+        <span className="Account__titleSpn">{t("acPerfil")}</span>
+        <button className="Account__titleBtn" onClick={toCall}>
+          {t("acEdit")}
         </button>
       </div>
       <div className="Account__perfil">

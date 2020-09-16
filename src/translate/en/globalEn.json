@@ -4,8 +4,30 @@
     "HelloEvery": "Ingles"
   },
   "header": {
-    "welcomeHead": "Bienvenido",
-    "searchHead": "Buscar...",
-    "enterHead": "Ingresar"
+    "welcomeHead": "Welcome",
+    "searchHead": "Search...",
+    "enterHead": "Enter"
+  },
+  "language": {
+    "deLanguage": "Aleman",
+    "enLanguage": "Ingles",
+    "esLanguage": "Español",
+    "frLanguage": "frances"
+  },
+  "sidebarT": {
+    "sidInicio": "InicioE",
+    "sidCursos": "CursosE",
+    "sidCalendario": "Calendario",
+    "sidCuenta": "Cuenta",
+    "sidPreguntas": "Preguntas"
+  },
+  "infoT": {
+    "infCategories": "Categories"
+  },
+  "formLR": {
+    "lrIniciar": "Iniciar Sesion",
+    "lrRegistro": "Registro",
+    "lrIniGF": "Iniciar Sesion Usando",
+    "lrNotCount": "No tienes cuenta Registrate"
   }
 }

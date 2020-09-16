@@ -2,8 +2,11 @@ import React from "react";
 import "./Sidebar.css";
 import logo1 from "../../assets/img/logo1.png";
 import logo from "../../assets/img/logo.png";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-function sidebar(props) {
+
+function Sidebar() {
+  const { t } = useTranslation("sidebarT");
   return (
     <nav className="itemSidebar navbar">
       <ul className="navbar__nav">
@@ -23,7 +26,7 @@ function sidebar(props) {
             <span className="nav__linkIcon">
               <i className="fas fa-home"></i>
             </span>
-            <span className="nav__linkText">Inicio</span>
+            <span className="nav__linkText">{t("sidInicio")}</span>
           </Link>
         </li>
 
@@ -32,7 +35,7 @@ function sidebar(props) {
             <span className="nav__linkIcon">
               <i className="fas fa-chalkboard-teacher"></i>
             </span>
-            <span className="nav__linkText">Cursos</span>
+            <span className="nav__linkText">{t("sidCursos")}</span>
           </Link>
         </li>
 
@@ -41,7 +44,7 @@ function sidebar(props) {
             <span className="nav__linkIcon">
               <i className="fas fa-calendar-day"></i>
             </span>
-            <span className="nav__linkText">Calendario</span>
+            <span className="nav__linkText">{t("sidCalendario")}</span>
           </Link>
         </li>
 
@@ -50,7 +53,7 @@ function sidebar(props) {
             <span className="nav__linkIcon">
               <i className="fas fa-user-circle"></i>
             </span>
-            <span className="nav__linkText">Cuenta</span>
+            <span className="nav__linkText">{t("sidCuenta")}</span>
           </Link>
         </li>
 
@@ -59,7 +62,7 @@ function sidebar(props) {
             <span className="nav__linkIcon">
               <i className="fas fa-question-circle"></i>
             </span>
-            <span className="nav__linkText">Preguntas</span>
+            <span className="nav__linkText">{t("sidPreguntas")}</span>
           </Link>
         </li>
       </ul>
@@ -67,4 +70,4 @@ function sidebar(props) {
   );
 }
 
-export default sidebar;
+export default Sidebar;

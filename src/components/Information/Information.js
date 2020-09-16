@@ -1,11 +1,19 @@
 import React from "react";
+import Prueba from "../Prueba";
 import "./Information.css";
 import { useStateValue } from "../../services/context/store";
-// import Prueba from "../Prueba";
+import { useTranslation } from "react-i18next";
+
 function Information(props) {
   const [{ informationR }] = useStateValue();
+  const { t } = useTranslation("infoT");
 
-  const categoria = <h2>Categorias</h2>;
+  const categoria = (
+    <React.Fragment>
+      <h2>{t("infCategories")}</h2>
+      <Prueba />
+    </React.Fragment>
+  );
   return (
     <div className="itemInformation">
       {informationR ? informationR.information : categoria}

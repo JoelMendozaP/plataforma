@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { loginUsuario } from "../../services/actions/UsuarioAction";
 import { useStateValue } from "../../services/context/store";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Login(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
-  // const [dispatch] = useStateValue();
-
+  const { t } = useTranslation("loginF");
   const [usuario, setUsuario] = useState({
     UsernameOrEmail: "",
     password: "",
@@ -49,14 +49,13 @@ function Login(props) {
   return (
     <React.Fragment>
       <form>
-        <span className="form__span">Iniciar Sesion</span>
-        {/* <p>{sesionUsuario ? sesionUsuario.usuario.id : "no data"}</p> */}
+        <span className="form__span">{t("lgIniciar")}</span>
         <div className="form__Input">
           <input
             className="formControl"
             type="text"
             name="UsernameOrEmail"
-            placeholder="Usuario o correo"
+            placeholder={t("lgUsC")}
             value={usuario.UsernameOrEmail}
             onChange={handleChange1}
             required
@@ -68,7 +67,7 @@ function Login(props) {
             className="formControl"
             type="password"
             name="password"
-            placeholder="Contraseña"
+            placeholder={t("lgPass")}
             value={usuario.password}
             onChange={handleChange1}
             required
@@ -76,15 +75,12 @@ function Login(props) {
           <i className="fas fa-lock"></i>
         </div>
         <Link to="/" className="form__Link" onClick={loginUsuarioButton}>
-          Iniciar Sesion
+          {t("lgIniciar")}
         </Link>
-        {/* <Link className="form__Link" onClick={loginUsuarioButton}>
-          Iniciar Sesion
-        </Link> */}
         <br />
         <br />
         <span className="forgotPassword">
-          ¿Olvidaste tu <Link to="/auth/recover">contraseña</Link>?
+          {t("lgForget")} <Link to="/auth/recover">{t("lgPass")}</Link> ?
         </span>
         {sesionUsuario ? sesionUsuario.usuario.username : null}
       </form>

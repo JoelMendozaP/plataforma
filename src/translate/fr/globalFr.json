@@ -4,8 +4,36 @@
     "HelloEvery": "Frances"
   },
   "header": {
-    "welcomeHead": "Bienvenido",
-    "searchHead": "Buscar...",
-    "enterHead": "Ingresar"
+    "welcomeHead": "Bienvenue",
+    "searchHead": "Chercher...",
+    "enterHead": "Entrer"
+  },
+  "language": {
+    "deLanguage": "Aleman",
+    "enLanguage": "Ingles",
+    "esLanguage": "Español",
+    "frLanguage": "frances"
+  },
+  "sidebarT": {
+    "sidInicio": "Inicio",
+    "sidCursos": "Cursos",
+    "sidCalendario": "Calendario",
+    "sidCuenta": "Cuenta",
+    "sidPreguntas": "Preguntas"
+  },
+  "infoT": {
+    "infCategories": "Categories"
+  },
+  "formLR": {
+    "lrIniciar": "Iniciar Sesion",
+    "lrRegistro": "Registro",
+    "lrIniGF": "Iniciar Sesion Usando",
+    "lrNotCount": "No tienes cuenta Registrate",
+    "loginF": {
+      "lgIniciar": "Iniciar Sesion",
+      "lgUsC": "Usuario o correo",
+      "lgPass": "Contraseña",
+      "lgForget": "¿Olvidaste tu"
+    }
   }
 }

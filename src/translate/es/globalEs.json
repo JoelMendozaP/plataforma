@@ -7,5 +7,62 @@
     "welcomeHead": "Bienvenido",
     "searchHead": "Buscar...",
     "enterHead": "Ingresar"
+  },
+  "language": {
+    "deLanguage": "Aleman",
+    "enLanguage": "Ingles",
+    "esLanguage": "Español",
+    "frLanguage": "frances"
+  },
+  "sidebarT": {
+    "sidInicio": "Inicio",
+    "sidCursos": "Cursos",
+    "sidCalendario": "Calendario",
+    "sidCuenta": "Cuenta",
+    "sidPreguntas": "Preguntas"
+  },
+  "infoT": {
+    "infCategories": "Categories"
+  },
+  "formLR": {
+    "lrIniciar": "Iniciar Sesion",
+    "lrRegistro": "Registro",
+    "lrIniGF": "Iniciar Sesion Usando",
+    "lrNotCount": "No tienes cuenta Registrate"
+  },
+  "loginF": {
+    "lgIniciar": "Iniciar Sesion",
+    "lgUsC": "Usuario o correo",
+    "lgPass": "Contraseña",
+    "lgForget": "¿Olvidaste tu"
+  },
+  "account": {
+    "acPerfil": "Perfil de Usuario",
+    "acEdit": "Editar Perfil",
+    "acChange": "Cambiar Foto",
+    "acUser": "Usuario",
+    "acName": "Nombre Completo",
+    "acEmail": "Correo",
+    "acPhone": "Ceular"
+  },
+  "editPerfil": {
+    "epEditar": "Editar",
+    "epDataU": "Datos de Usuario",
+    "epUsr": "Usuario",
+    "epName": "Nombre",
+    "epLastN": "Apellido",
+    "epEmail": "Correo",
+    "epPhone": "Telefono",
+    "epDate": "Fecha de Nacimiento",
+    "epGener": "Genero",
+    "epDirection": "Direccion",
+    "epCodeP": "Codigo Postal",
+    "epSave": "Guardar datos",
+    "epCancel": "Cancelar"
+  },
+  "ChangeImg": {
+    "ciChange": "Cambia foto de perfil",
+    "ciSelect": "Escoger imagen",
+    "ciSave": "Guardar Cambios"
   }
 }

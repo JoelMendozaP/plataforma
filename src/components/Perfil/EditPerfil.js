@@ -1,17 +1,20 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./EditPerfil.css";
+
 function EditPerfil(props) {
+  const { t } = useTranslation("editPerfil");
   return (
     <div className="EditPerfil">
-      <h2>Editar</h2>
+      <h2>{t("epEditar")}</h2>
       <form action="">
-        <h3>Datos de Usuario</h3>
+        <h3>{t("epDataU")}</h3>
         <div className="form__Input">
           <input
             className="formControl"
             type="text"
             name="username"
-            placeholder="Usuario"
+            placeholder={t("epUsr")}
             defaultValue={props.user.username}
             onChange={props.handleChange}
           />
@@ -22,7 +25,7 @@ function EditPerfil(props) {
             className="formControl"
             type="text"
             name="name"
-            placeholder="Nombre"
+            placeholder={t("epName")}
             onChange={props.handleChange}
             defaultValue={props.user.name}
           />
@@ -33,7 +36,7 @@ function EditPerfil(props) {
             className="formControl"
             type="text"
             name="lastname"
-            placeholder="Apellido"
+            placeholder={t("epLastN")}
             defaultValue={props.user.lastname}
             onChange={props.handleChange}
           />
@@ -44,7 +47,7 @@ function EditPerfil(props) {
             className="formControl"
             type="email"
             name="email"
-            placeholder="Correo"
+            placeholder={t("Correo")}
             defaultValue={props.user.email}
             onChange={props.handleChange}
           />
@@ -55,7 +58,7 @@ function EditPerfil(props) {
             className="formControl"
             type="number"
             name="phone"
-            placeholder="Telefono"
+            placeholder={t("epPhone")}
             defaultValue={props.user.phone}
             onChange={props.handleChange}
           />
@@ -67,7 +70,7 @@ function EditPerfil(props) {
             className="formControl"
             type="date"
             name="dateN"
-            placeholder="Fecha de Nacimiento"
+            placeholder={t("epDate")}
             defaultValue={props.user.dateN}
             onChange={props.handleChange}
           />
@@ -78,7 +81,7 @@ function EditPerfil(props) {
             className="formControl"
             type="number"
             name="gender"
-            placeholder="Genero"
+            placeholder={t("epGener")}
             defaultValue={props.user.gender}
             onChange={props.handleChange}
           />
@@ -89,7 +92,7 @@ function EditPerfil(props) {
             className="formControl"
             type="text"
             name="direction"
-            placeholder="Direccion"
+            placeholder={t("epDirection")}
             defaultValue={props.user.direction}
             onChange={props.handleChange}
           />
@@ -100,15 +103,15 @@ function EditPerfil(props) {
             className="formControl"
             type="number"
             name="postalCode"
-            placeholder="Codigo Postal"
+            placeholder={t("epCodeP")}
             defaultValue={props.user.postalCode}
             onChange={props.handleChange}
           />
           <i className="fas fa-mail-bulk"></i>
         </div>
         <div className="EditPerfil__btn">
-          <button className="EditPerfil__btnG">Guardar datos</button>
-          <button className="EditPerfil__btnC">Cancelar</button>
+          <button className="EditPerfil__btnG">{t("epSave")}</button>
+          <button className="EditPerfil__btnC">{t("epCancel")}</button>
         </div>
       </form>
     </div>
