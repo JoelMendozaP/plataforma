@@ -65,7 +65,8 @@ function EditPerfil(props) {
           <i className="fas fa-mobile"></i>
         </div>
         <h3>Datos Personales</h3>
-        <div className="form__Input">
+        <div className="form__InputDate">
+          {/* <label for="party">Fecha de nacimiento</label> */}
           <input
             className="formControl"
             type="date"
@@ -74,7 +75,7 @@ function EditPerfil(props) {
             defaultValue={props.user.dateN}
             onChange={props.handleChange}
           />
-          <i className="fas fa-calendar-check"></i>
+          {/* <i className="fas fa-calendar-check"></i> */}
         </div>
         <div className="form__Input">
           <input

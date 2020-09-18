@@ -23,7 +23,7 @@
   right: 0;
   border: 0;
   padding: 0.5rem 1rem;
-  color: wheat;
+  background-color: #f5f5f5;
   text-decoration: none;
 }
 @media (min-width: 50em) {
@@ -31,9 +31,5 @@
     top: 2rem;
     width: 900px;
     height: 500px;
-  }
-  .Modal__close-button {
-    background-color: #f5f5f5;
-    color: black;
   }
 }

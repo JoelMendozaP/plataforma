@@ -22,6 +22,7 @@ export const loginUsuario = (usuario, dispatch) => {
   return new Promise((resolve, eject) => {
     HttpClient.post("/auth/login", usuario)
       .then((response) => {
+        console.log(response);
         dispatch({
           type: "INICIAR_SESION",
           sesion: response.data.rolsAssigned[0].user,
@@ -31,6 +32,7 @@ export const loginUsuario = (usuario, dispatch) => {
         console.log("logueado", response.data.rolsAssigned[0].user);
       })
       .catch((error) => {
+        console.log(error.response);
         resolve(error.response);
       });
   });

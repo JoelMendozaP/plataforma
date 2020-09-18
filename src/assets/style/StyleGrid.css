@@ -30,13 +30,9 @@
       "Inf"
       "Sidebar";
   }
-  .itemInformation {
-    /* height: 100vh; */
-  }
 }
 @media screen and (max-width: 375px) {
   .containerGrid {
-    /* gap: 0px; */
     height: auto;
     grid-template: 60px 1fr 1fr 65px / 1fr;
     grid-template-areas:
@@ -44,12 +40,6 @@
       "Conten"
       "Inf"
       "Sidebar ";
-  }
-  .itemContent {
-    height: 100vh;
-  }
-  .itemInformation {
-    /* height: 100vh; */
   }
 }
 
@@ -102,16 +92,5 @@
   }
   .form__Link {
     padding: 8px 70px;
-  }
-}
-
-/* Perfil */
-
-@media screen and (min-width: 768px) {
-  .Perfil__photoBtn {
-    /* margin: 0 2em; */
-  }
-  .Perfil__information {
-    /* margin-left: 1em; */
   }
 }

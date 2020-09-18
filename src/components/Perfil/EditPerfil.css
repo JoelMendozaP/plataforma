@@ -26,3 +26,22 @@
 .EditPerfil__btnC {
   background: linear-gradient(var(--primary), #405267);
 }
+.form__InputDate {
+  width: 85%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 5px 0 5px 15px;
+  margin: 15px 0;
+  border-bottom: 1px solid var(--secondary);
+}
+.form__InputDate .formControl {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 15px;
+  width: 100%;
+}
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: rgba(199, 23, 140, 0.521);
+  border-radius: 5px;
+} */

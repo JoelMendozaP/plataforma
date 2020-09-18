@@ -16,3 +16,45 @@
     display: none;
   }
 }
+.userPhoto__img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 1px gray;
+}
+.userPhoto .userPhoto__ul {
+  list-style: none;
+  display: flex;
+  display: none;
+  padding: 0 10px;
+  border-radius: 5px;
+  background: white;
+  width: 160px;
+  border: 1px solid rgb(189, 129, 176);
+}
+.userPhoto .userPhoto__img:hover + ul,
+.userPhoto ul:hover {
+  position: absolute;
+  display: block;
+}
+.userPhoto__ul a {
+  text-decoration: none;
+}
+.userPhoto__ul i {
+  float: right;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.userPhoto__li {
+  color: var(--primary);
+  width: 160px;
+  margin: 15px 0;
+}
+.userPhoto__li:hover,
+.userPhoto__li a:hover {
+  cursor: pointer;
+  color: rgb(189, 129, 176);
+}
