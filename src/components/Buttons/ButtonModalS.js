@@ -8,15 +8,27 @@ function ButtonModalS(props) {
   const { t } = useTranslation("header");
   const [{ sesionUsuario }, dispatch] = useStateValue();
 
-  // function cerrar() {
-  //   console.log("cerrar sesion");
-  //   dispatch({
-  //     type: "SALIR_SESION",
-  //     nuevoUsuario: "",
-  //     autenticado: false,
-  //   });
-  //   localStorage.removeItem("token_seguridad");
-  // }
+  function cerrar() {
+    console.log("cerrar sesion");
+    dispatch({
+      type: "SALIR_SESION",
+      nuevoUsuario: {
+        id: "",
+        username: "",
+        name: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        dateN: "",
+        gender: "",
+        direction: "",
+        postalCode: "",
+        foto: "",
+      },
+      autenticado: false,
+    });
+    localStorage.removeItem("token_seguridad");
+  }
 
   const BtnEnter = (
     <React.Fragment>
@@ -37,16 +49,15 @@ function ButtonModalS(props) {
       <div className="userPhoto__img"></div>
       <ul className="userPhoto__ul">
         <li className="userPhoto__li">
-          <a>
+          <Link to="/Account">
             Mi Perfil <i className="far fa-user"></i>
-          </a>
+          </Link>
         </li>
         <li className="userPhoto__li">
-          {/* onClick={cerrar} */}
-          <a>
+          <Link onClick={cerrar} to="/">
             Cerrar Sesion
             <i className="fas fa-door-open"></i>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
