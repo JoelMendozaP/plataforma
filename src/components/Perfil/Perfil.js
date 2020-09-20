@@ -7,14 +7,28 @@ import ChangeImage from "./ChangeImage";
 function Perfil(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const { t } = useTranslation("account");
-
   function ChangeImg() {
     dispatch({ data: <ChangeImage /> });
+  }
+  function validar(img) {
+    if (img === undefined || img === null) {
+      return user;
+    }
+    return img;
   }
   return (
     <div className="Perfil">
       <div className="Perfil__photo">
-        <img className="Perfil__photoImg" src={user} alt="" />
+        {/* <img className="Perfil__photoImg" src={props.user.photoUrl} alt="" /> */}
+        <div
+          style={{
+            backgroundImage: sesionUsuario
+              ? `url("${validar(sesionUsuario.usuario.photoUrl)}")`
+              : `url("${user}")`,
+          }}
+          className="change__containerImg"
+          id="change__Img"
+        ></div>
         <button className="Perfil__photoBtn" onClick={ChangeImg}>
           {t("acChange")}
         </button>

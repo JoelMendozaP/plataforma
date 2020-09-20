@@ -16,6 +16,7 @@ function Account(props) {
     phone: `${sesionUsuario ? validar(sesionUsuario.usuario.phone) : ""}`,
     dateN: `${sesionUsuario ? validar(sesionUsuario.usuario.dateN) : ""}`,
     gender: `${sesionUsuario ? validar(sesionUsuario.usuario.gender) : ""}`,
+    photoUrl: `${sesionUsuario ? validar(sesionUsuario.usuario.photoUrl) : ""}`,
     direction: `${
       sesionUsuario ? validar(sesionUsuario.usuario.direction) : ""
     }`,
@@ -55,6 +56,8 @@ function Account(props) {
       <div className="Account__perfil">
         <Perfil user={usuario} />
       </div>
+      foto:{" "}
+      {sesionUsuario ? validar(sesionUsuario.usuario.photoUrl) : "no data"}
       <div className="Account__data">
         <InformationPersonal user={usuario} />
       </div>

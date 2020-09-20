@@ -26,17 +26,12 @@ function ChangeImage(props) {
   };
   function handleUpload(e) {
     e.preventDefault();
-    console.log(imgPreview);
-    console.log(name.name);
     let formdata = new FormData();
-    formdata.append("image", imgPreview);
-    formdata.append("name", name.name);
-
-    changeImg(formdata, sesionUsuario.usuario.id).then((response) => {
+    formdata.append("File", name);
+    changeImg(formdata, sesionUsuario.usuario, dispatch).then((response) => {
       console.log("changeComponet", response);
     });
   }
-
   return (
     <div className="change">
       <div className="change__container">
@@ -59,7 +54,6 @@ function ChangeImage(props) {
           </label>
         </div>
         <button
-          style={{}}
           className="change__btn"
           disabled={!imgPreview}
           onClick={(e) => handleUpload(e)}

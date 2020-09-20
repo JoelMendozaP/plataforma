@@ -38,14 +38,23 @@ export const loginUsuario = (usuario, dispatch) => {
   });
 };
 
-export const changeImg = (file, id) => {
+export const changeImg = (file, usuario, dispatch) => {
   return new Promise((resolve, eject) => {
-    HttpClient.post(`/users/${id}/photos`, file)
+    HttpClient.post(`/users/${usuario.id}/photos`, file)
       .then((response) => {
+        dispatch({
+          type: "ACTUALIZAR_USUARIO",
+          nuevoUsuario: {
+            ...usuario,
+            photoUrl: response.data.url,
+          },
+          autenticado: true,
+        });
         resolve(response);
-        console.log("change", response);
+        console.log("then", response);
       })
       .catch((error) => {
+        console.log("error", error.response);
         resolve(error.response);
       });
   });

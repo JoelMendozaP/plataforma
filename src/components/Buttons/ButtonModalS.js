@@ -12,20 +12,8 @@ function ButtonModalS(props) {
     console.log("cerrar sesion");
     dispatch({
       type: "SALIR_SESION",
-      nuevoUsuario: {
-        id: "",
-        username: "",
-        name: "",
-        lastname: "",
-        email: "",
-        phone: "",
-        dateN: "",
-        gender: "",
-        direction: "",
-        postalCode: "",
-        foto: "",
-      },
       autenticado: false,
+      nuevoUsuario: {},
     });
     localStorage.removeItem("token_seguridad");
   }
