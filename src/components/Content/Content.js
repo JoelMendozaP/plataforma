@@ -7,6 +7,7 @@ import Courses from "./Courses/Courses";
 import Calendar from "./Calendar/Calendar";
 import Account from "./Account/Account";
 import Questions from "./Questions/Questions";
+import Chat from "./Chat/Chat";
 import Palette from "../Palette/Palette";
 
 import "./Content.css";
@@ -21,6 +22,7 @@ class content extends Component {
           <Route exact path="/Calendar" component={Calendar} />
           <Route exact path="/Account" component={Account} />
           <Route exact path="/questions" component={Questions} />
+          <Route exact path="/chat" component={Chat} />
           <Route
             path="/theme"
             render={() => (

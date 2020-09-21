@@ -1,9 +1,11 @@
 import React from "react";
 import GetIn from "../GetIn/GetIn";
+import Chats from "../Information/Chats";
 import "./style/ButtonModalS.css";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../services/context/store";
+import user from "../../assets/img/user.jpg";
 function ButtonModalS(props) {
   const { t } = useTranslation("header");
   const [{ sesionUsuario }, dispatch] = useStateValue();
@@ -16,6 +18,9 @@ function ButtonModalS(props) {
       nuevoUsuario: {},
     });
     localStorage.removeItem("token_seguridad");
+  }
+  function ChangeInfo() {
+    dispatch({ data: <Chats /> });
   }
 
   const BtnEnter = (
@@ -31,14 +36,32 @@ function ButtonModalS(props) {
       <GetIn isOpen={props.modalIsOpen} onClose={props.onCloseModal} />
     </React.Fragment>
   );
-
+  function validar(img) {
+    if (img === undefined || img === null) {
+      return user;
+    }
+    return img;
+  }
   const menuUser = (
     <div className="userPhoto">
-      <div className="userPhoto__img"></div>
+      <div
+        className="userPhoto__img"
+        style={{
+          backgroundImage: sesionUsuario
+            ? `url("${validar(sesionUsuario.usuario.photoUrl)}")`
+            : `url("${user}")`,
+        }}
+      ></div>
       <ul className="userPhoto__ul">
         <li className="userPhoto__li">
           <Link to="/Account">
             Mi Perfil <i className="far fa-user"></i>
+          </Link>
+        </li>
+        <li className="userPhoto__li">
+          <Link onClick={ChangeInfo} to="/chat">
+            Chat
+            <i className="fas fa-comments"></i>
           </Link>
         </li>
         <li className="userPhoto__li">
