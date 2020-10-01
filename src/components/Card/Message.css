@@ -1,0 +1,36 @@
+.message {
+  display: grid;
+  grid-template-columns: 50%;
+  margin: 0px 30px;
+  padding: 5px;
+}
+/* #FAC4EB */
+.message__cont {
+  padding: 10px;
+  color: #000;
+  text-align: left;
+}
+.message__hour {
+  font-size: 13px;
+}
+
+.you__message {
+  justify-content: end;
+}
+.you__message .message__cont {
+  background-color: #fac4eb;
+  border-radius: 20px 20px 0px 20px;
+}
+.you__message .message__hour {
+  text-align: left;
+}
+.other__message {
+  justify-content: start;
+}
+.other__message .message__cont {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0px 20px 20px 20px;
+}
+.other__message .message__hour {
+  text-align: right;
+}

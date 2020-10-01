@@ -1,8 +1,14 @@
 import HttpClient from "../HttpClient";
+import axios from "axios";
+
+const instancia = axios.create();
+instancia.CancelToken = axios.CancelToken;
+instancia.isCancel = axios.isCancel;
 
 export const registerUser = (usuario, dispatch) => {
   return new Promise((resolve, eject) => {
-    HttpClient.post("/auth/register", usuario)
+    instancia
+      .post("/auth/register", usuario)
       .then((response) => {
         dispatch({
           type: "INICIAR_SESION",
@@ -20,7 +26,8 @@ export const registerUser = (usuario, dispatch) => {
 
 export const loginUsuario = (usuario, dispatch) => {
   return new Promise((resolve, eject) => {
-    HttpClient.post("/auth/login", usuario)
+    instancia
+      .post("/auth/login", usuario)
       .then((response) => {
         console.log(response);
         dispatch({
