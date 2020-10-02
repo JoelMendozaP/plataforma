@@ -9,7 +9,6 @@ function Facebook(props) {
 
   const responseFacebook = (response) => {
     if (!response.accessToken) {
-      console.log("falla", response);
       dispatch({
         type: "OPEN_SNACKBAR",
         openMensaje: {
@@ -29,11 +28,8 @@ function Facebook(props) {
         LastName: "",
         PhotoUrl: response.picture.data.url,
       };
-      console.log("0");
       externalLogin(usuario, dispatch).then((response) => {
-        console.log("1");
         if (response.status === 200) {
-          console.log("2", response);
           dispatch({
             type: "OPEN_SNACKBAR",
             openMensaje: {
@@ -43,7 +39,6 @@ function Facebook(props) {
           });
           props.onClose();
         } else {
-          console.log("3", response);
           dispatch({
             type: "OPEN_SNACKBAR",
             openMensaje: {

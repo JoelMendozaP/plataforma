@@ -29,7 +29,6 @@ function Google(props) {
     };
 
     externalLogin(usuario, dispatch).then((response) => {
-      console.log("data", response);
       if (response.status === 200) {
         dispatch({
           type: "OPEN_SNACKBAR",

@@ -11,7 +11,6 @@ function ButtonModalS(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
 
   function cerrar() {
-    console.log("cerrar sesion");
     dispatch({
       type: "SALIR_SESION",
       autenticado: false,
