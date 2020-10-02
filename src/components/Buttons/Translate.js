@@ -12,14 +12,18 @@ function Translate() {
   const handleChangeLocale = (lan) => {
     setLocale(lan);
     i18n.changeLanguage(lan);
-    changeLang(
-      {
-        LanguageCode: lan,
-      },
-      sesionUsuario.usuario
-    ).then((response) => {
-      console.log("changeLang", response);
-    });
+    if (sesionUsuario) {
+      if (sesionUsuario.usuario.id) {
+        changeLang(
+          {
+            LanguageCode: lan,
+          },
+          sesionUsuario.usuario
+        ).then((response) => {
+          console.log("changeLang", response);
+        });
+      }
+    }
   };
 
   return (

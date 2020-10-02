@@ -20,29 +20,27 @@ function Login(props) {
     }));
   };
   const loginUsuarioButton = (e) => {
-    e.preventDefault();
     loginUsuario(usuario, dispatch).then((response) => {
-      console.log("login", response);
-      // if (response.status === 200) {
-      //   dispatch({
-      //     type: "OPEN_SNACKBAR",
-      //     openMensaje: {
-      //       open: true,
-      //       message: "Login Exitoso",
-      //     },
-      //   });
-      //   props.onClose();
-      // } else {
-      //   dispatch({
-      //     type: "OPEN_SNACKBAR",
-      //     openMensaje: {
-      //       open: true,
-      //       message: "Error al guardar",
-      //     },
-      //   });
-      // }
+      if (response.status === 200) {
+        dispatch({
+          type: "OPEN_SNACKBAR",
+          openMensaje: {
+            open: true,
+            message: "Login Exitoso",
+          },
+        });
+        props.onClose();
+      } else {
+        dispatch({
+          type: "OPEN_SNACKBAR",
+          openMensaje: {
+            open: true,
+            message: "Error al guardar",
+          },
+        });
+      }
     });
-    // .catch
+    e.preventDefault();
   };
 
   return (

@@ -15,9 +15,9 @@ export const registerUser = (usuario, dispatch) => {
           sesion: response.data.userToReturn,
           autenticado: true,
         });
-        console.log("action", response);
         window.localStorage.setItem("id", response.data.userToReturn.id);
         window.localStorage.setItem("token_seguridad", response.data.token);
+        resolve(response);
       })
       .catch((error) => {
         resolve(error.response);
@@ -30,18 +30,14 @@ export const loginUsuario = (usuario, dispatch) => {
     instancia
       .post("/auth/login", usuario)
       .then((response) => {
-        console.log(response);
         dispatch({
           type: "INICIAR_SESION",
-          sesion: response.data.rolsAssigned[0].user,
+          sesion: response.data.user,
           autenticado: true,
         });
-        window.localStorage.setItem(
-          "id",
-          response.data.rolsAssigned[0].user.id
-        );
+        window.localStorage.setItem("id", response.data.user.id);
         window.localStorage.setItem("token_seguridad", response.data.token);
-        console.log(response);
+        resolve(response);
       })
       .catch((error) => {
         console.log(error.response);
@@ -57,15 +53,13 @@ export const externalLogin = (usuario, dispatch) => {
       .then((response) => {
         dispatch({
           type: "INICIAR_SESION",
-          sesion: response.data.rolsAssigned[0].user,
+          sesion: response.data.user,
           autenticado: true,
         });
-        window.localStorage.setItem(
-          "id",
-          response.data.rolsAssigned[0].user.id
-        );
+        window.localStorage.setItem("id", response.data.user.id);
         window.localStorage.setItem("token_seguridad", response.data.token);
-        console.log(response);
+        window.history.pushState(null, null, "/");
+        resolve(response);
       })
       .catch((error) => {
         console.log(error.response);
@@ -79,7 +73,6 @@ export const changeLang = (lg, usuario) => {
     HttpClient.put(`/users/${usuario.id}/language`, lg)
       .then((response) => {
         resolve(response);
-        console.log("then", response);
       })
       .catch((error) => {
         console.log("error", error.response);

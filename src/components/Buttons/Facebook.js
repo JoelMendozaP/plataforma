@@ -18,7 +18,6 @@ function Facebook(props) {
         },
       });
     } else {
-      console.log("resp", response);
       const usuario = {
         RegisterOption: "Facebook",
         AccessToken: response.accessToken,
@@ -30,8 +29,11 @@ function Facebook(props) {
         LastName: "",
         PhotoUrl: response.picture.data.url,
       };
+      console.log("0");
       externalLogin(usuario, dispatch).then((response) => {
+        console.log("1");
         if (response.status === 200) {
+          console.log("2", response);
           dispatch({
             type: "OPEN_SNACKBAR",
             openMensaje: {
@@ -40,8 +42,8 @@ function Facebook(props) {
             },
           });
           props.onClose();
-          window.history.pushState(null, null, "/");
         } else {
+          console.log("3", response);
           dispatch({
             type: "OPEN_SNACKBAR",
             openMensaje: {
