@@ -103,26 +103,25 @@ export const changeImg = (file, usuario, dispatch) => {
   });
 };
 
-// export const obtenerUsuarioActual = (id) => {
-//   return new Promise((resolve, eject) => {
-//     HttpClient.get(`/users/${id}/detailed`)
-//       .then((response) => {
-//         console.log(response);
-//         // dispatch({
-//         //   type: "INICIAR_SESION",
-//         //   sesion: response.data.rolsAssigned[0].user,
-//         //   autenticado: true,
-//         // });
-//         // window.localStorage.setItem(
-//         //   "id",
-//         //   response.data.rolsAssigned[0].user.id
-//         // );
-//         // window.localStorage.setItem("token_seguridad", response.data.token);
-//         // console.log(response);
-//       })
-//       .catch((error) => {
-//         console.log(error.response);
-//         resolve(error.response);
-//       });
-//   });
-// };
+export const obtenerUsuarioActual = (id, dispatch) => {
+  return new Promise((resolve, eject) => {
+    HttpClient.get(`/users/${id}/detailed`)
+      .then((response) => {
+        dispatch({
+          type: "INICIAR_SESION",
+          sesion: response.data.userToReturn,
+          autenticado: true,
+        });
+        // window.localStorage.setItem(
+        //   "id",
+        //   response.data.rolsAssigned[0].user.id
+        // );
+        // window.localStorage.setItem("token_seguridad", response.data.token);
+        resolve(response);
+      })
+      .catch((error) => {
+        console.log(error.response);
+        resolve(error.response);
+      });
+  });
+};

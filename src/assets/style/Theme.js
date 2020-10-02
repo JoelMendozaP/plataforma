@@ -1,17 +1,20 @@
 import React, { Component } from "react";
 import GlobalStyle from "./GlobalStyle";
 import App from "../../App";
-
 class theme extends Component {
-  state = {
-    color: {
-      primary: "#723489",
-      secondary: "#F509B4",
-      text: "#ffffff",
-      backgroundSecondary: "#23232e",
-      background: "#F509B4",
-    },
-  };
+  constructor() {
+    super();
+    this.state = {
+      color: {
+        primary: "#723489",
+        secondary: "#F509B4",
+        text: "#ffffff",
+        backgroundSecondary: "#23232e",
+        background: "#F509B4",
+      },
+    };
+  }
+
   onChangeHeader = (e) => {
     this.setState({
       color: {
