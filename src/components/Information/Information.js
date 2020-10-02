@@ -1,10 +1,10 @@
 import React from "react";
 // import Prueba from "../Prueba";
-import Chats from "./Chats";
+// import Chats from "./Chats";
 import "./Information.css";
 import { useStateValue } from "../../services/context/store";
 // import { useTranslation } from "react-i18next";
-
+import Category from "./Category";
 function Information(props) {
   const [{ informationR }] = useStateValue();
   // const { t } = useTranslation("infoT");
@@ -15,10 +15,10 @@ function Information(props) {
   //     <Prueba />
   //   </React.Fragment>
   // );
-  const chat = <Chats />;
+  const category = <Category />;
   return (
     <div className="itemInformation">
-      {informationR ? informationR.information : chat}
+      {informationR ? informationR.information : category}
     </div>
   );
 }

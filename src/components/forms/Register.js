@@ -21,7 +21,6 @@ function Register(props) {
     e.preventDefault();
     registerUser(usuario, dispatch).then((response) => {
       console.log("Se registro exitosamente", response);
-      window.localStorage.setItem("token_seguridad", response.data.token);
       props.onClose();
     });
   };

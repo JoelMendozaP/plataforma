@@ -1,0 +1,26 @@
+.Courses__Title {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.Courses__category {
+  text-align: start;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.Courses__cards {
+  margin: 10px 20px;
+  display: flex;
+  overflow: auto;
+}
+.Courses__cards::-webkit-scrollbar {
+  height: 0.5rem;
+}
+.Courses__cards::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 50px;
+  margin: 30px 0;
+}
+.Courses__cards::-webkit-scrollbar-thumb {
+  background: #dbd0db;
+}

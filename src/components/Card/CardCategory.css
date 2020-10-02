@@ -1,0 +1,29 @@
+.CardCategory {
+  border: solid 2px var(--primary);
+  margin: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  height: 60px;
+}
+.CardCategory__Text {
+  margin-left: 10px;
+  font-size: 16px;
+  text-align: start;
+  color: #000;
+}
+.CardCategory__Name {
+  font-size: 20px;
+  color: var(--primary);
+  margin: 5px 0;
+}
+.CardCategory__Icon {
+  background-color: var(--primary);
+  border-radius: 0 10px 10px 0;
+  width: 50px;
+  cursor: pointer;
+}
+.CardCategory__Icon i {
+  color: white;
+  line-height: 60px;
+}

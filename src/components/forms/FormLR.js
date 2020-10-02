@@ -56,8 +56,8 @@ function FormLR(props) {
         </div>
         <div className="LoginForm__fg">
           <span className="form__span">{t("lrRegistro")}:</span>
-          <Facebook />
-          <Google />
+          <Facebook isOpen={props.isOpen} onClose={props.onClose} />
+          <Google isOpen={props.isOpen} onClose={props.onClose} />
         </div>
         <div className="LoginForm__change">{t("lrNotCount")}</div>
       </React.Fragment>

@@ -7,11 +7,22 @@ import { I18nextProvider } from "react-i18next";
 import { initialState } from "./services/context/initialState";
 import { StateProvider } from "./services/context/store";
 import { mainReducer } from "./services/context/reducer/index";
-
+// import { obtenerUsuarioActual } from "./services/actions/UsuarioAction";
 const container = document.getElementById("root");
+
+// function logToken() {
+//   const idLs = window.localStorage.getItem("id");
+//   if (idLs) {
+//     obtenerUsuarioActual(idLs).then((response) => {
+//       console.log("Se inicio", response);
+//     });
+//   }
+// }
+
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={mainReducer}>
+      {/* {logToken()} */}
       <I18nextProvider i18n={i18n}>
         <Theme />
       </I18nextProvider>

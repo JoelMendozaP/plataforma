@@ -1,58 +1,76 @@
-import React, { Component } from "react";
+import React from "react";
 import FacebookLogin from "react-facebook-login";
 import "./style/Facebook.css";
-// import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
+import { useStateValue } from "../../services/context/store";
+import { externalLogin } from "../../services/actions/UsuarioAction";
 
-class facebook extends Component {
-  state = {
-    isLoggedIn: false,
-    userID: "",
-    name: "",
-    email: "",
-    urlImage: "",
-  };
-  responseFacebook = (response) => {
-    console.log(response);
-    this.setState({
-      isLoggedIn: true,
-      userID: response.userID,
-      name: response.name,
-      email: response.email,
-      // urlImage: response.picture.data.url,
-    });
-  };
+function Facebook(props) {
+  const [{ sesionUsuario }, dispatch] = useStateValue();
 
-  componentClicked = () => console.log("clicked");
-
-  render() {
-    let fbButton = (
-      <span>
-        Facebook<i className="fab fa-facebook-f"></i>
-      </span>
-    );
-    let fbContent;
-    if (this.state.isLoggedIn) {
-      fbContent = (
-        <div>
-          <img srec={this.state.urlImage} alt={this.state.name} />
-          <h2>Bienvenido {this.state.name}</h2>
-          Email: {this.state.email}
-        </div>
-      );
+  const responseFacebook = (response) => {
+    if (!response.accessToken) {
+      console.log("falla", response);
+      dispatch({
+        type: "OPEN_SNACKBAR",
+        openMensaje: {
+          open: true,
+          message: "Error al ingresar",
+        },
+      });
     } else {
-      fbContent = (
-        <FacebookLogin
-          appId="1026030154520877"
-          autoLoad={false}
-          fields="name,email,picture"
-          callback={this.responseFacebook}
-          cssClass="btnFacebook"
-          textButton={fbButton}
-        />
-      );
+      console.log("resp", response);
+      const usuario = {
+        RegisterOption: "Facebook",
+        AccessToken: response.accessToken,
+        UserID: response.id,
+        ExpiresIn: response.expiresIn,
+        ReauthorizeRequiredIn: "",
+        Email: response.email,
+        FirstName: response.name,
+        LastName: "",
+        PhotoUrl: response.picture.data.url,
+      };
+      externalLogin(usuario, dispatch).then((response) => {
+        if (response.status === 200) {
+          dispatch({
+            type: "OPEN_SNACKBAR",
+            openMensaje: {
+              open: true,
+              message: "Login Exitoso",
+            },
+          });
+          props.onClose();
+          window.history.pushState(null, null, "/");
+        } else {
+          dispatch({
+            type: "OPEN_SNACKBAR",
+            openMensaje: {
+              open: true,
+              message: "Error al guardar",
+            },
+          });
+        }
+      });
     }
-    return <div>{fbContent}</div>;
-  }
+  };
+  let fbButton = (
+    <span>
+      Facebook<i className="fab fa-facebook-f"></i>
+    </span>
+  );
+  return (
+    <React.Fragment>
+      <br />
+      <FacebookLogin
+        appId="1026030154520877"
+        autoLoad={false}
+        fields="name,email,picture"
+        callback={responseFacebook}
+        cssClass="btnFacebook"
+        textButton={fbButton}
+      />
+    </React.Fragment>
+  );
 }
 
-export default facebook;
+export default Facebook;

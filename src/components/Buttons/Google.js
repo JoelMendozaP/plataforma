@@ -1,67 +1,71 @@
-import React, { Component } from "react";
+import React from "react";
 import GoogleLogin from "react-google-login";
+import { useStateValue } from "../../services/context/store";
+import { externalLogin } from "../../services/actions/UsuarioAction";
 import "./style/Google.css";
-class Google extends Component {
-  state = {
-    isLoggedIn: false,
-    userID: "",
-    name: "",
-    email: "",
-    urlImage: "",
-  };
-  responseGoogle = (response) => {
-    console.log(response);
-    console.log(response.profileObj);
-    this.setState({
-      isLoggedIn: true,
-      userID: response.profileObj.googleId,
-      name: response.profileObj.name + response.profileObj.familyName,
-      email: response.profileObj.email,
-      urlImage: response.profileObj.imageUrl,
+function Google(props) {
+  const [{ sesionUsuario }, dispatch] = useStateValue();
+  const responseGooglef = (response) => {
+    console.log("falla", response);
+    dispatch({
+      type: "OPEN_SNACKBAR",
+      openMensaje: {
+        open: true,
+        message: "Error al ingresar",
+      },
     });
   };
+  const responseGoogle = (response) => {
+    const usuario = {
+      RegisterOption: "Google",
+      AccessToken: response.accessToken,
+      UserID: response.googleId,
+      ExpiresIn: response.tokenObj.expires_in,
+      ReauthorizeRequiredIn: "",
+      Email: response.profileObj.email,
+      FirstName: response.profileObj.givenName,
+      LastName: response.profileObj.familyName,
+      PhotoUrl: response.profileObj.imageUrl,
+    };
 
-  render() {
-    let googleContent;
-    if (this.state.isLoggedIn) {
-      googleContent = (
-        <div>
-          <img srec={this.state.urlImage} alt={this.state.name} />
-          <h2>Bienvenido {this.state.name}</h2>
-          Email: {this.state.email}
-        </div>
-      );
-    } else {
-      googleContent = (
-        <GoogleLogin
-          clientId="510643267486-phub6ol9cpq7lq01nacs8sft7kj5d0mt.apps.googleusercontent.com"
-          render={(renderProps) => (
-            <button
-              className="btnGoogle"
-              onClick={renderProps.onClick}
-              disabled={renderProps.disabled}
-            >
-              Google
-              <i className="fab fa-google"></i>
-            </button>
-          )}
-          buttonText="Google"
-          onSuccess={this.responseGoogle}
-          onFailure={this.responseGoogle}
-          cookiePolicy={"single_host_origin"}
-        />
-
-        // <GoogleLogin
-        //   clientId="510643267486-phub6ol9cpq7lq01nacs8sft7kj5d0mt.apps.googleusercontent.com"
-        //   buttonText="Google"
-        //   onSuccess={this.responseGoogle}
-        //   onFailure={this.responseGoogle}
-        //   // cookiePolicy={"single_host_origin"}
-        //   cookiePolicy="none"
-        // />
-      );
-    }
-    return <div>{googleContent}</div>;
-  }
+    externalLogin(usuario, dispatch).then((response) => {
+      console.log("data", response);
+      if (response.status === 200) {
+        dispatch({
+          type: "OPEN_SNACKBAR",
+          openMensaje: {
+            open: true,
+            message: "Login Exitoso",
+          },
+        });
+        window.history.pushState(null, null, "/");
+        props.onClose();
+      } else {
+        dispatch({
+          type: "OPEN_SNACKBAR",
+          openMensaje: {
+            open: true,
+            message: "Error al guardar",
+          },
+        });
+      }
+    });
+  };
+  return (
+    <GoogleLogin
+      clientId="510643267486-phub6ol9cpq7lq01nacs8sft7kj5d0mt.apps.googleusercontent.com"
+      render={(renderProps) => (
+        <button className="btnGoogle" onClick={renderProps.onClick}>
+          Google
+          <i className="fab fa-google"></i>
+          {sesionUsuario ? sesionUsuario.usuario.FirstName : null}
+        </button>
+      )}
+      buttonText="Google"
+      onSuccess={responseGoogle}
+      onFailure={responseGooglef}
+      cookiePolicy={"single_host_origin"}
+    />
+  );
 }
 export default Google;

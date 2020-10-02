@@ -15,8 +15,9 @@ export const registerUser = (usuario, dispatch) => {
           sesion: response.data.userToReturn,
           autenticado: true,
         });
-        resolve(response);
-        console.log(response.data.userToReturn);
+        console.log("action", response);
+        window.localStorage.setItem("id", response.data.userToReturn.id);
+        window.localStorage.setItem("token_seguridad", response.data.token);
       })
       .catch((error) => {
         resolve(error.response);
@@ -35,11 +36,53 @@ export const loginUsuario = (usuario, dispatch) => {
           sesion: response.data.rolsAssigned[0].user,
           autenticado: true,
         });
-        resolve(response);
-        console.log("logueado", response.data.rolsAssigned[0].user);
+        window.localStorage.setItem(
+          "id",
+          response.data.rolsAssigned[0].user.id
+        );
+        window.localStorage.setItem("token_seguridad", response.data.token);
+        console.log(response);
       })
       .catch((error) => {
         console.log(error.response);
+        resolve(error.response);
+      });
+  });
+};
+
+export const externalLogin = (usuario, dispatch) => {
+  return new Promise((resolve, eject) => {
+    instancia
+      .post("/auth/registerExternalLogin", usuario)
+      .then((response) => {
+        dispatch({
+          type: "INICIAR_SESION",
+          sesion: response.data.rolsAssigned[0].user,
+          autenticado: true,
+        });
+        window.localStorage.setItem(
+          "id",
+          response.data.rolsAssigned[0].user.id
+        );
+        window.localStorage.setItem("token_seguridad", response.data.token);
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error.response);
+        resolve(error.response);
+      });
+  });
+};
+
+export const changeLang = (lg, usuario) => {
+  return new Promise((resolve, eject) => {
+    HttpClient.put(`/users/${usuario.id}/language`, lg)
+      .then((response) => {
+        resolve(response);
+        console.log("then", response);
+      })
+      .catch((error) => {
+        console.log("error", error.response);
         resolve(error.response);
       });
   });
@@ -67,6 +110,26 @@ export const changeImg = (file, usuario, dispatch) => {
   });
 };
 
-// export const obtenerUsuarioActual = () => {
-//   return new Promise((resolve, eject) => {});
+// export const obtenerUsuarioActual = (id) => {
+//   return new Promise((resolve, eject) => {
+//     HttpClient.get(`/users/${id}/detailed`)
+//       .then((response) => {
+//         console.log(response);
+//         // dispatch({
+//         //   type: "INICIAR_SESION",
+//         //   sesion: response.data.rolsAssigned[0].user,
+//         //   autenticado: true,
+//         // });
+//         // window.localStorage.setItem(
+//         //   "id",
+//         //   response.data.rolsAssigned[0].user.id
+//         // );
+//         // window.localStorage.setItem("token_seguridad", response.data.token);
+//         // console.log(response);
+//       })
+//       .catch((error) => {
+//         console.log(error.response);
+//         resolve(error.response);
+//       });
+//   });
 // };

@@ -18,6 +18,7 @@ function ButtonModalS(props) {
       nuevoUsuario: {},
     });
     localStorage.removeItem("token_seguridad");
+    localStorage.removeItem("id");
   }
   function ChangeInfo() {
     dispatch({ data: <Chats /> });

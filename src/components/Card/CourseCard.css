@@ -1,0 +1,50 @@
+.CourseCard {
+  margin: 0 10px;
+  border: solid 2px #fa98de;
+  border-radius: 20px;
+  padding: 10px;
+}
+.CourseCard__header {
+  display: flex;
+  margin-bottom: 8px;
+  color: var(--secondary);
+  font-weight: bolder;
+}
+.CourseCard__title {
+  text-align: start;
+  color: var(--primary);
+}
+.CourseCard__video {
+  background: #fa98de;
+  /* border: solid 2px #fa98de; */
+  width: 200px;
+  height: 100px;
+  margin-bottom: 8px;
+  text-align: center;
+  border-radius: 20px;
+}
+.CourseCard__video i {
+  font-size: 30px;
+  line-height: 100px;
+}
+.CourseCard__info {
+  display: flex;
+  margin-bottom: 8px;
+  justify-content: space-around;
+  font-size: small;
+}
+.CourseCard__IconStar i {
+  color: #f58f09;
+}
+.CourseCard__IconFriends i {
+  color: var(--secondary);
+}
+.CourseCard__btn button {
+  width: 70%;
+  border-radius: 10px;
+  text-decoration: none;
+  background: linear-gradient(var(--secondary), #405267);
+  color: var(--text);
+  border: none;
+  padding: 6px 15px;
+}

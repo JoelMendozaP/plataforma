@@ -10,8 +10,7 @@ export const initialState = {
     gender: "",
     direction: "",
     postalCode: "",
-    photoUrl:
-      "http://res.cloudinary.com/dzxmzxvbr/image/upload/v1600562164/efy753hepqannfxshyag.png",
+    photoUrl: "",
   },
   autenticado: false,
 };
