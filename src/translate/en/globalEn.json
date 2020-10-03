@@ -4,65 +4,65 @@
     "HelloEvery": "Español"
   },
   "header": {
-    "welcomeHead": "Bienvenido",
-    "searchHead": "Buscar...",
-    "enterHead": "Ingresar"
+    "welcomeHead": "Welcome",
+    "searchHead": "Search...",
+    "enterHead": "Log in"
   },
   "language": {
-    "deLanguage": "Aleman",
-    "enLanguage": "Ingles",
-    "esLanguage": "Español",
-    "frLanguage": "frances"
+    "deLanguage": "German",
+    "enLanguage": "English",
+    "esLanguage": "Spanish",
+    "frLanguage": "French"
   },
   "sidebarT": {
-    "sidInicio": "Inicio",
-    "sidCursos": "Cursos",
-    "sidCalendario": "Calendario",
-    "sidCuenta": "Cuenta",
-    "sidPreguntas": "Preguntas"
+    "sidInicio": "Start",
+    "sidCursos": "Courses",
+    "sidCalendario": "Calendar",
+    "sidCuenta": "Account",
+    "sidPreguntas": "Questions"
   },
   "infoT": {
     "infCategories": "Categories"
   },
   "formLR": {
-    "lrIniciar": "Iniciar Sesion",
-    "lrRegistro": "Registro",
-    "lrIniGF": "Iniciar Sesion Usando",
-    "lrNotCount": "No tienes cuenta Registrate"
+    "lrIniciar": "Log in",
+    "lrRegistro": "Register",
+    "lrIniGF": "Start sesion with",
+    "lrNotCount": "No account registered"
   },
   "loginF": {
-    "lgIniciar": "Iniciar Sesion",
-    "lgUsC": "Usuario o correo",
-    "lgPass": "Contraseña",
-    "lgForget": "¿Olvidaste tu"
+    "lgIniciar": "Log in",
+    "lgUsC": "User or email",
+    "lgPass": "Password",
+    "lgForget": "Forgot your"
   },
   "account": {
-    "acPerfil": "Perfil de Usuario",
-    "acEdit": "Editar Perfil",
-    "acChange": "Cambiar Foto",
-    "acUser": "Usuario",
-    "acName": "Nombre Completo",
-    "acEmail": "Correo",
-    "acPhone": "Ceular"
+    "acPerfil": "User profile",
+    "acEdit": "Edit profile",
+    "acChange": "Change photo",
+    "acUser": "User",
+    "acName": "Complete name",
+    "acEmail": "Email",
+    "acPhone": "Phone number"
   },
   "editPerfil": {
-    "epEditar": "Editar",
-    "epDataU": "Datos de Usuario",
-    "epUsr": "Usuario",
-    "epName": "Nombre",
-    "epLastN": "Apellido",
-    "epEmail": "Correo",
-    "epPhone": "Telefono",
-    "epDate": "Fecha de Nacimiento",
-    "epGener": "Genero",
-    "epDirection": "Direccion",
-    "epCodeP": "Codigo Postal",
-    "epSave": "Guardar datos",
-    "epCancel": "Cancelar"
+    "epEditar": "Edit",
+    "epDataU": "User data",
+    "epUsr": "User",
+    "epName": "Name",
+    "epLastN": "Last name",
+    "epEmail": "Email",
+    "epPhone": "Phone number",
+    "epDate": "Date of birth",
+    "epGener": "Gender",
+    "epDirection": "Address",
+    "epCodeP": "Postal code",
+    "epSave": "Save changes",
+    "epCancel": "Cancel"
   },
   "ChangeImg": {
-    "ciChange": "Cambia foto de perfil",
-    "ciSelect": "Escoger imagen",
-    "ciSave": "Guardar Cambios"
+    "ciChange": "Change profile photo",
+    "ciSelect": "Select image",
+    "ciSave": "Save changes"
   }
 }

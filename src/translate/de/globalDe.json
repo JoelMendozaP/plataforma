@@ -4,65 +4,65 @@
     "HelloEvery": "Español"
   },
   "header": {
-    "welcomeHead": "Bienvenido",
-    "searchHead": "Buscar...",
-    "enterHead": "Ingresar"
+    "welcomeHead": "Willkommen",
+    "searchHead": "Suche...",
+    "enterHead": "Eingeben"
   },
   "language": {
-    "deLanguage": "Aleman",
-    "enLanguage": "Ingles",
-    "esLanguage": "Español",
-    "frLanguage": "frances"
+    "deLanguage": "Deutsch",
+    "enLanguage": "Englisch",
+    "esLanguage": "Spanisch",
+    "frLanguage": "Französisch"
   },
   "sidebarT": {
-    "sidInicio": "Inicio",
-    "sidCursos": "Cursos",
-    "sidCalendario": "Calendario",
-    "sidCuenta": "Cuenta",
-    "sidPreguntas": "Preguntas"
+    "sidInicio": "Heimat",
+    "sidCursos": "Kurse",
+    "sidCalendario": "Kalender",
+    "sidCuenta": "Konto",
+    "sidPreguntas": "Fragen"
   },
   "infoT": {
-    "infCategories": "Categories"
+    "infCategories": "Kategorien"
   },
   "formLR": {
-    "lrIniciar": "Iniciar Sesion",
-    "lrRegistro": "Registro",
-    "lrIniGF": "Iniciar Sesion Usando",
-    "lrNotCount": "No tienes cuenta Registrate"
+    "lrIniciar": "Anmeldung",
+    "lrRegistro": "Registrierung",
+    "lrIniGF": "Anmeldung über",
+    "lrNotCount": "Sie haben kein registriertes Konto"
   },
   "loginF": {
-    "lgIniciar": "Iniciar Sesion",
-    "lgUsC": "Usuario o correo",
-    "lgPass": "Contraseña",
-    "lgForget": "¿Olvidaste tu"
+    "lgIniciar": "Anmeldung",
+    "lgUsC": "Benutzer oder E-Mail",
+    "lgPass": "Kennwort",
+    "lgForget": "Haben Sie Ihre"
   },
   "account": {
-    "acPerfil": "Perfil de Usuario",
-    "acEdit": "Editar Perfil",
-    "acChange": "Cambiar Foto",
-    "acUser": "Usuario",
-    "acName": "Nombre Completo",
-    "acEmail": "Correo",
-    "acPhone": "Ceular"
+    "acPerfil": "Benutzerprofil",
+    "acEdit": "Profil bearbeiten",
+    "acChange": "Foto ändern",
+    "acUser": "Benutzer",
+    "acName": "Vollständiger Name",
+    "acEmail": "Post",
+    "acPhone": "Zellular"
   },
   "editPerfil": {
-    "epEditar": "Editar",
-    "epDataU": "Datos de Usuario",
-    "epUsr": "Usuario",
-    "epName": "Nombre",
-    "epLastN": "Apellido",
-    "epEmail": "Correo",
-    "epPhone": "Telefono",
-    "epDate": "Fecha de Nacimiento",
-    "epGener": "Genero",
-    "epDirection": "Direccion",
-    "epCodeP": "Codigo Postal",
-    "epSave": "Guardar datos",
-    "epCancel": "Cancelar"
+    "epEditar": "Bearbeiten",
+    "epDataU": "Benutzerdaten",
+    "epUsr": "Benutzer",
+    "epName": "Name",
+    "epLastN": "Nachname",
+    "epEmail": "Post",
+    "epPhone": "Telefon",
+    "epDate": "Geburtsdatum",
+    "epGener": "Geschlecht",
+    "epDirection": "Anschrift",
+    "epCodeP": "Postleitzahl",
+    "epSave": "Daten speichern",
+    "epCancel": "Abbrechen"
   },
   "ChangeImg": {
-    "ciChange": "Cambia foto de perfil",
-    "ciSelect": "Escoger imagen",
-    "ciSave": "Guardar Cambios"
+    "ciChange": "Profilbild ändern",
+    "ciSelect": "Bild auswählen",
+    "ciSave": "Änderungen speichern"
   }
 }
