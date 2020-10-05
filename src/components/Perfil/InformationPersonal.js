@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./InformationPersonal.css";
 function InformationPersonal(props) {
   return (
     <div className="InfPersonal">

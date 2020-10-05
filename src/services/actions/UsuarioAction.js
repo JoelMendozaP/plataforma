@@ -112,11 +112,6 @@ export const obtenerUsuarioActual = (id, dispatch) => {
           sesion: response.data.userToReturn,
           autenticado: true,
         });
-        // window.localStorage.setItem(
-        //   "id",
-        //   response.data.rolsAssigned[0].user.id
-        // );
-        // window.localStorage.setItem("token_seguridad", response.data.token);
         resolve(response);
       })
       .catch((error) => {

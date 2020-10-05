@@ -2,6 +2,7 @@ import Perfil from "../../Perfil/Perfil";
 import EditPerfil from "../../Perfil/EditPerfil";
 import InformationPersonal from "../../Perfil/InformationPersonal";
 import React, { useState } from "react";
+import Preference from "../../Perfil/Preference";
 import { useStateValue } from "../../../services/context/store";
 import { useTranslation } from "react-i18next";
 import "./Account.css";
@@ -56,11 +57,12 @@ function Account(props) {
       <div className="Account__perfil">
         <Perfil user={usuario} />
       </div>
-      foto:{" "}
-      {sesionUsuario ? validar(sesionUsuario.usuario.photoUrl) : "no data"}
+      Informacion Personal
       <div className="Account__data">
         <InformationPersonal user={usuario} />
       </div>
+      Preferencias de Cuenta
+      <Preference />
     </React.Fragment>
   );
 }

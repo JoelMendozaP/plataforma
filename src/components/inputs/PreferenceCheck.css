@@ -1,0 +1,62 @@
+.checkP {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px rgb(216, 216, 216);
+  margin: 8px 0;
+  border-radius: 10px;
+  padding: 4px 10px 0 10px;
+  color: var(--primary);
+  font-size: 16px;
+  /* background: red; */
+}
+.checkP__span {
+  margin-top: 6px;
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 60px;
+  height: 25px;
+  background: #d57272;
+  -webkit-appearance: none;
+  border-radius: 20px;
+  outline: none;
+  transition: 0.4s;
+  /* box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+  cursor: pointer;
+}
+input:checked[type="checkbox"] {
+  background: #60bb6f;
+}
+input[type="checkbox"]::before {
+  z-index: 0;
+  position: absolute;
+  content: "";
+  left: 0;
+  margin: 2px 0 0 2px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transform: scale(1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+input:checked[type="checkbox"]::before {
+  left: 35px;
+}
+.checkP__toggle {
+  position: relative;
+  display: inline;
+}
+.checkP__toggle label {
+  position: absolute;
+  color: #fff;
+  pointer-events: none;
+}
+.onbtn {
+  bottom: 10px;
+  left: 8px;
+}
+.ofbtn {
+  bottom: 10px;
+  right: 8px;
+}
