@@ -3,6 +3,7 @@ import EditPerfil from "../../Perfil/EditPerfil";
 import InformationPersonal from "../../Perfil/InformationPersonal";
 import React, { useState } from "react";
 import Preference from "../../Perfil/Preference";
+import ChangePassword from "../../Perfil/ChangePassword";
 import { useStateValue } from "../../../services/context/store";
 import { useTranslation } from "react-i18next";
 import "./Account.css";
@@ -40,9 +41,14 @@ function Account(props) {
     }));
   };
 
+  // function toCallE() {
+  //   dispatch({
+  //     data: <EditPerfil user={usuario} handleChange={handleChange} />,
+  //   });
+  // }
   function toCall() {
     dispatch({
-      data: <EditPerfil user={usuario} handleChange={handleChange} />,
+      data: <ChangePassword user={usuario.email} handleChange={handleChange} />,
     });
   }
 

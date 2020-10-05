@@ -103,6 +103,18 @@ export const changeImg = (file, usuario, dispatch) => {
   });
 };
 
+export const changePassword = (id, body) => {
+  return new Promise((resolve, eject) => {
+    HttpClient.put(`/users/${id}/changepassword`, body)
+      .then((response) => {
+        resolve(response);
+      })
+      .catch((error) => {
+        resolve(error.response);
+      });
+  });
+};
+
 export const obtenerUsuarioActual = (id, dispatch) => {
   return new Promise((resolve, eject) => {
     HttpClient.get(`/users/${id}/detailed`)
