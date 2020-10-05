@@ -1,7 +1,7 @@
 .containerGrid {
   height: 100vh;
   display: grid;
-  grid-template: 100px 1fr / 80px 1fr 1fr 400px;
+  grid-template: 100px 1fr / 80px 1fr 1fr 1fr;
   grid-template-areas:
     "Sidebar Navbar Navbar Navbar"
     "Sidebar Conten Conten Inf";

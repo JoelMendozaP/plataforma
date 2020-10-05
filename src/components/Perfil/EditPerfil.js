@@ -112,7 +112,12 @@ function EditPerfil(props) {
         </div>
         <div className="EditPerfil__btn">
           <button className="EditPerfil__btnG">{t("epSave")}</button>
-          <button className="EditPerfil__btnC">{t("epCancel")}</button>
+          <button
+            onClick={() => window.location.reload()}
+            className="EditPerfil__btnC"
+          >
+            {t("epCancel")}
+          </button>
         </div>
       </form>
     </div>

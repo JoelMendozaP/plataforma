@@ -64,5 +64,22 @@
     "ciChange": "Cambia foto de perfil",
     "ciSelect": "Escoger imagen",
     "ciSave": "Guardar Cambios"
+  },
+
+  "Preference": {
+    "activeNotificationNewCourse": "Notificarme de nuevos cursos",
+    "activeNotificationCourseUpdate": "Notificar cursos actilizados",
+    "activeNotificationFreeCourse": "Notificarme de cursos gratis",
+    "activeNotificationChat": "Notificación de Chat",
+    "activeNotificationCertificate": "Notificación de Certificado",
+
+    "activeEmailNewCourse": "Notificar nuevos cursos",
+    "activeEmailCourseUpdate": "Notificar cursos actilizados",
+    "activeEmailFreeCourse": "Notificar cursos gratis",
+    "activeEmailChat": "Notificarme de actividad del chat",
+    "activeEmailCertificate": "Notificar mis Certificados",
+
+    "activeChat": "Recibir mensajes al chat",
+    "sesionTimeLogout": "Tiempo máximo de sesion"
   }
 }

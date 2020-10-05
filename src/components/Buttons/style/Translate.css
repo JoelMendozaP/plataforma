@@ -1,4 +1,4 @@
-select {
+.selectTranslate select {
   outline: 0;
   background: var(--primary);
   border: none;

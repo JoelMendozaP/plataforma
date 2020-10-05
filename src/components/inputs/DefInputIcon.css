@@ -1,0 +1,21 @@
+.DefInputIcon__div {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 5px 0;
+  margin: 15px 0;
+  border-bottom: 1px solid var(--secondary);
+}
+.DefInputIcon__div i {
+  width: 26px;
+  float: right;
+  color: var(--secondary);
+  filter: grayscale(20%) opacity(1);
+}
+.DefInputIcon__div .DefInputIcon__input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 15px;
+  width: 82%;
+}

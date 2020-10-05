@@ -19,7 +19,6 @@ function Perfil(props) {
   return (
     <div className="Perfil">
       <div className="Perfil__photo">
-        {/* <img className="Perfil__photoImg" src={props.user.photoUrl} alt="" /> */}
         <div
           style={{
             backgroundImage: sesionUsuario
