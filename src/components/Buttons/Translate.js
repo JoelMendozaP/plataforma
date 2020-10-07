@@ -10,11 +10,11 @@ function Translate() {
   const [locale, setLocale] = useState("es");
 
   useEffect(() => {
-    var lang = "es";
     if (sesionUsuario && sesionUsuario.usuario.language) {
-      lang = sesionUsuario.usuario.language.code;
+      var lang = sesionUsuario.usuario.language.code;
+      setLocale(lang);
+      i18n.changeLanguage(lang);
     }
-    setLocale(lang);
   }, [sesionUsuario]);
 
   const handleChangeLocale = (lan) => {
