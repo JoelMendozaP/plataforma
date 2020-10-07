@@ -5,16 +5,11 @@ const instancia = axios.create();
 instancia.CancelToken = axios.CancelToken;
 instancia.isCancel = axios.isCancel;
 
-export const registerUser = (usuario, dispatch) => {
+export const registerUser = (usuario) => {
   return new Promise((resolve, eject) => {
     instancia
       .post("/auth/register", usuario)
       .then((response) => {
-        dispatch({
-          type: "INICIAR_SESION",
-          sesion: response.data.userToReturn,
-          autenticado: true,
-        });
         window.localStorage.setItem("id", response.data.userToReturn.id);
         window.localStorage.setItem("token_seguridad", response.data.token);
         resolve(response);
@@ -25,16 +20,11 @@ export const registerUser = (usuario, dispatch) => {
   });
 };
 
-export const loginUsuario = (usuario, dispatch) => {
+export const loginUsuario = (usuario) => {
   return new Promise((resolve, eject) => {
     instancia
       .post("/auth/login", usuario)
       .then((response) => {
-        dispatch({
-          type: "INICIAR_SESION",
-          sesion: response.data.user,
-          autenticado: true,
-        });
         window.localStorage.setItem("id", response.data.user.id);
         window.localStorage.setItem("token_seguridad", response.data.token);
         resolve(response);

@@ -4,43 +4,66 @@ import { loginUsuario } from "../../services/actions/UsuarioAction";
 import { useStateValue } from "../../services/context/store";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Loading from "../animation/Loading";
 
 function Login(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const { t } = useTranslation("loginF");
-  const [usuario, setUsuario] = useState({
+  const [view, setView] = useState({
+    load: true,
+  });
+
+  const [user, setUser] = useState({
     UsernameOrEmail: "",
     password: "",
   });
-  const handleChange1 = (e) => {
+
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setUsuario((anterior) => ({
+    setUser((anterior) => ({
       ...anterior,
       [name]: value,
     }));
   };
-  const loginUsuarioButton = (e) => {
-    loginUsuario(usuario, dispatch).then((response) => {
-      if (response.status === 200) {
-        dispatch({
-          type: "OPEN_SNACKBAR",
-          openMensaje: {
-            open: true,
-            message: "Login Exitoso",
-          },
-        });
-        props.onClose();
-      } else {
-        dispatch({
-          type: "OPEN_SNACKBAR",
-          openMensaje: {
-            open: true,
-            message: "Error al guardar",
-          },
-        });
-      }
-    });
-    e.preventDefault();
+  function save(res) {
+    if (res.status === 200) {
+      setView((a) => ({ ...a, load: true }));
+      dispatch({
+        type: "OPEN_SNACKBAR",
+        openMensaje: {
+          open: true,
+          message: "Login Exitoso",
+        },
+      });
+      dispatch({
+        type: "INICIAR_SESION",
+        sesion: res.data.user,
+        autenticado: true,
+      });
+      props.onClose();
+      window.history.pushState(null, null, "/");
+    } else {
+      setView((a) => ({ ...a, load: true }));
+      dispatch({
+        type: "OPEN_SNACKBAR",
+        openMensaje: {
+          open: true,
+          message: "Error al guardar",
+        },
+      });
+    }
+  }
+  const loginUsuarioButton = async () => {
+    try {
+      setView({ load: false });
+      await loginUsuario(user).then((response) => {
+        console.log(" response", response);
+        save(response);
+      });
+    } catch (e) {
+      setView(true);
+      console.log(e);
+    }
   };
 
   return (
@@ -53,8 +76,8 @@ function Login(props) {
             type="text"
             name="UsernameOrEmail"
             placeholder={t("lgUsC")}
-            value={usuario.UsernameOrEmail}
-            onChange={handleChange1}
+            value={user.UsernameOrEmail}
+            onChange={handleChange}
             required
           />
           <i className="fas fa-user"></i>
@@ -65,21 +88,24 @@ function Login(props) {
             type="password"
             name="password"
             placeholder={t("lgPass")}
-            value={usuario.password}
-            onChange={handleChange1}
+            value={user.password}
+            onChange={handleChange}
             required
           />
           <i className="fas fa-lock"></i>
         </div>
-        <Link to="/" className="form__Link" onClick={loginUsuarioButton}>
-          {t("lgIniciar")}
-        </Link>
-        <br />
-        <br />
-        <span className="forgotPassword">
-          {t("lgForget")} <Link to="/auth/recover">{t("lgPass")}</Link> ?
-        </span>
-        {sesionUsuario ? sesionUsuario.usuario.username : null}
+        {view.load ? (
+          <React.Fragment>
+            <button className="form__Link" onClick={loginUsuarioButton}>
+              {t("lgIniciar")}
+            </button>
+            <span className="forgotPassword">
+              {t("lgForget")} <Link to="/auth/recover">{t("lgPass")}</Link> ?
+            </span>
+          </React.Fragment>
+        ) : (
+          <Loading />
+        )}
       </form>
     </React.Fragment>
   );

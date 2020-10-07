@@ -1,10 +1,15 @@
-import { registerUser } from "../../services/actions/UsuarioAction";
 import React, { useState } from "react";
+import { registerUser } from "../../services/actions/UsuarioAction";
 import { useStateValue } from "../../services/context/store";
-import { Link } from "react-router-dom";
+
+import Loading from "../animation/Loading";
+
 function Register(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
-  const [usuario, setUsuario] = useState({
+  const [view, setView] = useState({
+    load: true,
+  });
+  const [user, setUser] = useState({
     username: "",
     email: "",
     password: "",
@@ -12,17 +17,51 @@ function Register(props) {
   });
   const inputhandleChange = (e) => {
     const { name, value } = e.target;
-    setUsuario((anterior) => ({
+    setUser((anterior) => ({
       ...anterior,
       [name]: value,
     }));
   };
-  const registrarUsuario = (e) => {
-    e.preventDefault();
-    registerUser(usuario, dispatch).then((response) => {
-      console.log("Se registro exitosamente", response);
+  function save(res) {
+    if (res.status === 201) {
+      setView((a) => ({ ...a, load: true }));
+      dispatch({
+        type: "OPEN_SNACKBAR",
+        openMensaje: {
+          open: true,
+          message: "Registro Exitoso",
+        },
+      });
+      dispatch({
+        type: "INICIAR_SESION",
+        sesion: res.data.userToReturn,
+        autenticado: true,
+      });
       props.onClose();
-    });
+      window.history.pushState(null, null, "/");
+    } else {
+      setView((a) => ({ ...a, load: true }));
+      dispatch({
+        type: "OPEN_SNACKBAR",
+        openMensaje: {
+          open: true,
+          message: "Error al guardar",
+        },
+      });
+    }
+  }
+
+  const registrarUsuario = async () => {
+    try {
+      setView({ load: false });
+      await registerUser(user).then((response) => {
+        console.log(" response", response);
+        save(response);
+      });
+    } catch (e) {
+      setView(true);
+      console.log(e);
+    }
   };
 
   return (
@@ -34,7 +73,7 @@ function Register(props) {
           type="text"
           name="username"
           placeholder="Usuario"
-          value={usuario.username}
+          value={user.username}
           onChange={inputhandleChange}
           required
         />
@@ -46,7 +85,7 @@ function Register(props) {
           type="email"
           name="email"
           placeholder="Correo electrónico"
-          value={usuario.email}
+          value={user.email}
           onChange={inputhandleChange}
           required
         />
@@ -58,7 +97,7 @@ function Register(props) {
           type="password"
           name="password"
           placeholder="Contraseña"
-          value={usuario.password}
+          value={user.password}
           onChange={inputhandleChange}
           required
         />
@@ -70,16 +109,19 @@ function Register(props) {
           type="password"
           name="password_confirmation"
           placeholder="Confirmar contraseña"
-          value={usuario.password_confirmation}
+          value={user.password_confirmation}
           onChange={inputhandleChange}
           required
         />
         <i className="fas fa-lock"></i>
       </div>
-      <Link to="/" className="form__Link" onClick={registrarUsuario}>
-        Crear cuenta
-      </Link>
-      {sesionUsuario ? sesionUsuario.usuario.username : null}
+      {view.load ? (
+        <button className="form__Link" onClick={registrarUsuario}>
+          Crear cuenta
+        </button>
+      ) : (
+        <Loading />
+      )}
     </form>
   );
 }
