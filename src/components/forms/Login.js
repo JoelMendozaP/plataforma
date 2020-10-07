@@ -106,6 +106,7 @@ function Login(props) {
         ) : (
           <Loading />
         )}
+        {sesionUsuario ? null : null}
       </form>
     </React.Fragment>
   );

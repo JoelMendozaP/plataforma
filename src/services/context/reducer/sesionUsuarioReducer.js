@@ -35,7 +35,14 @@ const sesionUsuarioReducer = (state = initialState, action) => {
         usuario: action.nuevoUsuario,
         autenticado: action.autenticado,
       };
-
+    case "CABIAR_IDIOMA":
+      return {
+        ...state,
+        usuario: {
+          ...state.usuario,
+          language: action.nuevoLang,
+        },
+      };
     default:
       return state;
   }
