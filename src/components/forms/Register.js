@@ -122,6 +122,7 @@ function Register(props) {
       ) : (
         <Loading />
       )}
+      {sesionUsuario ? sesionUsuario.usuario.email : null}
     </form>
   );
 }

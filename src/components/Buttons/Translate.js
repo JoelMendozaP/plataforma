@@ -15,7 +15,7 @@ function Translate() {
       setLocale(lang);
       i18n.changeLanguage(lang);
     }
-  }, [sesionUsuario]);
+  }, [sesionUsuario, i18n]);
 
   const handleChangeLocale = (lan) => {
     setLocale(lan);

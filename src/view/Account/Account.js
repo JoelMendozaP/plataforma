@@ -1,7 +1,8 @@
 import Perfil from "../../components/Perfil/Perfil";
-import EditPerfil from "../../components/Perfil/EditPerfil";
+import Prueba from "../../components/Information/Prueba";
+// import EditPerfil from "../../components/Perfil/EditPerfil";
 import InformationPersonal from "../../components/Perfil/InformationPersonal";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Preference from "../../components/Perfil/Preference";
 import ChangePassword from "../../components/Perfil/ChangePassword";
 import { useStateValue } from "../../services/context/store";
@@ -26,6 +27,13 @@ function Account(props) {
       sesionUsuario ? validar(sesionUsuario.usuario.postalCode) : ""
     }`,
   });
+  useEffect(() => {
+    dispatch({
+      type: "CHANGE_INFO",
+      data: <Prueba>Account</Prueba>,
+    });
+  }, [dispatch]);
+
   function validar(text) {
     if (text === undefined || text === null) {
       return "";
@@ -48,6 +56,7 @@ function Account(props) {
   // }
   function toCall() {
     dispatch({
+      type: "CHANGE_INFO",
       data: <ChangePassword user={usuario.email} handleChange={handleChange} />,
     });
   }

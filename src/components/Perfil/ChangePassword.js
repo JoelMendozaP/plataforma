@@ -13,7 +13,7 @@ function ChangePassword(props) {
       ConfNewPassword: "Campo obligatorio",
     },
   });
-  const [confirm, setConfirm] = useState("");
+  // const [confirm, setConfirm] = useState("");
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData((a) => ({

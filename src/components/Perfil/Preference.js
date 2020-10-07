@@ -33,7 +33,7 @@ function Preference(props) {
         }
       });
     }
-  }, []);
+  }, [sesionUsuario]);
 
   const onChange = (e) => {
     if (e.target.type === "checkbox") {

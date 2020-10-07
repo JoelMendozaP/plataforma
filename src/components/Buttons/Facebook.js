@@ -66,6 +66,7 @@ function Facebook(props) {
         cssClass="btnFacebook"
         textButton={fbButton}
       />
+      {sesionUsuario ? sesionUsuario.usuario.email : null}
     </React.Fragment>
   );
 }
