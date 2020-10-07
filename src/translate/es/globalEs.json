@@ -9,10 +9,10 @@
     "enterHead": "Ingresar"
   },
   "language": {
-    "deLanguage": "Aleman",
-    "enLanguage": "Ingles",
+    "deLanguage": "Alemán",
+    "enLanguage": "Inglés",
     "esLanguage": "Español",
-    "frLanguage": "frances"
+    "frLanguage": "francés"
   },
   "sidebarT": {
     "sidInicio": "Inicio",
@@ -22,13 +22,13 @@
     "sidPreguntas": "Preguntas"
   },
   "infoT": {
-    "infCategories": "Categories"
+    "infCategories": "Categorías"
   },
   "formLR": {
     "lrIniciar": "Iniciar Sesion",
     "lrRegistro": "Registro",
     "lrIniGF": "Iniciar Sesion Usando",
-    "lrNotCount": "No tienes cuenta Registrate"
+    "lrNotCount": "No tienes cuenta Registrada"
   },
   "loginF": {
     "lgIniciar": "Iniciar Sesion",
@@ -43,7 +43,7 @@
     "acUser": "Usuario",
     "acName": "Nombre Completo",
     "acEmail": "Correo",
-    "acPhone": "Ceular"
+    "acPhone": "Celular"
   },
   "editPerfil": {
     "epEditar": "Editar",
@@ -52,11 +52,11 @@
     "epName": "Nombre",
     "epLastN": "Apellido",
     "epEmail": "Correo",
-    "epPhone": "Telefono",
+    "epPhone": "Teléfono",
     "epDate": "Fecha de Nacimiento",
-    "epGener": "Genero",
-    "epDirection": "Direccion",
-    "epCodeP": "Codigo Postal",
+    "epGener": "Género",
+    "epDirection": "Dirección",
+    "epCodeP": "Código Postal",
     "epSave": "Guardar datos",
     "epCancel": "Cancelar"
   },
