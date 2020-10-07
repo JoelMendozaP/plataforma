@@ -1,6 +1,6 @@
 import React from "react";
 import user from "../../assets/img/user.jpg";
-import "./UserChat.css";
+import "./style/UserChat.css";
 function UserChat(props) {
   //   function validar(img) {
   //     if (img === undefined || img === null) {

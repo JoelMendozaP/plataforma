@@ -3,7 +3,7 @@ import user from "../../assets/img/user.jpg";
 import { changeImg } from "../../services/actions/UsuarioAction";
 import { useTranslation } from "react-i18next";
 import { useStateValue } from "../../services/context/store";
-import "./ChangeImage.css";
+import "./style/ChangeImage.css";
 function ChangeImage(props) {
   const [imgPreview, setImgPreview] = useState(null);
   const [{ sesionUsuario }, dispatch] = useStateValue();

@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "./EditPerfil.css";
+import "./style/EditPerfil.css";
 
 function EditPerfil(props) {
   const { t } = useTranslation("editPerfil");

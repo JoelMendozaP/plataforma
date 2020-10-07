@@ -1,6 +1,6 @@
 import React from "react";
 import CardCategory from "../Card/CardCategory";
-import "./Category.css";
+import "./style/Category.css";
 function Category(props) {
   return (
     <div className="Category">

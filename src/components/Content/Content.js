@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
-// import Perfil from "../Perfil/Perfil";
-import Inicio from "./Inicio/Inicio";
-import Courses from "./Courses/Courses";
-import Calendar from "./Calendar/Calendar";
-import Account from "./Account/Account";
-import Questions from "./Questions/Questions";
-import Chat from "./Chat/Chat";
+import Inicio from "../../view/Inicio/Inicio";
+import Courses from "../../view/Courses/Courses";
+import Calendar from "../../view/Calendar/Calendar";
+import Account from "../../view/Account/Account";
+import Questions from "../../view/Questions/Questions";
+import Chat from "../../view/Chat/Chat";
 import Palette from "../Palette/Palette";
 
-import "./Content.css";
+import "./style/Content.css";
 
 class content extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import UserChat from "../Card/UserChat";
-import "./Chats.css";
+import "./style/Chats.css";
 function Chats(props) {
   return (
     <div>

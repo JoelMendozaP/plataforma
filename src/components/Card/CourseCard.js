@@ -1,5 +1,5 @@
 import React from "react";
-import "./CourseCard.css";
+import "./style/CourseCard.css";
 function CourseCard(props) {
   return (
     <div className="CourseCard">

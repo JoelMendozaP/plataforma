@@ -1,6 +1,6 @@
 import React from "react";
-import Message from "../../Card/Message";
-import user from "../../../assets/img/user.jpg";
+import Message from "../../components/Card/Message";
+import user from "../../assets/img/user.jpg";
 import "./Chat.css";
 
 function Chat(props) {

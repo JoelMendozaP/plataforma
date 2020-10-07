@@ -1,10 +1,10 @@
-import Perfil from "../../Perfil/Perfil";
-import EditPerfil from "../../Perfil/EditPerfil";
-import InformationPersonal from "../../Perfil/InformationPersonal";
+import Perfil from "../../components/Perfil/Perfil";
+import EditPerfil from "../../components/Perfil/EditPerfil";
+import InformationPersonal from "../../components/Perfil/InformationPersonal";
 import React, { useState } from "react";
-import Preference from "../../Perfil/Preference";
-import ChangePassword from "../../Perfil/ChangePassword";
-import { useStateValue } from "../../../services/context/store";
+import Preference from "../../components/Perfil/Preference";
+import ChangePassword from "../../components/Perfil/ChangePassword";
+import { useStateValue } from "../../services/context/store";
 import { useTranslation } from "react-i18next";
 import "./Account.css";
 function Account(props) {

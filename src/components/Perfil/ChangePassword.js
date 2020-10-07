@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DefInputIcon from "../inputs/DefInputIcon";
 import { changePassword } from "../../services/actions/UsuarioAction";
-import "./ChangePassword.css";
+import "./style/ChangePassword.css";
 function ChangePassword(props) {
   const [data, setData] = useState({
     CurrentPassword: "",

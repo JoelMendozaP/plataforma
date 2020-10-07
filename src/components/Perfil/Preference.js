@@ -6,7 +6,7 @@ import { changePreference } from "../../services/actions/UserPreferenceAction";
 import IntputNumber from "../inputs/IntputNumber";
 import InputSelect from "../inputs/InputSelect";
 import { useStateValue } from "../../services/context/store";
-import "./Preference.css";
+import "./style/Preference.css";
 function Preference(props) {
   const [check, setCheck] = useState([]);
   const { t } = useTranslation("Preference");

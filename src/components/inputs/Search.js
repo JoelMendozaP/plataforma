@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "./Search.css";
+import "./style/Search.css";
 function Search() {
   const { t } = useTranslation("header");
   return (

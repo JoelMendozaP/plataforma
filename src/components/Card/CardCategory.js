@@ -1,5 +1,5 @@
 import React from "react";
-import "./CardCategory.css";
+import "./style/CardCategory.css";
 function CardCategory(props) {
   return (
     <div className="CardCategory">

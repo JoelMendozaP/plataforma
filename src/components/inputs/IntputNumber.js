@@ -1,5 +1,5 @@
 import React from "react";
-import "./IntputNumber.css";
+import "./style/IntputNumber.css";
 function IntputNumber(props) {
   return (
     <div className="IntputNumber number-input">

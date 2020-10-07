@@ -1,5 +1,5 @@
 import React from "react";
-import "./PreferenceCheck.css";
+import "./style/PreferenceCheck.css";
 function PreferenceCheck(props) {
   return (
     <div className="checkP">

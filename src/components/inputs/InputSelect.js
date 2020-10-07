@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "./InputSelect.css";
+import "./style/InputSelect.css";
 function InputSelect(props) {
   const { t } = useTranslation("language");
   return (

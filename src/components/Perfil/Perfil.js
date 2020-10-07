@@ -2,7 +2,7 @@ import React from "react";
 import user from "../../assets/img/user.jpg";
 import { useStateValue } from "../../services/context/store";
 import { useTranslation } from "react-i18next";
-import "./Perfil.css";
+import "./style/Perfil.css";
 import ChangeImage from "./ChangeImage";
 function Perfil(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();

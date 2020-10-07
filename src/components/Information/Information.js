@@ -1,5 +1,5 @@
 import React from "react";
-import "./Information.css";
+import "./style/Information.css";
 import { useStateValue } from "../../services/context/store";
 import Category from "./Category";
 function Information(props) {

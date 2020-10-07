@@ -3,7 +3,7 @@ import Google from "../Buttons/Google";
 import Login from "./Login";
 import Recover from "./Recover";
 import Register from "./Register";
-import "./FormLR.css";
+import "./style/FormLR.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";

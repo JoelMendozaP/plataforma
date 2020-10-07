@@ -1,5 +1,5 @@
 import React from "react";
-import CourseCard from "../../Card/CourseCard";
+import CourseCard from "../../components/Card/CourseCard";
 import "./Inicio.css";
 
 function Inicio(props) {

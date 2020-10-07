@@ -1,5 +1,5 @@
 import React from "react";
-import "./Message.css";
+import "./style/Message.css";
 function Message(props) {
   return (
     <div className={`message ${props.typeM}`}>
