@@ -28,17 +28,17 @@ function App(props) {
     <React.Fragment>
       <div className="containerGrid">
         <BrowserRouter>
-          <Switch>
-            <Route
-              path="/"
-              render={() => (
-                <Home
-                  onChangeColor={props.onChangeColor}
-                  colorValue={props.colorValue}
-                />
-              )}
-            />
-          </Switch>
+          {/* <Switch> */}
+          <Route
+            path="/"
+            render={() => (
+              <Home
+                onChangeColor={props.onChangeColor}
+                colorValue={props.colorValue}
+              />
+            )}
+          />
+          {/* </Switch> */}
           <Navbar />
           <Sidebar />
         </BrowserRouter>

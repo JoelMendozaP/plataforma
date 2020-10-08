@@ -16,7 +16,7 @@ class content extends Component {
     return (
       <div className="itemContent">
         <Switch>
-          <Route exact path="/" component={Inicio} />
+          <Route exact path="/Home" component={Inicio} />
           <Route exact path="/Courses" component={Courses} />
           <Route exact path="/Calendar" component={Calendar} />
           <Route exact path="/Account" component={Account} />
@@ -31,6 +31,7 @@ class content extends Component {
               />
             )}
           />
+          <Route component={Inicio} />
         </Switch>
       </div>
     );
