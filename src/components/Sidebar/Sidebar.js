@@ -22,7 +22,7 @@ function Sidebar() {
         </li>
 
         <li className="nav__item">
-          <Link to="/" className="nav__link">
+          <Link to="/home" className="nav__link">
             <span className="nav__linkIcon">
               <i className="fas fa-home"></i>
             </span>

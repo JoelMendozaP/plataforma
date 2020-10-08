@@ -11,7 +11,7 @@ function Modal(props) {
     <div className="Modal">
       <div className="Modal__container">
         <Link
-          to="/"
+          to="/home"
           onClick={props.onClose}
           className="Modal__close-button cta"
         >
