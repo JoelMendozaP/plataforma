@@ -8,6 +8,12 @@ function Register(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const [view, setView] = useState({
     load: true,
+    formErrors: {
+      username: "",
+      email: "",
+      password: "",
+      password_confirmation: "",
+    },
   });
   const [user, setUser] = useState({
     username: "",
@@ -15,12 +21,38 @@ function Register(props) {
     password: "",
     password_confirmation: "",
   });
+  const emailRegex = RegExp(
+    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  );
   const inputhandleChange = (e) => {
     const { name, value } = e.target;
+    let formErrors = { ...view.formErrors };
+    switch (name) {
+      case "username":
+        formErrors.username =
+          value.length < 3 ? "minimum 3 characaters required" : "";
+        break;
+      case "email":
+        formErrors.email = emailRegex.test(value)
+          ? ""
+          : "invalid email address";
+        break;
+      case "password":
+        formErrors.password =
+          value.length < 3 ? "minimum 3 characaters required" : "";
+        break;
+      case "password_confirmation":
+        formErrors.password_confirmation =
+          value.length < 3 ? "minimum 3 characaters required" : "";
+        break;
+      default:
+        break;
+    }
     setUser((anterior) => ({
       ...anterior,
       [name]: value,
     }));
+    setView((a) => ({ ...a, formErrors }));
   };
   function save(res) {
     if (res.status === 201) {
@@ -51,13 +83,45 @@ function Register(props) {
     }
   }
 
-  const registrarUsuario = async () => {
+  const formValid = (user, formErrors) => {
+    let valid = true;
+    Object.values(formErrors).forEach((val) => {
+      val.length > 0 && (valid = false);
+    });
+    Object.values(user).forEach((val) => {
+      val === "" && (valid = false);
+    });
+    return valid;
+  };
+
+  const registrarUsuario = async (e) => {
+    e.preventDefault();
     try {
-      setView({ load: false });
-      await registerUser(user).then((response) => {
-        console.log(" response", response);
-        save(response);
-      });
+      if (user.password === user.password_confirmation) {
+        if (formValid(user, view.formErrors)) {
+          setView((a) => ({ ...a, load: false }));
+          await registerUser(user).then((response) => {
+            console.log(" response", response);
+            save(response);
+          });
+        } else {
+          dispatch({
+            type: "OPEN_SNACKBAR",
+            openMensaje: {
+              open: true,
+              message: "Llene el formulario",
+            },
+          });
+        }
+      } else {
+        dispatch({
+          type: "OPEN_SNACKBAR",
+          openMensaje: {
+            open: true,
+            message: "Las contraseñas no coinciden",
+          },
+        });
+      }
     } catch (e) {
       setView(true);
       console.log(e);
@@ -79,6 +143,9 @@ function Register(props) {
         />
         <i className="fas fa-user"></i>
       </div>
+      {view.formErrors.username.length > 0 && (
+        <span className="errorMessage">{view.formErrors.username}</span>
+      )}
       <div className="form__Input">
         <input
           className="formControl"
@@ -91,6 +158,9 @@ function Register(props) {
         />
         <i className="fas fa-envelope"></i>
       </div>
+      {view.formErrors.email.length > 0 && (
+        <span className="errorMessage">{view.formErrors.email}</span>
+      )}
       <div className="form__Input">
         <input
           className="formControl"
@@ -103,6 +173,9 @@ function Register(props) {
         />
         <i className="fas fa-lock"></i>
       </div>
+      {view.formErrors.password.length > 0 && (
+        <span className="errorMessage">{view.formErrors.password}</span>
+      )}
       <div className="form__Input">
         <input
           className="formControl"
@@ -115,6 +188,11 @@ function Register(props) {
         />
         <i className="fas fa-lock"></i>
       </div>
+      {view.formErrors.password_confirmation.length > 0 && (
+        <span className="errorMessage">
+          {view.formErrors.password_confirmation}
+        </span>
+      )}
       {view.load ? (
         <button className="form__Link" onClick={registrarUsuario}>
           Crear cuenta

@@ -11,6 +11,10 @@ function Login(props) {
   const { t } = useTranslation("loginF");
   const [view, setView] = useState({
     load: true,
+    formErrors: {
+      UsernameOrEmail: "",
+      password: "",
+    },
   });
 
   const [user, setUser] = useState({
@@ -19,11 +23,26 @@ function Login(props) {
   });
 
   const handleChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
+    let formErrors = { ...view.formErrors };
+    switch (name) {
+      case "UsernameOrEmail":
+        formErrors.UsernameOrEmail =
+          value.length < 3 ? "minimum 3 characaters required" : "";
+        break;
+      case "password":
+        formErrors.password =
+          value.length < 3 ? "minimum 3 characaters required" : "";
+        break;
+      default:
+        break;
+    }
     setUser((anterior) => ({
       ...anterior,
       [name]: value,
     }));
+    setView((a) => ({ ...a, formErrors }));
   };
   function save(res) {
     if (res.status === 200) {
@@ -53,15 +72,37 @@ function Login(props) {
       });
     }
   }
-  const loginUsuarioButton = async () => {
+  const formValid = (user, formErrors) => {
+    let valid = true;
+    Object.values(formErrors).forEach((val) => {
+      val.length > 0 && (valid = false);
+    });
+    Object.values(user).forEach((val) => {
+      val === "" && (valid = false);
+    });
+    return valid;
+  };
+
+  const loginUsuarioButton = async (e) => {
+    e.preventDefault();
     try {
-      setView({ load: false });
-      await loginUsuario(user).then((response) => {
-        console.log(" response", response);
-        save(response);
-      });
+      if (formValid(user, view.formErrors)) {
+        setView((a) => ({ ...a, load: false }));
+        await loginUsuario(user).then((response) => {
+          console.log(" response", response);
+          save(response);
+        });
+      } else {
+        dispatch({
+          type: "OPEN_SNACKBAR",
+          openMensaje: {
+            open: true,
+            message: "Llene el formulario",
+          },
+        });
+      }
     } catch (e) {
-      setView(true);
+      setView((a) => ({ ...a, load: true }));
       console.log(e);
     }
   };
@@ -82,6 +123,11 @@ function Login(props) {
           />
           <i className="fas fa-user"></i>
         </div>
+        {view.formErrors.UsernameOrEmail.length > 0 && (
+          <span className="errorMessage">
+            {view.formErrors.UsernameOrEmail}
+          </span>
+        )}
         <div className="form__Input">
           <input
             className="formControl"
@@ -94,6 +140,9 @@ function Login(props) {
           />
           <i className="fas fa-lock"></i>
         </div>
+        {view.formErrors.password.length > 0 && (
+          <span className="errorMessage">{view.formErrors.password}</span>
+        )}
         {view.load ? (
           <React.Fragment>
             <button className="form__Link" onClick={loginUsuarioButton}>
