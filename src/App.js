@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Snackbar from "./components/Snackbar/Snackbar";
 import "./assets/style/StyleGrid.css";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import { useStateValue } from "./services/context/store";
 import { obtenerUsuarioActual } from "./services/actions/UsuarioAction";
 
@@ -28,7 +28,6 @@ function App(props) {
     <React.Fragment>
       <div className="containerGrid">
         <BrowserRouter>
-          {/* <Switch> */}
           <Route
             path="/"
             render={() => (
@@ -38,7 +37,6 @@ function App(props) {
               />
             )}
           />
-          {/* </Switch> */}
           <Navbar />
           <Sidebar />
         </BrowserRouter>
