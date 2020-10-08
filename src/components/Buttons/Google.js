@@ -16,6 +16,7 @@ function Google(props) {
     });
   };
   const responseGoogle = (response) => {
+    console.log("responseGoogle", response);
     const usuario = {
       RegisterOption: "Google",
       AccessToken: response.accessToken,
@@ -27,8 +28,10 @@ function Google(props) {
       LastName: response.profileObj.familyName,
       PhotoUrl: response.profileObj.imageUrl,
     };
+    console.log("usuario", usuario);
 
     externalLogin(usuario, dispatch).then((response) => {
+      console.log("response", response);
       if (response.status === 200) {
         dispatch({
           type: "OPEN_SNACKBAR",
@@ -38,7 +41,11 @@ function Google(props) {
           },
         });
         window.history.pushState(null, null, "/");
-        props.onClose();
+        dispatch({
+          type: "OPEN_MODAL",
+          open: false,
+          content: null,
+        });
       } else {
         dispatch({
           type: "OPEN_SNACKBAR",

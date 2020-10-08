@@ -3,6 +3,7 @@ import Home from "./view/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Snackbar from "./components/Snackbar/Snackbar";
+import Modal from "./view/Modal/Modal";
 import "./assets/style/StyleGrid.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import { useStateValue } from "./services/context/store";
@@ -53,6 +54,22 @@ function App(props) {
             type: "OPEN_SNACKBAR",
             openMensaje: { open: false, message: "" },
           })
+        }
+      />
+      <Modal
+        open={
+          openSnackbar
+            ? openSnackbar.modal.open
+              ? openSnackbar.modal.open
+              : false
+            : false
+        }
+        content={
+          openSnackbar
+            ? openSnackbar.modal.content
+              ? openSnackbar.modal.content
+              : null
+            : null
         }
       />
     </React.Fragment>

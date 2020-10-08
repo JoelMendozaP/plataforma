@@ -9,10 +9,7 @@ function HeaderOption(props) {
     <div className="optionList">
       <ul className="optionList__ul">
         <li>
-          <ButtonModalS
-            onCloseModal={props.onCloseModal}
-            modalIsOpen={props.modalIsOpen}
-          />
+          <ButtonModalS />
         </li>
         <li>
           <Translate />

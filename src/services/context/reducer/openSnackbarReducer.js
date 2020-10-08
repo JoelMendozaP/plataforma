@@ -1,6 +1,10 @@
 const initialState = {
   open: false,
   message: "",
+  modal: {
+    open: false,
+    content: null,
+  },
 };
 
 const openSnackbarReducer = (state = initialState, action) => {
@@ -11,7 +15,14 @@ const openSnackbarReducer = (state = initialState, action) => {
         open: action.openMensaje.open,
         message: action.openMensaje.message,
       };
-
+    case "OPEN_MODAL":
+      return {
+        ...state,
+        modal: {
+          open: action.open,
+          content: action.content,
+        },
+      };
     default:
       return state;
   }

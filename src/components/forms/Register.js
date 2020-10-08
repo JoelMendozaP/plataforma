@@ -69,7 +69,11 @@ function Register(props) {
         sesion: res.data.userToReturn,
         autenticado: true,
       });
-      props.onClose();
+      dispatch({
+        type: "OPEN_MODAL",
+        open: false,
+        content: null,
+      });
       window.history.pushState(null, null, "/");
     } else {
       setView((a) => ({ ...a, load: true }));

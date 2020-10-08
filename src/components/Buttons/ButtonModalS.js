@@ -22,20 +22,20 @@ function ButtonModalS(props) {
   function ChangeInfo() {
     dispatch({ data: <Chats /> });
   }
-
+  function OpenModal() {
+    dispatch({
+      type: "OPEN_MODAL",
+      open: true,
+      content: <GetIn />,
+    });
+  }
   const BtnEnter = (
-    <React.Fragment>
-      <Link
-        to="/auth/login"
-        onClick={props.onCloseModal}
-        className="ButtonModalS"
-      >
-        <span className="ButtonModalS__text">{t("enterHead")}</span>
-        <i className="fas fa-user-circle"></i>
-      </Link>
-      <GetIn isOpen={props.modalIsOpen} onClose={props.onCloseModal} />
-    </React.Fragment>
+    <Link to="/auth/login" onClick={OpenModal} className="ButtonModalS">
+      <span className="ButtonModalS__text">{t("enterHead")}</span>
+      <i className="fas fa-user-circle"></i>
+    </Link>
   );
+
   function validar(img) {
     if (img === undefined || img === null) {
       return user;
