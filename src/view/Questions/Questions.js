@@ -1,16 +1,101 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useStateValue } from "../../services/context/store";
 import Prueba from "../../components/Information/Prueba";
 
 function Questions(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
+  const [inf, setInf] = useState({
+    disponible: "",
+    latitude: "",
+    longitude: "",
+    formatted: "",
+    components: null,
+  });
+
+  const getCountry = (position) => {
+    const { latitude, longitude } = position.coords;
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=92000d6367c24202aeb7fa1ce7ff49de`;
+    fetch(url)
+      .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+      .then((json) => {
+        const { formatted, components } = json.results[0];
+        setInf((a) => ({
+          ...a,
+          formatted,
+          components,
+        }));
+      })
+      .catch((err) => console.log("err", err));
+  };
+
   useEffect(() => {
     dispatch({
       type: "CHANGE_INFO",
       data: <Prueba>Questions</Prueba>,
     });
-  }, [dispatch, sesionUsuario]);
-  return <div>Questions</div>;
+
+    if ("geolocation" in navigator) {
+      console.log("disponible");
+      setInf((a) => ({ ...a, disponible: "disponible" }));
+      navigator.geolocation.getCurrentPosition((position) => {
+        const { latitude, longitude } = position.coords;
+        getCountry(position);
+        setInf((a) => ({
+          ...a,
+          latitude: latitude,
+          longitude: longitude,
+        }));
+      });
+    } else {
+      console.log("NO está disponible");
+      setInf((a) => ({ ...a, disponible: "NO está disponible" }));
+    }
+  }, [dispatch, setInf, sesionUsuario]);
+
+  const createList = () => {
+    let List = [];
+    if (inf.components) {
+      for (let i = 0; i < 14; i++) {
+        // var na = Object.keys(inf.components)[i];
+        var v = Object.values(inf.components)[i];
+        List.push(<li key={i}>{v}</li>);
+      }
+      return List;
+    }
+    return "loading...";
+  };
+
+  return (
+    <div>
+      Questions
+      <br />
+      <span>
+        La ubicacion esta:
+        {" " + inf.disponible}
+      </span>
+      <br />
+      <div className="loc">
+        <span>
+          Latitud:
+          {" " + inf.latitude}
+        </span>
+        <br />
+        <span>
+          Longitud:
+          {" " + inf.longitude}
+        </span>
+        <br />
+        <span>
+          Ubicacion:
+          {" " + inf.formatted}
+        </span>
+        <br />
+      </div>
+      <div className="information">
+        <ul>{createList()}</ul>
+      </div>
+    </div>
+  );
 }
 
 export default Questions;
