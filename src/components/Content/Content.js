@@ -8,7 +8,8 @@ import Account from "../../view/Account/Account";
 import Questions from "../../view/Questions/Questions";
 import Chat from "../../view/Chat/Chat";
 import Palette from "../Palette/Palette";
-
+import RouteSafe from "../navigation/RouteSafe";
+import Auth from "../../view/Auth/Auth";
 import "./style/Content.css";
 
 class content extends Component {
@@ -17,9 +18,12 @@ class content extends Component {
       <div className="itemContent">
         <Switch>
           <Route exact path="/home" component={Inicio} />
-          <Route exact path="/Courses" component={Courses} />
-          <Route exact path="/Calendar" component={Calendar} />
-          <Route exact path="/Account" component={Account} />
+          <Route exact path="/courses" component={Courses} />
+          <Route exact path="/calendar" component={Calendar} />
+
+          <RouteSafe exact path="/account" component={Account} />
+          {/* <Route exact path="/Account" component={Account} /> */}
+          <Route exact path="/auth" component={Auth} />
           <Route exact path="/questions" component={Questions} />
           <Route exact path="/chat" component={Chat} />
           <Route
@@ -31,7 +35,8 @@ class content extends Component {
               />
             )}
           />
-          <Route path="/" component={Inicio} />
+          {/* <Route path="/" component={Inicio} /> */}
+          <Route component={Inicio} />
         </Switch>
       </div>
     );

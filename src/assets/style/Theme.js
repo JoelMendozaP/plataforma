@@ -31,7 +31,6 @@ class theme extends Component {
           onChangeColor={this.onChangeHeader}
           colorValue={this.state.color}
         />
-        <div id="modal"></div>
       </div>
     );
   }

@@ -28,6 +28,7 @@ function Facebook(props) {
         LastName: "",
         PhotoUrl: response.picture.data.url,
       };
+      console.log(usuario);
       externalLogin(usuario, dispatch).then((response) => {
         if (response.status === 200) {
           dispatch({
@@ -37,7 +38,13 @@ function Facebook(props) {
               message: "Login Exitoso",
             },
           });
-          props.onClose();
+          dispatch({
+            type: "OPEN_MODAL",
+            open: false,
+            content: null,
+          });
+          window.history.pushState(null, null, "/");
+          console.log(response);
         } else {
           dispatch({
             type: "OPEN_SNACKBAR",

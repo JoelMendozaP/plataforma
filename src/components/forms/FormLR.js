@@ -34,30 +34,15 @@ function FormLR(props) {
         </div>
         <div className="LoginForm__form">
           <Switch>
-            <Route
-              path="/auth/register"
-              render={() => (
-                <Register isOpen={props.isOpen} onClose={props.onClose} />
-              )}
-            />
-            <Route
-              path="/auth/login"
-              render={() => (
-                <Login isOpen={props.isOpen} onClose={props.onClose} />
-              )}
-            />
-            <Route
-              path="/auth/recover"
-              render={() => (
-                <Recover isOpen={props.isOpen} onClose={props.onClose} />
-              )}
-            />
+            <Route path="/auth/register" component={Register} />
+            <Route path="/auth/login" component={Login} />
+            <Route path="/auth/recover" component={Recover} />
           </Switch>
         </div>
         <div className="LoginForm__fg">
           <span className="form__span">{t("lrRegistro")}:</span>
-          <Facebook isOpen={props.isOpen} onClose={props.onClose} />
-          <Google isOpen={props.isOpen} onClose={props.onClose} />
+          <Facebook />
+          <Google />
         </div>
         <div className="LoginForm__change">{t("lrNotCount")}</div>
       </React.Fragment>

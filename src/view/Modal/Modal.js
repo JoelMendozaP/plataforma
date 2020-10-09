@@ -1,27 +1,29 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./Modal.css";
-import { Link } from "react-router-dom";
-
+import { useStateValue } from "../../services/context/store";
 function Modal(props) {
-  if (!props.isOpen) {
-    return null;
+  const [{ openSnackbar }, dispatch] = useStateValue();
+  function onClose() {
+    dispatch({
+      type: "OPEN_MODAL",
+      open: false,
+      content: null,
+    });
+    window.history.pushState(null, null, "/");
   }
-  return ReactDOM.createPortal(
-    <div className="Modal">
-      <div className="Modal__container">
-        <Link
-          to="/home"
-          onClick={props.onClose}
-          className="Modal__close-button cta"
-        >
-          X
-        </Link>
-        {props.children}
+  if (props.open) {
+    return (
+      <div className="Modal">
+        <div className="Modal__container">
+          <button onClick={onClose} className="Modal__close-button cta">
+            X
+          </button>
+          {props.content}
+        </div>
+        {openSnackbar ? null : null}
       </div>
-    </div>,
-    document.getElementById("modal")
-  );
+    );
+  }
+  return null;
 }
-
 export default Modal;

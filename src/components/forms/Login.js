@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Loading from "../animation/Loading";
 
-function Login(props) {
+function Login() {
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const { t } = useTranslation("loginF");
   const [view, setView] = useState({
@@ -59,7 +59,11 @@ function Login(props) {
         sesion: res.data.user,
         autenticado: true,
       });
-      props.onClose();
+      dispatch({
+        type: "OPEN_MODAL",
+        open: false,
+        content: null,
+      });
       window.history.pushState(null, null, "/");
     } else {
       setView((a) => ({ ...a, load: true }));
