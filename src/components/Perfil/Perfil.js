@@ -10,7 +10,13 @@ function Perfil(props) {
   function ChangeImg() {
     dispatch({ data: <ChangeImage /> });
   }
-  function validar(img) {
+  function validar(text) {
+    if (text === undefined || text === null) {
+      return "";
+    }
+    return text;
+  }
+  function validarImg(img) {
     if (img === undefined || img === null) {
       return user;
     }
@@ -22,7 +28,7 @@ function Perfil(props) {
         <div
           style={{
             backgroundImage: sesionUsuario
-              ? `url("${validar(sesionUsuario.usuario.photoUrl)}")`
+              ? `url("${validarImg(sesionUsuario.usuario.photoUrl)}")`
               : `url("${user}")`,
           }}
           className="change__containerImg"
@@ -36,20 +42,24 @@ function Perfil(props) {
       <div className="Perfil__information">
         <h3>
           <span>
-            {t("acUser")}: {props.user.username}
+            {t("acUser")}:{" "}
+            {sesionUsuario ? validar(sesionUsuario.usuario.username) : ""}
           </span>
         </h3>
         <h3>
           <span>
-            {t("acName")}:{props.user.name} {props.user.lastname}
+            {t("acName")}:{" "}
+            {sesionUsuario
+              ? (validar(sesionUsuario.usuario.firstName),
+                validar(sesionUsuario.usuario.lastName))
+              : ""}
           </span>
         </h3>
         <h3>
-          {t("acEmail")}: {props.user.email}
+          {t("acEmail")}:{" "}
+          {sesionUsuario ? validar(sesionUsuario.usuario.email) : ""}
         </h3>
-        <h3>
-          {t("acPhone")}: {props.user.phone}
-        </h3>
+        <h3>{t("acPhone")}: +591 78944081</h3>
       </div>
     </div>
   );
