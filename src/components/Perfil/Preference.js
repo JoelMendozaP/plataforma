@@ -43,7 +43,6 @@ function Preference(props) {
         [name]: checked,
       }));
     }
-    console.log(e.target.type);
     if (e.target.type === "number" || e.target.type === "select-one") {
       const { name, value } = e.target;
       setCheck((anterior) => ({
@@ -58,6 +57,12 @@ function Preference(props) {
       var msj = "";
       if (response.status === 200) {
         msj = "Actualizado exitoso";
+        dispatch({
+          type: "CABIAR_IDIOMA",
+          nuevoLang: {
+            code: check.LanguageCode,
+          },
+        });
       } else {
         msj = "Error al actualizar";
       }
