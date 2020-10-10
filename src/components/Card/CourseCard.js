@@ -1,11 +1,15 @@
-import React from "react";
 import "./style/CourseCard.css";
+
+import React from "react";
+
+import { useTranslation } from "react-i18next";
 function CourseCard(props) {
+  const { t } = useTranslation("CourseCard");
   return (
     <div className="CourseCard">
       <div className="CourseCard__header">
-        <div className="CourseCard__title">SQL para el análisis de datos</div>
-        <div className="CourseCard__Price">US$19</div>
+        <div className="CourseCard__title">{t("title")}</div>
+        <div className="CourseCard__Price">{t("price")}</div>
       </div>
       <div className="CourseCard__video">
         <i className="fas fa-play-circle"></i>
@@ -25,7 +29,7 @@ function CourseCard(props) {
         </div>
       </div>
       <div className="CourseCard__btn">
-        <button>Infromacion</button>
+        <button>{t("information")}</button>
       </div>
     </div>
   );

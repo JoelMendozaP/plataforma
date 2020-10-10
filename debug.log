@@ -1,0 +1,4 @@
+[1010/125610.996:ERROR:settings.cc(430)] Settings version is not 5
+[1010/130611.055:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\joelm\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\37bfab80-a2c8-4192-9286-19f37aaa0ce5: El sistema no puede encontrar la ruta especificada. (0x3)
+[1010/130611.059:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\joelm\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\cbe107a7-8216-4a5a-b175-33b675821b83: El sistema no puede encontrar la ruta especificada. (0x3)
+[1010/130611.063:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)

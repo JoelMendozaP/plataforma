@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Message from "../../components/Card/Message";
 import user from "../../assets/img/user.jpg";
+import Chats from "../../components/Information/Chats";
 import "./Chat.css";
+import { useStateValue } from "../../services/context/store";
 
 function Chat(props) {
+  const [{ sesionUsuario }, dispatch] = useStateValue();
+  useEffect(() => {
+    dispatch({
+      type: "CHANGE_INFO",
+      data: <Chats />,
+    });
+  }, [dispatch, sesionUsuario]);
   return (
     <div className="Chat">
       <div className="Chat__head">

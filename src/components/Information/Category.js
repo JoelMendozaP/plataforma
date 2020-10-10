@@ -1,10 +1,12 @@
 import React from "react";
-import CardCategory from "../Card/CardCategory";
 import "./style/Category.css";
+import { useTranslation } from "react-i18next";
+import CardCategory from "../Card/CardCategory";
 function Category(props) {
+  const { t } = useTranslation("category");
   return (
     <div className="Category">
-      Categorias
+      {t("categories")}
       <CardCategory />
       <CardCategory />
       <CardCategory />

@@ -34,7 +34,12 @@
     "lgIniciar": "Iniciar Sesion",
     "lgUsC": "Usuario o correo",
     "lgPass": "Contraseña",
-    "lgForget": "¿Olvidaste tu"
+    "lgForget": "¿Olvidaste tu",
+
+    "cambio": "cambio",
+    "fieldObligatory": "Campo obligatorio",
+    "charactersRequired": "mínimo 3 caracteres requeridos",
+    "cambioFinal": "cambio"
   },
   "account": {
     "acPerfil": "Perfil de Usuario",
@@ -43,7 +48,16 @@
     "acUser": "Usuario",
     "acName": "Nombre Completo",
     "acEmail": "Correo",
-    "acPhone": "Celular"
+    "acPhone": "Celular",
+
+    "cambio": "cambio",
+    "personalInformation": "Informacion Personal",
+    "accountPreferences": "Preferencias de Cuenta",
+    "Birthdate": "Fecha de Nacimiento",
+    "gender": "Genero",
+    "address": "Direccion",
+    "postalCode": "Codigo Postal",
+    "cambioFinal": "cambio"
   },
   "editPerfil": {
     "epEditar": "Editar",
@@ -66,7 +80,13 @@
     "ciSave": "Guardar Cambios"
   },
 
+  "cambio": "cambio",
   "Preference": {
+    "notifications": "Notificaciones",
+    "emailNotifications": "Notificaciones de Email",
+    "save": "Guardar Configuracion",
+    "cancel": "Cancelar",
+
     "activeNotificationNewCourse": "Notificarme de nuevos cursos",
     "activeNotificationCourseUpdate": "Notificar cursos actilizados",
     "activeNotificationFreeCourse": "Notificarme de cursos gratis",
@@ -80,6 +100,41 @@
     "activeEmailCertificate": "Notificar mis Certificados",
 
     "activeChat": "Recibir mensajes al chat",
-    "sesionTimeLogout": "Tiempo máximo de sesion"
-  }
+    "sesionTimeLogout": "Tiempo máximo de sesion",
+
+    "change": "Cambiar",
+    "changePassword": "Cambiar Contraseña",
+    "fieldObligatory": "Campo obligatorio",
+    "charactersRequired": "mínimo 3 caracteres requeridos",
+    "oldPassword": "Antigua Contraseña",
+    "newPassword": "Nueva Contraseña",
+    "repeatPassword": "Repetir Contraseña"
+  },
+  "Inicio": {
+    "courses": "Cursos",
+    "coursesOffer": "Cursos en Oferta",
+    "coursesRecommended": "Cursos Recomendados"
+  },
+  "CourseCard": {
+    "title": "SQL para el análisis de datos",
+    "price": "US$19",
+    "information": "Infromacion"
+  },
+  "Register": {
+    "fieldObligatory": "Campo obligatorio",
+    "charactersRequired": "mínimo 3 caracteres requeridos",
+    "invalidEmail": "dirección de correo electrónico no válida",
+    "signIn": "Registarse",
+    "user": "Usuario",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "createAccount": "Crear cuenta"
+  },
+  "category": {
+    "categories": "Categorias",
+    "title": "Desarrollo de Sistemas",
+    "cont": "56 Cursos"
+  },
+  "cambioFinal": "cambio"
 }

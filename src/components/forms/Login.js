@@ -1,9 +1,11 @@
 import "./style/Login.css";
-import React, { useState } from "react";
+
+import { Link } from "react-router-dom";
 import { loginUsuario } from "../../services/actions/UsuarioAction";
 import { useStateValue } from "../../services/context/store";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import React, { useState } from "react";
+
 import Loading from "../animation/Loading";
 
 function Login() {
@@ -12,8 +14,8 @@ function Login() {
   const [view, setView] = useState({
     load: true,
     formErrors: {
-      UsernameOrEmail: "Campo obligatorio",
-      password: "Campo obligatorio",
+      UsernameOrEmail: t("fieldObligatory"),
+      password: t("fieldObligatory"),
     },
   });
 
@@ -29,11 +31,10 @@ function Login() {
     switch (name) {
       case "UsernameOrEmail":
         formErrors.UsernameOrEmail =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+          value.length < 3 ? t("charactersRequired") : "";
         break;
       case "password":
-        formErrors.password =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+        formErrors.password = value.length < 3 ? t("charactersRequired") : "";
         break;
       default:
         break;
@@ -153,6 +154,7 @@ function Login() {
             <button className="form__Link" onClick={loginUsuarioButton}>
               {t("lgIniciar")}
             </button>
+            <br />
             <span className="forgotPassword">
               {t("lgForget")} <Link to="/auth/recover">{t("lgPass")}</Link> ?
             </span>

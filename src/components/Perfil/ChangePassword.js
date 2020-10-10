@@ -1,21 +1,26 @@
+import "./style/ChangePassword.css";
+
+import { withRouter } from "react-router-dom";
+import { useStateValue } from "../../services/context/store";
+import { useTranslation } from "react-i18next";
+import { changePassword } from "../../services/actions/UsuarioAction";
 import React, { useState } from "react";
+
 import DefInputIcon from "../inputs/DefInputIcon";
 import Loading from "../animation/Loading";
-import { useStateValue } from "../../services/context/store";
-import { changePassword } from "../../services/actions/UsuarioAction";
 import Prueba from "../../components/Information/Prueba";
-import "./style/ChangePassword.css";
-import { withRouter } from "react-router-dom";
+
 function ChangePassword(props) {
+  const { t } = useTranslation("Preference");
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const [data, setData] = useState({
     CurrentPassword: "",
     NewPassword: "",
     ConfNewPassword: "",
     errors: {
-      CurrentPassword: "Campo obligatorio",
-      NewPassword: "Campo obligatorio",
-      ConfNewPassword: "Campo obligatorio",
+      CurrentPassword: t("fieldObligatory"),
+      NewPassword: t("fieldObligatory"),
+      ConfNewPassword: t("fieldObligatory"),
     },
     load: true,
   });
@@ -26,15 +31,14 @@ function ChangePassword(props) {
     switch (name) {
       case "CurrentPassword":
         errors.CurrentPassword =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+          value.length < 3 ? t("charactersRequired") : "";
         break;
       case "NewPassword":
-        errors.NewPassword =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+        errors.NewPassword = value.length < 3 ? t("charactersRequired") : "";
         break;
       case "ConfNewPassword":
         errors.ConfNewPassword =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+          value.length < 3 ? t("charactersRequired") : "";
         break;
       default:
         break;
@@ -124,12 +128,12 @@ function ChangePassword(props) {
 
   return (
     <div className="ChangePassword">
-      <h2>Cambiar Contraseña</h2>
+      <h2>{t("changePassword")}</h2>
       <form className="ChangePassword__form">
         <DefInputIcon
           type="password"
           name="CurrentPassword"
-          placeholder="Antigua Contraseña"
+          placeholder={t("oldPassword")}
           icon="unlock"
           onChange={handleChange}
         />
@@ -139,7 +143,7 @@ function ChangePassword(props) {
         <DefInputIcon
           type="password"
           name="NewPassword"
-          placeholder="Nueva Contraseña"
+          placeholder={t("newPassword")}
           icon="lock"
           onChange={handleChange}
         />
@@ -149,7 +153,7 @@ function ChangePassword(props) {
         <DefInputIcon
           type="password"
           name="ConfNewPassword"
-          placeholder="Repetir Contraseña"
+          placeholder={t("repeatPassword")}
           icon="lock"
           onChange={handleChange}
         />
@@ -164,7 +168,7 @@ function ChangePassword(props) {
                 onClick={dataSend}
                 className="ChangePassword__btnS"
               >
-                Cambiar
+                {t("change")}
               </button>
               <button
                 type="button"
@@ -176,7 +180,7 @@ function ChangePassword(props) {
                 }
                 className="ChangePassword__btnC"
               >
-                Cancelar
+                {t("cancel")}
               </button>
             </React.Fragment>
           ) : (

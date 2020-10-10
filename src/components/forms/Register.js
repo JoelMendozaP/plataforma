@@ -1,18 +1,20 @@
-import React, { useState } from "react";
-import { registerUser } from "../../services/actions/UsuarioAction";
-import { useStateValue } from "../../services/context/store";
-
 import Loading from "../animation/Loading";
 
+import { registerUser } from "../../services/actions/UsuarioAction";
+import { useStateValue } from "../../services/context/store";
+import { useTranslation } from "react-i18next";
+import React, { useState } from "react";
+
 function Register(props) {
+  const { t } = useTranslation("Register");
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const [view, setView] = useState({
     load: true,
     formErrors: {
-      username: "Campo obligatorio",
-      email: "Campo obligatorio",
-      password: "Campo obligatorio",
-      password_confirmation: "Campo obligatorio",
+      username: t("fieldObligatory"),
+      email: t("fieldObligatory"),
+      password: t("fieldObligatory"),
+      password_confirmation: t("fieldObligatory"),
     },
   });
   const [user, setUser] = useState({
@@ -29,21 +31,17 @@ function Register(props) {
     let formErrors = { ...view.formErrors };
     switch (name) {
       case "username":
-        formErrors.username =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+        formErrors.username = value.length < 3 ? t("charactersRequired") : "";
         break;
       case "email":
-        formErrors.email = emailRegex.test(value)
-          ? ""
-          : "invalid email address";
+        formErrors.email = emailRegex.test(value) ? "" : t("invalidEmail");
         break;
       case "password":
-        formErrors.password =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+        formErrors.password = value.length < 3 ? t("charactersRequired") : "";
         break;
       case "password_confirmation":
         formErrors.password_confirmation =
-          value.length < 3 ? "minimum 3 characaters required" : "";
+          value.length < 3 ? t("charactersRequired") : "";
         break;
       default:
         break;
@@ -134,13 +132,13 @@ function Register(props) {
 
   return (
     <form>
-      <span className="form__span">Registarse</span>
+      <span className="form__span">{t("signIn")}</span>
       <div className="form__Input">
         <input
           className="formControl"
           type="text"
           name="username"
-          placeholder="Usuario"
+          placeholder={t("user")}
           value={user.username}
           onChange={inputhandleChange}
           required
@@ -155,7 +153,7 @@ function Register(props) {
           className="formControl"
           type="email"
           name="email"
-          placeholder="Correo electrónico"
+          placeholder={t("email")}
           value={user.email}
           onChange={inputhandleChange}
           required
@@ -170,7 +168,7 @@ function Register(props) {
           className="formControl"
           type="password"
           name="password"
-          placeholder="Contraseña"
+          placeholder={t("password")}
           value={user.password}
           onChange={inputhandleChange}
           required
@@ -185,7 +183,7 @@ function Register(props) {
           className="formControl"
           type="password"
           name="password_confirmation"
-          placeholder="Confirmar contraseña"
+          placeholder={t("confirmPassword")}
           value={user.password_confirmation}
           onChange={inputhandleChange}
           required
@@ -199,7 +197,7 @@ function Register(props) {
       )}
       {view.load ? (
         <button className="form__Link" onClick={registrarUsuario}>
-          Crear cuenta
+          {t("createAccount")}
         </button>
       ) : (
         <Loading />

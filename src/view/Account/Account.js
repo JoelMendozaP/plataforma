@@ -1,13 +1,16 @@
-import Perfil from "../../components/Perfil/Perfil";
-import Prueba from "../../components/Information/Prueba";
-// import EditPerfil from "../../components/Perfil/EditPerfil";
-import InformationPersonal from "../../components/Perfil/InformationPersonal";
-import React, { useState, useEffect } from "react";
-import Preference from "../../components/Perfil/Preference";
-import ChangePassword from "../../components/Perfil/ChangePassword";
+import "./Account.css";
+
 import { useStateValue } from "../../services/context/store";
 import { useTranslation } from "react-i18next";
-import "./Account.css";
+import React, { useState, useEffect } from "react";
+
+// import EditPerfil from "../../components/Perfil/EditPerfil";
+import Perfil from "../../components/Perfil/Perfil";
+import Prueba from "../../components/Information/Prueba";
+import InformationPersonal from "../../components/Perfil/InformationPersonal";
+import Preference from "../../components/Perfil/Preference";
+import ChangePassword from "../../components/Perfil/ChangePassword";
+
 function Account(props) {
   const { t } = useTranslation("account");
   const [{ sesionUsuario }, dispatch] = useStateValue();
@@ -72,11 +75,11 @@ function Account(props) {
       <div className="Account__perfil">
         <Perfil user={usuario} />
       </div>
-      Informacion Personal
+      {t("personalInformation")}
       <div className="Account__data">
         <InformationPersonal user={usuario} />
       </div>
-      Preferencias de Cuenta
+      {t("accountPreferences")}
       <Preference />
     </React.Fragment>
   );

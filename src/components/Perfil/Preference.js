@@ -87,11 +87,11 @@ function Preference(props) {
   return (
     <div className="Preference">
       <div className="Preference__Notify">
-        Notificaciones
+        {t("notifications")}
         <div className="Preference__List">{createList(0, 4)}</div>
       </div>
       <div className="Preference__NEmail">
-        Notificaciones de Email
+        {t("emailNotifications")}
         <div className="Preference__List">{createList(5, 9)}</div>
       </div>
       <div className="Preference__Acount">
@@ -113,13 +113,13 @@ function Preference(props) {
       </div>
       <div className="Preference__btn">
         <button onClick={UpdatePref} className="EditPerfil__btnG">
-          Guardar Configuracion
+          {t("save")}
         </button>
         <button
           onClick={() => window.location.reload()}
           className="EditPerfil__btnC"
         >
-          Cancelar
+          {t("cancel")}
         </button>
       </div>
     </div>
