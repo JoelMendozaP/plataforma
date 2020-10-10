@@ -28,7 +28,7 @@ function Auth(props) {
     }
   }, [props, sesionUsuario, dispatch]);
 
-  return <div>hola </div>;
+  return null;
 }
 
 export default withRouter(Auth);

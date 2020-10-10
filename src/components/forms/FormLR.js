@@ -44,7 +44,7 @@ function FormLR(props) {
           <Facebook />
           <Google />
         </div>
-        <div className="LoginForm__change">{t("lrNotCount")}</div>
+        <div className="LoginForm__change"></div>
       </React.Fragment>
     </BrowserRouter>
   );

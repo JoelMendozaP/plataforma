@@ -12,8 +12,8 @@ function Login() {
   const [view, setView] = useState({
     load: true,
     formErrors: {
-      UsernameOrEmail: "",
-      password: "",
+      UsernameOrEmail: "Campo obligatorio",
+      password: "Campo obligatorio",
     },
   });
 
@@ -44,6 +44,7 @@ function Login() {
     }));
     setView((a) => ({ ...a, formErrors }));
   };
+
   function save(res) {
     if (res.status === 200) {
       setView((a) => ({ ...a, load: true }));

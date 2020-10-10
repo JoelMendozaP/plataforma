@@ -57,7 +57,7 @@ function Account(props) {
   function toCall() {
     dispatch({
       type: "CHANGE_INFO",
-      data: <ChangePassword user={usuario.email} handleChange={handleChange} />,
+      data: <ChangePassword />,
     });
   }
 

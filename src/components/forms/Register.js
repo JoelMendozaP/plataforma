@@ -9,10 +9,10 @@ function Register(props) {
   const [view, setView] = useState({
     load: true,
     formErrors: {
-      username: "",
-      email: "",
-      password: "",
-      password_confirmation: "",
+      username: "Campo obligatorio",
+      email: "Campo obligatorio",
+      password: "Campo obligatorio",
+      password_confirmation: "Campo obligatorio",
     },
   });
   const [user, setUser] = useState({
