@@ -1,5 +1,5 @@
 .CardCategory {
-  border: solid 2px var(--primary);
+  border: solid 2px var(--color3);
   margin: 20px 30px;
   display: flex;
   justify-content: space-between;
@@ -10,20 +10,20 @@
   margin-left: 10px;
   font-size: 16px;
   text-align: start;
-  color: #000;
+  color: var(--color1);
 }
 .CardCategory__Name {
   font-size: 20px;
-  color: var(--primary);
+  color: var(--color3);
   margin: 5px 0;
 }
 .CardCategory__Icon {
-  background-color: var(--primary);
+  background-color: var(--color3);
   border-radius: 0 10px 10px 0;
   width: 50px;
   cursor: pointer;
 }
 .CardCategory__Icon i {
-  color: white;
+  color: var(--color6);
   line-height: 60px;
 }

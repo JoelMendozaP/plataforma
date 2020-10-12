@@ -16,15 +16,15 @@
   margin-right: 20px;
   border-radius: 10px;
   text-decoration: none;
-  color: var(--text);
+  color: var(--color6);
   font-size: 14px;
   border: none;
 }
 .EditPerfil__btnG {
-  background: linear-gradient(var(--secondary), #405267);
+  background: linear-gradient(var(--color4), var(--color3));
 }
 .EditPerfil__btnC {
-  background: linear-gradient(var(--primary), #405267);
+  background: linear-gradient(var(--color3), var(--color2));
 }
 .form__InputDate {
   width: 85%;
@@ -32,7 +32,7 @@
   font-size: 20px;
   padding: 5px 0 5px 15px;
   margin: 15px 0;
-  border-bottom: 1px solid var(--secondary);
+  border-bottom: 1px solid var(--color4);
 }
 .form__InputDate .formControl {
   border: none;

@@ -1,21 +1,21 @@
 .CourseCard {
   margin: 0 10px;
-  border: solid 2px #fa98de;
+  border: solid 2px var(--color5);
   border-radius: 20px;
   padding: 10px;
 }
 .CourseCard__header {
   display: flex;
   margin-bottom: 8px;
-  color: var(--secondary);
+  color: var(--color4);
   font-weight: bolder;
 }
 .CourseCard__title {
   text-align: start;
-  color: var(--primary);
+  color: var(--color3);
 }
 .CourseCard__video {
-  background: #fa98de;
+  background: var(--color5);
   /* border: solid 2px #fa98de; */
   width: 200px;
   height: 100px;
@@ -37,14 +37,14 @@
   color: #f58f09;
 }
 .CourseCard__IconFriends i {
-  color: var(--secondary);
+  color: var(--color4);
 }
 .CourseCard__btn button {
   width: 70%;
   border-radius: 10px;
   text-decoration: none;
-  background: linear-gradient(var(--secondary), #405267);
-  color: var(--text);
+  background: linear-gradient(var(--color4), var(--color3));
+  color: var(--color6);
   border: none;
   padding: 6px 15px;
 }

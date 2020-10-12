@@ -8,7 +8,7 @@ function Perfil(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const { t } = useTranslation("account");
   function ChangeImg() {
-    dispatch({ data: <ChangeImage /> });
+    dispatch({ type: "CHANGE_INFO", data: <ChangeImage /> });
   }
   function validar(text) {
     if (text === undefined || text === null) {

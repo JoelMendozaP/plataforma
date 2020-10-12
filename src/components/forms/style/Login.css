@@ -4,13 +4,13 @@
   font-size: 20px;
   padding: 5px 0;
   margin: 20px 0 5px 0;
-  border-bottom: 1px solid var(--secondary);
+  border-bottom: 1px solid var(--color4);
 }
 .form__Input i {
   width: 26px;
   float: right;
   text-align: center;
-  color: var(--secondary);
+  color: var(--color4);
   filter: grayscale(20%) opacity(1);
 }
 .form__Input .formControl {
@@ -23,34 +23,34 @@
 .form__Link {
   padding: 8px 57px;
   border-radius: 10px;
-  text-decoration: none;
-  background: linear-gradient(var(--secondary), #405267);
-  color: var(--text);
+  background: linear-gradient(var(--color4), var(--color3));
+  color: var(--color6);
   font-size: 14px;
+  border: none;
 }
 .form__span {
-  color: var(--secondary);
+  color: var(--color4);
   font-weight: bolder;
   filter: grayscale(20%) opacity(1);
-  text-shadow: 0 0 28px var(--secondary);
+  text-shadow: 0 0 28px var(--color5);
 }
 .forgotPassword {
   color: gray;
   margin-top: 20px;
 }
 .forgotPassword a {
-  color: var(--secondary);
+  color: var(--color4);
   filter: grayscale(20%) opacity(1);
   font-weight: bolder;
   text-decoration: none;
 }
 .Change_text {
   margin: 10px 0;
-  font-weight: bolder;
+  font-weight: normal;
   font-size: 15px;
-  color: gray;
+  color: var(--color3);
 }
 .errorMessage {
-  color: red;
+  color: var(--color7);
   font-size: 13px;
 }

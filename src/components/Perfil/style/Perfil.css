@@ -15,8 +15,8 @@
   margin: 10px auto;
   border-radius: 10px;
   text-decoration: none;
-  background: linear-gradient(var(--secondary), #405267);
-  color: var(--text);
+  background: linear-gradient(var(--color4), var(--color3));
+  color: var(--color6);
   border: none;
 }
 .Perfil__information {
