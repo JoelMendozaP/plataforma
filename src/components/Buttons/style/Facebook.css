@@ -4,10 +4,10 @@
   height: 30px;
   border-radius: 10px;
   text-decoration: none;
-  color: var(--text);
+  color: var(--color6);
   font-size: 14px;
   border: none;
-  background: linear-gradient(var(--secondary), #405267);
+  background: linear-gradient(var(--color4), var(--color3));
   text-align: start;
   padding: 0 15px;
 }

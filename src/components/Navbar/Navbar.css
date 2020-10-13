@@ -7,7 +7,7 @@
   align-content: center;
 }
 .navlist__title h1 {
-  color: var(--primary);
+  color: var(--color3);
   font-size: 3.5rem;
   font-weight: 450;
   margin: 0;

@@ -6,11 +6,16 @@ class theme extends Component {
     super();
     this.state = {
       color: {
-        primary: "#723489",
-        secondary: "#F509B4",
-        text: "#ffffff",
-        backgroundSecondary: "#23232e",
-        background: "#F509B4",
+        color1: "#23232e",
+        color2: "#405267",
+        color3: "#723489",
+        color4: "#F509B4",
+        color5: "#fa98de",
+        color6: "#ffffff",
+        color7: "#d57272",
+        color8: "#60bb6f",
+        fondo1: "#fff",
+        fondo2: "#fff",
       },
     };
   }

@@ -14,7 +14,7 @@
   grid-area: Sidebar;
 }
 .itemContent {
-  background-color: var(--text);
+  background-color: var(--fondo2);
   grid-area: Conten;
 }
 .itemInformation {

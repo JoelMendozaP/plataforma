@@ -15,8 +15,9 @@
 .containerLogin__img p {
   width: 250px;
   margin-left: 30px;
-  color: var(--text);
+  color: var(--color6);
   font-size: 14px;
+  font-weight: lighter;
   margin-top: 35px;
 }
 

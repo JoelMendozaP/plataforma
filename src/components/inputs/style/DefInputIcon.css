@@ -4,12 +4,12 @@
   font-size: 20px;
   padding: 5px 0;
   margin: 15px 0;
-  border-bottom: 1px solid var(--secondary);
+  border-bottom: 1px solid var(--color4);
 }
 .DefInputIcon__div i {
   width: 26px;
   float: right;
-  color: var(--secondary);
+  color: var(--color4);
   filter: grayscale(20%) opacity(1);
 }
 .DefInputIcon__div .DefInputIcon__input {

@@ -1,9 +1,9 @@
 .ButtonModalS {
   border: none;
-  background: var(--primary);
+  background: var(--color3);
   padding: 10px 15px;
   border-radius: 50px;
-  color: var(--text);
+  color: var(--color6);
   font-size: 16px;
   height: 40px;
   text-decoration: none;
@@ -23,8 +23,9 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: solid 2px white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.514);
+  border: solid 2px var(--color6);
+  box-shadow: 0 0 20px var(--color1);
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.514); */
 }
 .userPhoto .userPhoto__ul {
   list-style: none;
@@ -32,9 +33,9 @@
   display: none;
   padding: 0 10px;
   border-radius: 5px;
-  background: white;
+  background: var(--fondo2);
   width: 160px;
-  border: 1px solid rgb(189, 129, 176);
+  border: 1px solid var(--color5);
 }
 .userPhoto .userPhoto__img:hover + ul,
 .userPhoto ul:hover {
@@ -51,12 +52,13 @@
 }
 .userPhoto__li,
 .userPhoto__li a {
-  color: var(--primary);
+  color: var(--color3);
   width: 160px;
   margin: 15px 0;
 }
 .userPhoto__li:hover,
 .userPhoto__li a:hover {
   cursor: pointer;
-  color: rgb(189, 129, 176);
+  /* color: #bd81b0; */
+  color: var(--color5);
 }

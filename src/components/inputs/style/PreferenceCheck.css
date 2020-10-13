@@ -1,7 +1,7 @@
 .checkP {
   display: flex;
   justify-content: space-between;
-  border: solid 1px rgb(216, 216, 216);
+  border: solid 1px rgba(0, 0, 0, 0.2);
   margin: 8px 0;
   border-radius: 10px;
   padding: 4px 10px 0 10px;
@@ -16,7 +16,7 @@ input[type="checkbox"] {
   position: relative;
   width: 60px;
   height: 25px;
-  background: #d57272;
+  background: var(--color7);
   -webkit-appearance: none;
   border-radius: 20px;
   outline: none;
@@ -25,7 +25,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 input:checked[type="checkbox"] {
-  background: #60bb6f;
+  background: var(--color8);
 }
 input[type="checkbox"]::before {
   z-index: 0;
@@ -35,7 +35,7 @@ input[type="checkbox"]::before {
   margin: 2px 0 0 2px;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: var(--color6);
   border-radius: 50%;
   transform: scale(1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -49,7 +49,7 @@ input:checked[type="checkbox"]::before {
 }
 .checkP__toggle label {
   position: absolute;
-  color: #fff;
+  color: var(--color6);
   pointer-events: none;
 }
 .onbtn {
