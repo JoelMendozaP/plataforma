@@ -36,7 +36,7 @@
     "lgPass": "Contraseña",
     "lgForget": "¿Olvidaste tu",
     "fieldObligatory": "Campo obligatorio",
-    "charactersRequired": "mínimo 3 caracteres requeridos",
+    "charactersRequired": "mínimo 3 caracteres requeridos"
   },
   "account": {
     "acPerfil": "Perfil de Usuario",
@@ -52,7 +52,7 @@
     "Birthdate": "Fecha de Nacimiento",
     "gender": "Género",
     "address": "Dirección",
-    "postalCode": "Código Postal",
+    "postalCode": "Código Postal"
   },
   "editPerfil": {
     "epEditar": "Editar",
