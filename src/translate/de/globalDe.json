@@ -34,7 +34,9 @@
     "lgIniciar": "Anmeldung",
     "lgUsC": "Benutzer oder E-Mail",
     "lgPass": "Kennwort",
-    "lgForget": "Haben Sie Ihre"
+    "lgForget": "Haben Sie Ihre",
+    "fieldObligatory": "Erforderliches Feld",
+    "charactersRequired": "mindestens 3 Zeichen erforderlich",
   },
   "account": {
     "acPerfil": "Benutzerprofil",
@@ -43,7 +45,14 @@
     "acUser": "Benutzer",
     "acName": "Vollständiger Name",
     "acEmail": "Post",
-    "acPhone": "Zellular"
+    "acPhone": "Zellular",
+    "changePassword": "Passwort ändern",
+    "personalInformation": "Persönliche Informationen",
+    "accountPreferences": "Konto-Präferenzen",
+    "Birthdate": "Geburtsdatum",
+    "gender": "Geschlecht",
+    "address": "Adresse",
+    "postalCode": "Postleitzahl",
   },
   "editPerfil": {
     "epEditar": "Bearbeiten",
@@ -64,5 +73,60 @@
     "ciChange": "Profilbild ändern",
     "ciSelect": "Bild auswählen",
     "ciSave": "Änderungen speichern"
+  },
+  "Preference": {
+    "notifications": "Benachrichtigungen",
+    "emailNotifications": "E-Mail-Benachrichtigungen",
+    "save": "Konfiguration speichern",
+    "cancel": "Abbrechen",
+
+    "activeNotificationNewCourse": "Benachrichtigen Sie mich über neue Kurse",
+    "activeNotificationCourseUpdate": "Benachrichtigung über belegte Kurse",
+    "activeNotificationFreeCourse": "Benachrichtigen Sie mich über kostenlose Kurse",
+    "activeNotificationChat": "Chat-Benachrichtigung",
+    "activeNotificationCertificate": "Zertifikat-Benachrichtigung",
+
+    "activeEmailNewCourse": "Neue Kurse benachrichtigen",
+    "activeEmailCourseUpdate": "Benachrichtigung über belegte Kurse",
+    "activeEmailFreeCourse": "Benachrichtigen Sie mich über kostenlose Kurse",
+    "activeEmailChat": "Benachrichtigen Sie mich über Chat-Aktivitäten",
+    "activeEmailCertificate": "Meine Zertifikate benachrichtigen",
+
+    "activeChat": "Chat-Nachrichten empfangen",
+    "sesionTimeLogout": "Maximale Sitzungszeit",
+
+    "change": "ändern",
+    "changePassword": "Passwort ändern",
+    "fieldObligatory": "Erforderliches Feld",
+    "charactersRequired": "mindestens 3 Zeichen erforderlich",
+    "oldPassword": "Altes Passwort",
+    "newPassword": "Neues Passwort",
+    "repeatPassword": "Passwort wiederholen"
+  },
+  "Inicio": {
+    "courses": "Kurse",
+    "coursesOffer": "Angebot an Kursen",
+    "coursesRecommended": "Empfohlene Kurse"
+  },
+  "CourseCard": {
+    "title": "SQL für die Datenanalyse",
+    "price": "US$19",
+    "information": "Informationen"
+  },
+  "Register": {
+    "fieldObligatory": "Erforderliches Feld",
+    "charactersRequired": "mindestens 3 Zeichen erforderlich",
+    "invalidEmail": "ungültige E-Mail-Adresse",
+    "signIn": "Registrieren",
+    "user": "Benutzer",
+    "email": "E-Mail-Adresse",
+    "password": "Kennwort",
+    "confirmPassword": "Passwort bestätigen",
+    "createAccount": "Ein Konto erstellen"
+  },
+  "category": {
+    "categories": "Kategorien",
+    "title": "Entwicklung von Systemen",
+    "cont": "56 Kurse"
   }
 }
