@@ -59,7 +59,10 @@ function Perfil(props) {
           {t("acEmail")}:{" "}
           {sesionUsuario ? validar(sesionUsuario.usuario.email) : ""}
         </h3>
-        <h3>{t("acPhone")}: +591 78944081</h3>
+        <h3>
+          {t("acPhone")}:{" "}
+          {sesionUsuario ? validar(sesionUsuario.usuario.Number) : ""}
+        </h3>
       </div>
     </div>
   );

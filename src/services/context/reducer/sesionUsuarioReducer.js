@@ -33,7 +33,6 @@ const sesionUsuarioReducer = (state = initialState, action) => {
       return {
         ...state,
         usuario: action.nuevoUsuario,
-        autenticado: action.autenticado,
       };
     case "CABIAR_IDIOMA":
       return {

@@ -122,3 +122,15 @@ export const obtenerUsuarioActual = (id, dispatch) => {
       });
   });
 };
+
+export const updateUser = (id, body) => {
+  return new Promise((resolve, eject) => {
+    HttpClient.put(`/users/${id}/UpdateUser`, body)
+      .then((response) => {
+        resolve(response);
+      })
+      .catch((error) => {
+        resolve(error.response);
+      });
+  });
+};

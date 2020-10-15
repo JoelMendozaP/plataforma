@@ -43,3 +43,16 @@
 .Chat__optEnv {
   color: var(--color4);
 }
+.Chat__title {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+}
+.Chat__action {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

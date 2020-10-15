@@ -11,6 +11,7 @@
 }
 .checkP__span {
   margin-top: 6px;
+  color: var(--color3);
 }
 input[type="checkbox"] {
   position: relative;

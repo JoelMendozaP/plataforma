@@ -23,7 +23,7 @@ function InformationPersonal(props) {
       </h3>
       <h3>
         {t("address")}:{" "}
-        {sesionUsuario ? validar(sesionUsuario.usuario.address) : ""}
+        {sesionUsuario ? validar(sesionUsuario.usuario.Address) : ""}
       </h3>
       <h3>
         {t("postalCode")}:{" "}
