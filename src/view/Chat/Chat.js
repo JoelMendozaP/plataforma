@@ -9,6 +9,7 @@ import {
   sendMessageAction,
   getChatBalloons,
 } from "../../services/actions/UserChats";
+var idRR = 0;
 function Chat(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const [conversation, setConversation] = useState({
@@ -16,6 +17,7 @@ function Chat(props) {
     startConversation: false,
     conversationUsers: null,
     inputMessage: "",
+    numMsj: 0,
   });
   const [listChat, setListChat] = useState([]);
 
@@ -26,27 +28,30 @@ function Chat(props) {
       ...a,
       [name]: value,
     }));
+    if (name === "addConversation") {
+      idRR = value;
+    }
   };
   const addButton = (e) => {
     e.preventDefault();
     const id = sesionUsuario.usuario.id;
-    const recipientId = id === 4 ? 3 : 4;
-    getChatBalloons(id, recipientId).then((response) => {
+    getChatBalloons(id, idRR).then((response) => {
       console.log("addButton response", response);
       if (response.status === 200) {
         setConversation((a) => ({
           ...a,
           startConversation: true,
+          numMsj: response.data.length,
         }));
+        setListChat([]);
         const c = response.data.length;
-        console.log(c);
         for (let i = 0; i < c; i++) {
           var dataChat = response.data[c - i - 1];
           const typeMess =
             dataChat.senderId !== id ? "other__message" : "you__message";
           setListChat((a) => [
             ...a,
-            <Message key={dataChat.id} typeM={typeMess} time="11:08">
+            <Message key={dataChat.id - 1} typeM={typeMess} time="11:08">
               {dataChat.content ? dataChat.content : null}
             </Message>,
           ]);
@@ -80,10 +85,9 @@ function Chat(props) {
   const sendMessage = () => {
     if (conversation.inputMessage !== "") {
       const id = sesionUsuario.usuario.id;
-      const recipientId = id === 4 ? 3 : 4;
       const body = {
         SenderId: id,
-        RecipientId: recipientId,
+        RecipientId: idRR,
         Content: conversation.inputMessage,
       };
       sendMessageAction(id, body).then((response) => {

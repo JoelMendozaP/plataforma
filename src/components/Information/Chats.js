@@ -29,8 +29,8 @@ function Chats(props) {
             <form className="Chats__addForm" action="">
               <DefInputIcon
                 onChange={props.onChange}
-                type="email"
-                placeholder="email"
+                type="number"
+                placeholder="id del usuario"
                 icon="envelope"
                 name="addConversation"
               ></DefInputIcon>
