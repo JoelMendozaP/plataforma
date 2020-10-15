@@ -34,7 +34,9 @@
     "lgIniciar": "Connexion",
     "lgUsC": "Utilisateur ou courrier",
     "lgPass": "Mot de passe",
-    "lgForget": "Avez-vous oublié votre"
+    "lgForget": "Avez-vous oublié votre",
+    "fieldObligatory": "Données obligatoires",
+    "charactersRequired": "3 caractères minimum requis"
   },
   "account": {
     "acPerfil": "Profil de l'utilisateur",
@@ -43,7 +45,14 @@
     "acUser": "Utilisateur",
     "acName": "Nom et prénom",
     "acEmail": "Courrier",
-    "acPhone": "Téléphone portable"
+    "acPhone": "Téléphone portable",
+    "changePassword": "Changer le mot de passe",
+    "personalInformation": "Informations personnelles",
+    "accountPreferences": "Préférences de compte",
+    "Birthdate": "Date de naissance",
+    "gender": "Genre",
+    "address": "Adresse",
+    "postalCode": "Code postal"
   },
   "editPerfil": {
     "epEditar": "Édition",
@@ -64,5 +73,61 @@
     "ciChange": "Changer la photo de profil",
     "ciSelect": "Choisir une image",
     "ciSave": "Enregistrer les changements"
+  },
+  "cambio": "changer",
+  "Preference": {
+    "notifications": "Notifications",
+    "emailNotifications": "Notifications par courrier électronique",
+    "save": "Sauvegarder la configuration",
+    "cancel": "Cancel",
+
+    "activeNotificationNewCourse": "Avertissez-moi des nouveaux cours",
+    "activeNotificationCourseUpdate": "Avertissez-moi des mises à jour des cours",
+    "activeNotificationFreeCourse": "Avertissez-moi des cours gratuits",
+    "activeNotificationChat": "Avertissez-moi des messages de chat",
+    "activeNotificationCertificate": "Avertissez-moi des certificat",
+
+    "activeEmailNewCourse": "Courriel per nouveaux cours",
+    "activeEmailCourseUpdate": "Courriel per cours utilisés",
+    "activeEmailFreeCourse": "Courriel per des cours gratuits",
+    "activeEmailChat": "Courriel per des messages de chat",
+    "activeEmailCertificate": "Courriel per des certificat",
+
+    "activeChat": "Recevoir des messages de chat",
+    "sesionTimeLogout": "Durée maximale de la session",
+
+    "change": "Changer",
+    "changePassword": "Changer le mot de passe",
+    "fieldObligatory": "Données obligatoires",
+    "charactersRequired": "3 caractères minimum requis",
+    "oldPassword": "Ancien mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "repeatPassword": "Répéter le mot de passe"
+  },
+  "Inicio": {
+    "courses": "Cours",
+    "coursesOffer": "Cours proposés",
+    "coursesRecommended": "Cours recommandés"
+  },
+  "CourseCard": {
+    "title": "SQL pour l'analyse des données",
+    "price": "19 $US",
+    "information": "Informations"
+  },
+  "Register": {
+    "fieldObligatory": "Données obligatoires",
+    "charactersRequired": "3 caractères minimum requis",
+    "invalidEmail": "adresse électronique non valable",
+    "signIn": "Registre",
+    "user": "Utilisateur",
+    "email": "Courrier électronique",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "createAccount": "Créer un compte"
+  },
+  "category": {
+    "categories": "Catégories",
+    "title": "Développement de systèmes",
+    "cont": "56 Cours"
   }
 }

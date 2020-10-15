@@ -34,7 +34,9 @@
     "lgIniciar": "Log in",
     "lgUsC": "User or email",
     "lgPass": "Password",
-    "lgForget": "Forgot your"
+    "lgForget": "Forgot your",
+    "fieldObligatory": "Mandatory field",
+    "charactersRequired": "At least 3 characters required"
   },
   "account": {
     "acPerfil": "User profile",
@@ -43,7 +45,14 @@
     "acUser": "User",
     "acName": "Complete name",
     "acEmail": "Email",
-    "acPhone": "Phone number"
+    "acPhone": "Phone number",
+    "changePassword": "Change password",
+    "personalInformation": "Personal information",
+    "accountPreferences": "Account preferences",
+    "Birthdate": "Date of birth",
+    "gender": "Gender",
+    "address": "Address",
+    "postalCode": "Postal code"
   },
   "editPerfil": {
     "epEditar": "Edit",
@@ -64,5 +73,60 @@
     "ciChange": "Change profile photo",
     "ciSelect": "Select image",
     "ciSave": "Save changes"
+  },
+  "Preference": {
+    "notifications": "Notifications",
+    "emailNotifications": "Email notifications",
+    "save": "Save configuration",
+    "cancel": "Cancel",
+
+    "activeNotificationNewCourse": "New courses notifications",
+    "activeNotificationCourseUpdate": "Course update notifications",
+    "activeNotificationFreeCourse": "Free course notifications",
+    "activeNotificationChat": "Chat messages notifications",
+    "activeNotificationCertificate": "Certification notifications",
+
+    "activeEmailNewCourse": "New courses email",
+    "activeEmailCourseUpdate": "Course update email",
+    "activeEmailFreeCourse": "Free course email",
+    "activeEmailChat": "Chat messages email",
+    "activeEmailCertificate": "Certification email",
+
+    "activeChat": "Chat service",
+    "sesionTimeLogout": "Maximum time of sesion",
+
+    "change": "change",
+    "changePassword": "Change password",
+    "fieldObligatory": "Mandatory field",
+    "charactersRequired": "At least 3 characters required",
+    "oldPassword": "Current password",
+    "newPassword": "New password",
+    "repeatPassword": "Repeat password"
+  },
+  "Inicio": {
+    "courses": "Courses",
+    "coursesOffer": "Courses on sale",
+    "coursesRecommended": "Recommended Courses"
+  },
+  "CourseCard": {
+    "title": "SQL for data analytics",
+    "price": "US$19",
+    "information": "Information"
+  },
+  "Register": {
+    "fieldObligatory": "Mandatory field",
+    "charactersRequired": "At least 3 characters required",
+    "invalidEmail": "Invalid email address",
+    "signIn": "Sign in",
+    "user": "User",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "createAccount": "Create account"
+  },
+  "category": {
+    "categories": "Categories",
+    "title": "Software development",
+    "cont": "56 Courses"
   }
 }
