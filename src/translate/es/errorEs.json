@@ -1,0 +1,18 @@
+{
+  "registration_failed": "Error al registrar usuario",
+  "external_login_failed": "Inicio de sesión externa fallida",
+  "login_failed": "Inicio de sesión fallido",
+  "recovery_account_failed": "Fallo en el envío de correo de recuperación",
+  "verify_recovery_failed": "Verificación de la nueva contraseña fallida",
+  "user_not_found": "Usuario no encontrado",
+  "message_not_found": "Mensaje no encontrado",
+  "message_delete_failed": "Eliminación de mensaje fallida",
+  "already_main_photo": "Ya es la foto principal",
+  "error_on_set_main_photo": "Fallo al establecer nueva foto principal",
+  "photo_upload_failed": "Carga de foto fallida",
+  "invalid_current_password": "Contraseña incorrecta",
+  "change_password_failed": "Cambio de contraseña fallido",
+  "message_creation_failed": "Envío de mensaje fallido",
+  "user_update_failed": "Error al actualizar usuario",
+  "user_preference_update_failed": "Error al actualizar preferencias de usuario"
+}

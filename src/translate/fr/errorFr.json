@@ -1,0 +1,18 @@
+{
+  "registration_failed": "Erreur d'enregistrement de l'utilisateur",
+  "external_login_failed": "Échec de la connexion externe",
+  "login_failed": "Échec de la connexion",
+  "recovery_account_failed": "Absence d'envoi de courrier de recouvrement",
+  "verify_recovery_failed": "Vérification du nouveau mot de passe erroné",
+  "user_not_found": "Utilisateur non trouvé",
+  "message_not_found": "Message non trouvé",
+  "message_delete_failed": "Échec du retrait des messages",
+  "already_main_photo": "C'est déjà l'image principale",
+  "error_on_set_main_photo": "Échec de l'établissement d'une nouvelle image principale",
+  "photo_upload_failed": "Echec du téléchargement de photos",
+  "invalid_current_password": "Mot de passe incorrect",
+  "change_password_failed": "Échec du changement de mot de passe",
+  "message_creation_failed": "Envoi d'un message infructueux",
+  "user_update_failed": "Erreur lors de la mise à jour de l'utilisateur",
+  "user_preference_update_failed": "Erreur lors de la mise à jour des préférences de l'utilisateur"
+}

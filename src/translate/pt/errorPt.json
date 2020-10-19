@@ -1,0 +1,18 @@
+{
+  "registration_failed": "Erro de registo do utilizador",
+  "external_login_failed": "Login externo falhado",
+  "login_failed": "Login falhado",
+  "recovery_account_failed": "Falha no envio do correio de recuperação",
+  "verify_recovery_failed": "Verificação da nova palavra-passe falhada",
+  "user_not_found": "Utilizador não encontrado",
+  "message_not_found": "Mensagem não encontrada",
+  "message_delete_failed": "Remoção de mensagens falhadas",
+  "already_main_photo": "É já a imagem principal",
+  "error_on_set_main_photo": "Falha em definir novo quadro principal",
+  "photo_upload_failed": "Carregamento de fotos falhado",
+  "invalid_current_password": "Palavra-passe incorrecta",
+  "change_password_failed": "Mudança de palavra-passe falhada",
+  "message_creation_failed": "Envio de mensagens sem sucesso",
+  "user_update_failed": "Erro ao actualizar o utilizador",
+  "user_preference_update_failed": "Erro ao actualizar as preferências dos utilizadores"
+}
