@@ -6,7 +6,7 @@ function Information(props) {
   const [{ informationR }] = useStateValue();
   const category = <Category />;
   return (
-    <div className="itemInformation">
+    <div className="itemInformation" id="infor">
       {informationR
         ? informationR.information
           ? informationR.information

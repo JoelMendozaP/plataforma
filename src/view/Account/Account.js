@@ -10,6 +10,7 @@ import Prueba from "../../components/Information/Prueba";
 import InformationPersonal from "../../components/Perfil/InformationPersonal";
 import Preference from "../../components/Perfil/Preference";
 import ChangePassword from "../../components/Perfil/ChangePassword";
+import ChangeImage from "../../components/Perfil/ChangeImage";
 
 function Account(props) {
   const { t } = useTranslation("account");
@@ -22,13 +23,24 @@ function Account(props) {
   }, [dispatch, sesionUsuario]);
 
   function toCallE() {
+    document
+      .getElementById("infor")
+      .scrollIntoView({ block: "start", behavior: "smooth" });
     dispatch({
       type: "CHANGE_INFO",
-      data: <EditPerfil />,
+      data: (
+        <React.Fragment>
+          <ChangeImage />
+          <EditPerfil />
+        </React.Fragment>
+      ),
     });
   }
 
   function toCall() {
+    document
+      .getElementById("infor")
+      .scrollIntoView({ block: "start", behavior: "smooth" });
     dispatch({
       type: "CHANGE_INFO",
       data: <ChangePassword />,

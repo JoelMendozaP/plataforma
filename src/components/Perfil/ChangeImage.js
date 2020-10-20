@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import { useStateValue } from "../../services/context/store";
 import "./style/ChangeImage.css";
 function ChangeImage(props) {
-  const [imgPreview, setImgPreview] = useState(null);
   const [{ sesionUsuario }, dispatch] = useStateValue();
+  const [imgPreview, setImgPreview] = useState(sesionUsuario.usuario.photoUrl);
   const { t } = useTranslation("ChangeImg");
   const [name, setname] = useState(null);
 
@@ -55,7 +55,9 @@ function ChangeImage(props) {
         </div>
         <button
           className="change__btn"
-          disabled={!imgPreview}
+          disabled={
+            !imgPreview || imgPreview === sesionUsuario.usuario.photoUrl
+          }
           onClick={(e) => handleUpload(e)}
         >
           {t("ciSave")}

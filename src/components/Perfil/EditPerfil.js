@@ -145,7 +145,8 @@ function EditPerfil(props) {
 
   return (
     <div className="EditPerfil">
-      <h2>{t("epEditar")}</h2>
+      {/* <h2>{t("epEditar")}</h2> */}
+      <br />
       <form action="">
         <h3>{t("epDataU")}</h3>
         <div className="form__Input">

@@ -50,6 +50,7 @@ function Translate() {
         <option value="en">{t("enLanguage")}</option>
         <option value="de">{t("deLanguage")}</option>
         <option value="fr">{t("frLanguage")}</option>
+        <option value="pt">{t("ptLanguage")}</option>
       </select>
     </div>
   );
