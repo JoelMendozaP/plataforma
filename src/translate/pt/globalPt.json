@@ -1,7 +1,132 @@
 {
+  "info": {
+    "welcomeToReact": "Texto en Español",
+    "HelloEvery": "Español"
+  },
   "header": {
-    "welcomeHead": "BienvenidoPt",
-    "searchHead": "Buscar...Pt",
-    "enterHead": "IngresarPt"
+    "welcomeHead": "Bem-vindo",
+    "searchHead": "Pesquisar...",
+    "enterHead": "Iniciar Sessão"
+  },
+  "language": {
+    "deLanguage": "Alemão",
+    "enLanguage": "Inglês",
+    "esLanguage": "Espanhol",
+    "frLanguage": "Francês"
+  },
+  "sidebarT": {
+    "sidInicio": "Início",
+    "sidCursos": "Cursos",
+    "sidCalendario": "Calendário",
+    "sidCuenta": "Conta",
+    "sidPreguntas": "Perguntas"
+  },
+  "infoT": {
+    "infCategories": "Categorias"
+  },
+  "formLR": {
+    "lrIniciar": "Iniciar Sessão",
+    "lrRegistro": "Registe-se",
+    "lrIniGF": "Comece a sessão com",
+    "lrNotCount": "Nenhuma conta registada"
+  },
+  "loginF": {
+    "lgIniciar": "Iniciar Sessão",
+    "lgUsC": "Utilizador ou e-mail",
+    "lgPass": "Senha",
+    "lgForget": "Esqueceu-se do seu",
+    "fieldObligatory": "Campo Obrigatório",
+    "charactersRequired": "Pelo menos 3 caracteres necessários"
+  },
+  "account": {
+    "acPerfil": "Perfil do utilizador",
+    "acEdit": "Editar perfil",
+    "acChange": "Mudar foto",
+    "acUser": "Utilizador",
+    "acName": "Nome completo",
+    "acEmail": "Email",
+    "acPhone": "Número de telefone",
+    "changePassword": "Alterar palavra-passe",
+    "personalInformation": "Informação pessoal",
+    "accountPreferences": "Preferências de conta",
+    "Birthdate": "Data de nascimento",
+    "gender": "Género",
+    "address": "Endereço",
+    "postalCode": "Código postal"
+  },
+  "editPerfil": {
+    "epEditar": "Editar",
+    "epDataU": "Dados do utilizador",
+    "epUsr": "Utilizador",
+    "epName": "Nome",
+    "epLastN": "Apelido",
+    "epEmail": "Email",
+    "epPhone": "Número de telefone",
+    "epDate": "Data de nascimento",
+    "epGener": "Género",
+    "epDirection": "Endereço",
+    "epCodeP": "Código postal",
+    "epSave": "Guardar alterações",
+    "epCancel": "Cancelar"
+  },
+  "ChangeImg": {
+    "ciChange": "Mudar foto do perfil",
+    "ciSelect": "Seleccionar imagem",
+    "ciSave": "Guardar alterações"
+  },
+  "Preference": {
+    "notifications": "Notificações",
+    "emailNotifications": "Notificações por e-mail",
+    "save": "Guardar configuração",
+    "cancel": "Cancelar",
+
+    "activeNotificationNewCourse": "Notificações de novos cursos",
+    "activeNotificationCourseUpdate": "Notificações de actualização do curso",
+    "activeNotificationFreeCourse": "Notificações de cursos gratuitas",
+    "activeNotificationChat": "Notificações de mensagens de chat",
+    "activeNotificationCertificate": "Notificações de certificação",
+
+    "activeEmailNewCourse": "Novos cursos e-mail",
+    "activeEmailCourseUpdate": "Correio electrónico de actualização do curso",
+    "activeEmailFreeCourse": "Email gratuito do curso",
+    "activeEmailChat": "Mensagens de chat e-mail",
+    "activeEmailCertificate": "Email de certificação",
+
+    "activeChat": "Serviço de chat",
+    "sesionTimeLogout": "Tempo máximo de adesão",
+
+    "change": "alteração",
+    "changePassword": "Alterar palavra-passe",
+    "fieldObligatory": "Campo Obrigatório",
+    "charactersRequired": "Pelo menos 3 caracteres necessários",
+    "oldPassword": "Senha actual",
+    "newPassword": "Nova palavra-passe",
+    "repeatPassword": "Repetir palavra-passe"
+  },
+  "Inicio": {
+    "courses": "Cursos",
+    "coursesOffer": "Cursos à venda",
+    "coursesRecommended": "Cursos recomendados"
+  },
+  "CourseCard": {
+    "title": "SQL para análise de dados",
+    "price": "US$19",
+    "information": "Informação"
+  },
+  "Register": {
+    "fieldObligatory": "Campo Obrigatório",
+    "charactersRequired": "Pelo menos 3 caracteres necessários",
+    "invalidEmail": "Endereço de e-mail inválido",
+    "signIn": "Iniciar sessão",
+    "user": "Utilizador",
+    "email": "Endereço de correio electrónico",
+    "password": "Senha",
+    "confirmPassword": "Confirmar palavra-passe",
+    "createAccount": "Criar conta"
+  },
+  "category": {
+    "categories": "Categorias",
+    "title": "Desenvolvimento de software",
+    "cont": "56 Cursos"
   }
 }

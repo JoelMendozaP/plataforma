@@ -1,0 +1,18 @@
+{
+  "registration_failed": "Fehler bei der Benutzerregistrierung",
+  "external_login_failed": "Externe Anmeldung fehlgeschlagen",
+  "login_failed": "Anmeldung fehlgeschlagen",
+  "recovery_account_failed": "Versäumnis, Wiederherstellungs-Mail zu senden",
+  "verify_recovery_failed": "Verifizierung des neuen fehlgeschlagenen Passworts",
+  "user_not_found": "Benutzer nicht gefunden",
+  "message_not_found": "Nachricht nicht gefunden",
+  "message_delete_failed": "Gescheiterte Nachrichtenentfernung",
+  "already_main_photo": "Es ist bereits das Hauptbild",
+  "error_on_set_main_photo": "Versäumnis, ein neues Hauptbild zu setzen",
+  "photo_upload_failed": "Foto-Upload fehlgeschlagen",
+  "invalid_current_password": "Falsches Kennwort",
+  "change_password_failed": "Fehlgeschlagene Passwort-Änderung",
+  "message_creation_failed": "Erfolgloses Senden einer Nachricht",
+  "user_update_failed": "Fehler beim Aktualisieren des Benutzers",
+  "user_preference_update_failed": "Fehler beim Aktualisieren der Benutzereinstellungen"
+}
