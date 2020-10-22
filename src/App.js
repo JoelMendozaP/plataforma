@@ -8,6 +8,9 @@ import "./assets/style/StyleGrid.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import { useStateValue } from "./services/context/store";
 import { obtenerUsuarioActual } from "./services/actions/UsuarioAction";
+import ReactGA from "react-ga";
+
+ReactGA.initialize("G-4QNPFMH62Q");
 
 function App(props) {
   const [{ openSnackbar }, dispatch] = useStateValue();
@@ -23,6 +26,7 @@ function App(props) {
           console.log("Error", err);
         });
     }
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, [dispatch]);
 
   return (
