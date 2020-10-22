@@ -68,7 +68,9 @@
     "epDirection": "Dirección",
     "epCodeP": "Código Postal",
     "epSave": "Guardar datos",
-    "epCancel": "Cancelar"
+    "epCancel": "Cancelar",
+    "female": "Femenino",
+    "male": "Masculino"
   },
   "ChangeImg": {
     "ciChange": "Cambia foto de perfil",

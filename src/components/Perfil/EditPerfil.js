@@ -184,15 +184,15 @@ function EditPerfil(props) {
         </div>
         <h3>Datos Personales</h3>
         <div className="form__Input">
-          <input
-            className="formControl"
-            type="text"
-            name="Gender"
-            placeholder={t("epGener")}
+          <select
+            className="fselect"
             value={user.Gender}
             onChange={handleChange}
-          />
-          <i className="fas fa-dna"></i>
+            name="Gender"
+          >
+            <option value="female">{t("female")}</option>
+            <option value="male">{t("male")}</option>
+          </select>
         </div>
         <div className="form__InputDate">
           <input
@@ -204,17 +204,6 @@ function EditPerfil(props) {
             onChange={handleChange}
           />
         </div>
-        {/* <div className="form__Input">
-          <input
-            className="formControl"
-            type="number"
-            name="phone"
-            placeholder={t("epPhone")}
-            defaultValue={user.phone}
-            onChange={handleChange}
-          />
-          <i className="fas fa-mobile"></i>
-        </div> */}
         <div className="form__Input">
           <input
             className="formControl"
