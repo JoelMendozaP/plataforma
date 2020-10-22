@@ -35,6 +35,19 @@
       rel="stylesheet"
     />
     <title>Capacita Global Internacional</title>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KGSTLYFBPM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-KGSTLYFBPM");
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -49,12 +62,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-
-    <script>
-      //<![CDATA[
-      document.cookie = "same-site-cookie=foo; SameSite=Lax";
-      document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
-      //]]>
-    </script>
   </body>
 </html>
