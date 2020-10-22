@@ -5,16 +5,19 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Snackbar from "./components/Snackbar/Snackbar";
 import Modal from "./view/Modal/Modal";
 import "./assets/style/StyleGrid.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import { useStateValue } from "./services/context/store";
 import { obtenerUsuarioActual } from "./services/actions/UsuarioAction";
 import ReactGA from "react-ga";
-
-ReactGA.initialize("G-4QNPFMH62Q");
+import { createBrowserHistory } from "history";
 
 function App(props) {
   const [{ openSnackbar }, dispatch] = useStateValue();
-
+  const history = createBrowserHistory();
+  ReactGA.initialize("G-4QNPFMH62Q");
+  history.listen(function (location) {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
   useEffect(() => {
     const idLs = window.localStorage.getItem("id");
     if (idLs) {
@@ -26,13 +29,12 @@ function App(props) {
           console.log("Error", err);
         });
     }
-    ReactGA.pageview(window.location.pathname + window.location.search);
   }, [dispatch]);
 
   return (
     <React.Fragment>
       <div className="containerGrid">
-        <BrowserRouter>
+        <Route history={history}>
           <Route
             path="/"
             render={() => (
@@ -44,7 +46,7 @@ function App(props) {
           />
           <Navbar />
           <Sidebar />
-        </BrowserRouter>
+        </Route>
       </div>
       <Snackbar
         open={openSnackbar ? openSnackbar.open : false}
