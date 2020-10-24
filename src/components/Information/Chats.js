@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import DefInputIcon from "../inputs/DefInputIcon";
 // import { Link, NavLink } from "react-router-dom";
-// import UserChat from "../Card/UserChat";
+import UserChat from "../Card/UserChat";
 import "./style/Chats.css";
 function Chats(props) {
   const [add, setAdd] = useState(false);
   const changeAdd = () => {
     setAdd(!add);
+  };
+
+  const createList = () => {
+    var c = props.conversationUsers.length;
+    // var conv = props.conversationUsers;
+    let List = [];
+    for (let i = 0; i < c; i++) {
+      List.push(
+        <UserChat key={i} CardCss={"CardD"} notifyCss={"notifyD"}>
+          Lorem Ipsum is simply dummy text of the printing and typesetti
+          industry.
+        </UserChat>
+      );
+    }
+    return List;
   };
   return (
     <div className="Chats">
@@ -41,8 +56,8 @@ function Chats(props) {
           </div>
         )}
         <div className="Chats__cards">
-          {props.conversationUsers === [] ? (
-            "hay"
+          {props.conversationUsers !== null ? (
+            createList()
           ) : (
             <span className="Chats__empty">
               No tiene conversasiones inicie una.

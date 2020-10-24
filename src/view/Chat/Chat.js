@@ -10,6 +10,7 @@ import {
   getChatBalloons,
 } from "../../services/actions/UserChats";
 var idRR = 0;
+var conUser = null;
 function Chat(props) {
   const [{ sesionUsuario }, dispatch] = useStateValue();
   const [conversation, setConversation] = useState({
@@ -45,8 +46,9 @@ function Chat(props) {
         }));
         setListChat([]);
         const c = response.data.length;
+        var dataChat;
         for (let i = 0; i < c; i++) {
-          var dataChat = response.data[c - i - 1];
+          dataChat = response.data[c - i - 1];
           const typeMess =
             dataChat.senderId !== id ? "other__message" : "you__message";
           setListChat((a) => [
@@ -68,20 +70,21 @@ function Chat(props) {
           ...a,
           conversationUsers: response.data,
         }));
+        conUser = response.data;
+        console.log("datos", conUser);
+      });
+      dispatch({
+        type: "CHANGE_INFO",
+        data: (
+          <Chats
+            addButton={addButton}
+            onChange={handleChange}
+            conversationUsers={conUser}
+          />
+        ),
       });
     }
-    dispatch({
-      type: "CHANGE_INFO",
-      data: (
-        <Chats
-          addButton={addButton}
-          onChange={handleChange}
-          conversationUsers={conversation.conversationUsers}
-        />
-      ),
-    });
-  }, [dispatch, sesionUsuario]);
-
+  }, [sesionUsuario]);
   const sendMessage = () => {
     if (conversation.inputMessage !== "") {
       const id = sesionUsuario.usuario.id;

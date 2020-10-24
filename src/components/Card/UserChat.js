@@ -23,10 +23,7 @@ function UserChat(props) {
       ></div>
       <div className="UserChat__content">
         <div className="UserChat__Cname">Joel Mendoza</div>
-        <div className="UserChat__Cchat">
-          Lorem Ipsum is simply dummy text of the printing and typesetti
-          industry.
-        </div>
+        <div className="UserChat__Cchat">{props.children}</div>
       </div>
       <div className="UserChat__info">
         <div className={`${props.notifyCss} UserChat__Inotify`}>1</div>
