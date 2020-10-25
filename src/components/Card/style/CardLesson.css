@@ -1,0 +1,26 @@
+.CardLesson {
+  padding: 10px 1.5% 10px 3%;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--color3);
+}
+.CardLesson span {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.CardLesson__description p {
+  font-size: 16px;
+  margin: 0;
+  margin-top: 10px;
+  color: var(--color1);
+}
+.CardLesson__right i {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color3);
+  cursor: pointer;
+}

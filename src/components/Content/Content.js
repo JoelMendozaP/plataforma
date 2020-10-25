@@ -10,6 +10,7 @@ import Chat from "../../view/Chat/Chat";
 import Palette from "../Palette/Palette";
 import RouteSafe from "../navigation/RouteSafe";
 import Auth from "../../view/Auth/Auth";
+import CourseInfo from "../../view/CourseInfo/CourseInfo";
 import "./style/Content.css";
 
 class content extends Component {
@@ -26,6 +27,7 @@ class content extends Component {
           <Route exact path="/auth" component={Auth} />
           <Route exact path="/questions" component={Questions} />
           <Route exact path="/chat" component={Chat} />
+          <Route exact path="/Course" component={CourseInfo} />
           <Route
             path="/theme"
             render={() => (

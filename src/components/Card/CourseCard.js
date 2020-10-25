@@ -1,10 +1,12 @@
 import "./style/CourseCard.css";
-
 import React from "react";
-
 import { useTranslation } from "react-i18next";
+import { withRouter } from "react-router-dom";
 function CourseCard(props) {
   const { t } = useTranslation("CourseCard");
+  const redirectInfo = () => {
+    props.history.push("/Course");
+  };
   return (
     <div className="CourseCard">
       <div className="CourseCard__header">
@@ -29,10 +31,10 @@ function CourseCard(props) {
         </div>
       </div>
       <div className="CourseCard__btn">
-        <button>{t("information")}</button>
+        <button onClick={redirectInfo}>{t("information")}</button>
       </div>
     </div>
   );
 }
 
-export default CourseCard;
+export default withRouter(CourseCard);
