@@ -3,9 +3,14 @@ import React, { useState, useEffect } from "react";
 import ListCard from "../../components/Card/ListCard";
 import Loading from "../../components/animation/Loading";
 import CardModule from "../../components/Card/CardModule";
+import InfomationCourse from "../../components/Information/InfomationCourse"
+import { useStateValue } from "../../services/context/store";
 const datos = {
   id: 1,
   nombre: "SQL para el análisis de datos",
+  price: "18,99 US$",
+  realPrice: "129,99 US$",
+  discount: "85",
   icons: { star: "5.0", time: "165", student: 151 },
   learn: [
     "Beginner level introduction to Docker",
@@ -82,12 +87,35 @@ const datos = {
       lessons: [],
     },
   ],
+  description: {
+    content: "Aprende Desarrollo Web con este curso 100% práctico, paso a paso y sin conocimientos previos, INCLUYE PROYECTO FINAL",
+    certificate: true,
+    level: "Curso Intermedio",
+    language: "Español (Spanish)",
+    subtitle: "Inglés (English)"
+  },
+  teacher: {
+    name: "Gabriel Gabellone",
+    titulo: "Regional Manager Planificación Comercial Cencosud",
+    photo: "https://uifaces.co/our-content/donated/gPZwCbdS.jpg",
+    qualification: "4.6",
+    courses: "25",
+    reviews: "47.285",
+    students: "174.235"
+  }
 };
 function CourseInfo(props) {
   const [curso, setCurso] = useState({});
+  const [{ sesionUsuario }, dispatch] = useStateValue();
   useEffect(() => {
     setCurso(datos);
-  }, []);
+    if (curso) {
+      dispatch({
+        type: "CHANGE_INFO",
+        data: <InfomationCourse course={curso} />,
+      });
+    }
+  }, [curso, dispatch]);
   const listModulo = () => {
     let list = [];
     if (curso) {

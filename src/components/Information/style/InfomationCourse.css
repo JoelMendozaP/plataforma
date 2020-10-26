@@ -1,0 +1,84 @@
+.InfomationCourse {
+  margin: 20px 5%;
+}
+.InfomationCourse .title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: start;
+}
+.InfomationCourse__card {
+  border: 2px solid var(--color5);
+  border-radius: 15px;
+  padding: 15px 10px;
+  margin: 5px 0 15px;
+  background: var(--color5);
+}
+.InfomationCourse__header {
+  display: flex;
+  justify-content: space-between;
+}
+.InfomationCourse__price {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.InfomationCourse__price .price {
+  font-weight: bolder;
+  font-size: 20px;
+}
+.InfomationCourse__price .discount {
+  color: var(--color6);
+  margin-top: 5px;
+  font-size: 14px;
+}
+.InfomationCourse__realPrice {
+  color: var(--color2);
+  text-decoration: line-through;
+  font-size: 16px;
+}
+.InfomationCourse__btns {
+  margin: 35px 5% 10px;
+}
+.InfomationCourse__btns button {
+  margin: 5px 0;
+}
+.InfomationCourse .offerTime {
+  color: var(--color2);
+  font-size: 14px;
+}
+.InfomationCourse__cardBorder {
+  border: 2px solid var(--color5);
+  margin: 8px 0px 20px;
+  text-align: start;
+  padding: 15px;
+  border-radius: 15px;
+}
+.InfomationCourse__cardBorder p {
+  margin: 0 0 10px;
+}
+.InfomationCourse__dataIcon{
+    margin: 10px 0;
+    font-size: 16px;
+}
+.InfomationCourse__dataIcon i {
+    margin-right: 8px;
+}
+.InfomationCourse__cardBorder .teacherCard {
+    display: flex;
+    align-items: center;
+}
+.InfomationCourse__cardBorder .teacherCard img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.InfomationCourse__cardBorder .description span{
+    font-weight: bold;
+    font-size: 18px;
+}
+.InfomationCourse__cardBorder .description p{
+    font-weight: lighter;
+    font-size: 15px;
+    margin-top: 5px;
+}
