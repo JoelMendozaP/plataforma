@@ -1,0 +1,29 @@
+.CourseInfo {
+  margin: 15px 0 30px;
+}
+.CourseInfo__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+}
+.CourseInfo__title h2 {
+  margin: 0;
+}
+.CourseInfo__title i {
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--color5);
+  cursor: pointer;
+}
+.CourseInfo__icons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.CourseInfo__Content {
+  text-align: start;
+}
+.CourseInfo__Content h3 {
+  margin: 30px 5% 10px;
+}

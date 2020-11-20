@@ -1,0 +1,18 @@
+{
+  "registration_failed": "User registration error",
+  "external_login_failed": "Failed external login",
+  "login_failed": "Failed login",
+  "recovery_account_failed": "Failure to send recovery mail",
+  "verify_recovery_failed": "Verification of the new failed password",
+  "user_not_found": "User not found",
+  "message_not_found": "Message not found",
+  "message_delete_failed": "Failed Message Removal",
+  "already_main_photo": "It is already the main picture",
+  "error_on_set_main_photo": "Failure to set new main picture",
+  "photo_upload_failed": "Failed photo loading",
+  "invalid_current_password": "Wrong Password",
+  "change_password_failed": "Failed password change",
+  "message_creation_failed": "Unsuccessful message sending",
+  "user_update_failed": "Error when updating user",
+  "user_preference_update_failed": "Error when updating user preferences"
+}

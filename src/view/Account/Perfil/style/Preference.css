@@ -1,0 +1,30 @@
+.Preference {
+  border: solid 2px var(--color3);
+  padding: 20px;
+  text-align: start;
+  border-radius: 20px;
+}
+.Preference__Notify {
+  color: var(--color4);
+  font-size: 18px;
+}
+.Preference__List {
+  margin-left: 20px;
+}
+.Preference__NEmail {
+  font-size: 18px;
+  color: var(--color4);
+}
+.Preference__btn {
+  display: flex;
+  justify-content: space-around;
+}
+.Preference__btn button {
+  padding: 6px 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color6);
+  font-size: 14px;
+  border: none;
+}

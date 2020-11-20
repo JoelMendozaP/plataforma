@@ -1,0 +1,26 @@
+.form__span {
+  color: var(--color4);
+  font-weight: bolder;
+  filter: grayscale(20%) opacity(1);
+  text-shadow: 0 0 28px var(--color5);
+}
+.forgotPassword {
+  color: gray;
+  margin-top: 20px;
+}
+.forgotPassword a {
+  color: var(--color4);
+  filter: grayscale(20%) opacity(1);
+  font-weight: bolder;
+  text-decoration: none;
+}
+.Change_text {
+  margin: 10px 0;
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--color3);
+}
+/* .errorMessage {
+  color: var(--color7);
+  font-size: 13px;
+} */

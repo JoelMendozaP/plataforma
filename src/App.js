@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { Template } from "./components/layout";
+import "./assets/style/globalStyle.css";
+import Theme from "./components/theme";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./translate/i18n";
+import { useEffect } from "react";
+import { obtenerUsuarioActual } from "./services/action/UserAuthAction";
+import { startSession } from "./store/actions";
+import { connect } from "react-redux";
+const App = (props) => {
+  useEffect(() => {
+    const idLs = window.localStorage.getItem("id");
+    if (idLs) {
+      obtenerUsuarioActual(idLs)
+        .then((response) => {
+          console.log(response);
+          props.startSession(response.data.userToReturn, true);
+        })
+        .catch((err) => {
+          console.log("Error", err);
+        });
+    }
+  }, [props]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <I18nextProvider i18n={i18n}>
+      <Theme>
+        <Template />
+      </Theme>
+    </I18nextProvider>
   );
-}
+};
 
-export default App;
+const mapDispatchToProps = {
+  startSession,
+};
+export default connect(null, mapDispatchToProps)(App);

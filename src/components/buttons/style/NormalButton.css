@@ -1,0 +1,9 @@
+.NormalButton {
+  padding: 8px 57px;
+  border-radius: 10px;
+  background: linear-gradient(var(--color4), var(--color3));
+  color: var(--color6);
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}

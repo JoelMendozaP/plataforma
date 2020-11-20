@@ -1,0 +1,133 @@
+{
+  "info": {
+    "welcomeToReact": "Texto en Español",
+    "HelloEvery": "Español"
+  },
+  "header": {
+    "welcomeHead": "Bienvenue",
+    "searchHead": "Rechercher...",
+    "enterHead": "Entrer"
+  },
+  "language": {
+    "deLanguage": "Allemand",
+    "enLanguage": "Anglais",
+    "esLanguage": "Espagnol",
+    "frLanguage": "Français"
+  },
+  "sidebarT": {
+    "sidInicio": "Accueil",
+    "sidCursos": "Cours",
+    "sidCalendario": "Calendrier",
+    "sidCuenta": "Compte",
+    "sidPreguntas": "Questions"
+  },
+  "infoT": {
+    "infCategories": "Catégories"
+  },
+  "formLR": {
+    "lrIniciar": "Connexion",
+    "lrRegistro": "Inscription",
+    "lrIniGF": "Connexion à l'aide de",
+    "lrNotCount": "Vous n'avez pas de compte Registre"
+  },
+  "loginF": {
+    "lgIniciar": "Connexion",
+    "lgUsC": "Utilisateur ou courrier",
+    "lgPass": "Mot de passe",
+    "lgForget": "Avez-vous oublié votre",
+    "fieldObligatory": "Données obligatoires",
+    "charactersRequired": "3 caractères minimum requis"
+  },
+  "account": {
+    "acPerfil": "Profil de l'utilisateur",
+    "acEdit": "Modifier le profil",
+    "acChange": "Changer la photo",
+    "acUser": "Utilisateur",
+    "acName": "Nom et prénom",
+    "acEmail": "Courrier",
+    "acPhone": "Téléphone portable",
+    "changePassword": "Changer le mot de passe",
+    "personalInformation": "Informations personnelles",
+    "accountPreferences": "Préférences de compte",
+    "Birthdate": "Date de naissance",
+    "gender": "Genre",
+    "address": "Adresse",
+    "postalCode": "Code postal"
+  },
+  "editPerfil": {
+    "epEditar": "Édition",
+    "epDataU": "Données relatives aux utilisateurs",
+    "epUsr": "Utilisateur",
+    "epName": "Nom",
+    "epLastN": "Nom de famille",
+    "epEmail": "Courrier",
+    "epPhone": "Téléphone",
+    "epDate": "Date de naissance",
+    "epGener": "Genre",
+    "epDirection": "Adresse",
+    "epCodeP": "Code postal",
+    "epSave": "Enregistrer les données",
+    "epCancel": "Annuler"
+  },
+  "ChangeImg": {
+    "ciChange": "Changer la photo de profil",
+    "ciSelect": "Choisir une image",
+    "ciSave": "Enregistrer les changements"
+  },
+  "cambio": "changer",
+  "Preference": {
+    "notifications": "Notifications",
+    "emailNotifications": "Notifications par courrier électronique",
+    "save": "Sauvegarder la configuration",
+    "cancel": "Cancel",
+
+    "activeNotificationNewCourse": "Avertissez-moi des nouveaux cours",
+    "activeNotificationCourseUpdate": "Avertissez-moi des mises à jour des cours",
+    "activeNotificationFreeCourse": "Avertissez-moi des cours gratuits",
+    "activeNotificationChat": "Avertissez-moi des messages de chat",
+    "activeNotificationCertificate": "Avertissez-moi des certificat",
+
+    "activeEmailNewCourse": "Courriel per nouveaux cours",
+    "activeEmailCourseUpdate": "Courriel per cours utilisés",
+    "activeEmailFreeCourse": "Courriel per des cours gratuits",
+    "activeEmailChat": "Courriel per des messages de chat",
+    "activeEmailCertificate": "Courriel per des certificat",
+
+    "activeChat": "Recevoir des messages de chat",
+    "sesionTimeLogout": "Durée maximale de la session",
+
+    "change": "Changer",
+    "changePassword": "Changer le mot de passe",
+    "fieldObligatory": "Données obligatoires",
+    "charactersRequired": "3 caractères minimum requis",
+    "oldPassword": "Ancien mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "repeatPassword": "Répéter le mot de passe"
+  },
+  "Inicio": {
+    "courses": "Cours",
+    "coursesOffer": "Cours proposés",
+    "coursesRecommended": "Cours recommandés"
+  },
+  "CourseCard": {
+    "title": "SQL pour l'analyse des données",
+    "price": "19 $US",
+    "information": "Informations"
+  },
+  "Register": {
+    "fieldObligatory": "Données obligatoires",
+    "charactersRequired": "3 caractères minimum requis",
+    "invalidEmail": "adresse électronique non valable",
+    "signIn": "Registre",
+    "user": "Utilisateur",
+    "email": "Courrier électronique",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "createAccount": "Créer un compte"
+  },
+  "category": {
+    "categories": "Catégories",
+    "title": "Développement de systèmes",
+    "cont": "56 Cours"
+  }
+}

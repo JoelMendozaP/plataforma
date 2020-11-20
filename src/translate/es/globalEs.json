@@ -1,0 +1,135 @@
+{
+  "info": {
+    "welcomeToReact": "Texto en Español",
+    "HelloEvery": "Español"
+  },
+  "header": {
+    "welcomeHead": "Bienvenido",
+    "searchHead": "Buscar...",
+    "enterHead": "Ingresar"
+  },
+  "language": {
+    "deLanguage": "Alemán",
+    "enLanguage": "Inglés",
+    "esLanguage": "Español",
+    "frLanguage": "francés",
+    "ptLanguage": "Portugués"
+  },
+  "sidebarT": {
+    "sidInicio": "Inicio",
+    "sidCursos": "Cursos",
+    "sidCalendario": "Calendario",
+    "sidCuenta": "Cuenta",
+    "sidPreguntas": "Preguntas"
+  },
+  "infoT": {
+    "infCategories": "Categorías"
+  },
+  "formLR": {
+    "lrIniciar": "Iniciar Sesion",
+    "lrRegistro": "Registro",
+    "lrIniGF": "Iniciar Sesion Usando",
+    "lrNotCount": "No tienes cuenta Registrada"
+  },
+  "loginF": {
+    "lgIniciar": "Iniciar Sesion",
+    "lgUsC": "Usuario o correo",
+    "lgPass": "Contraseña",
+    "lgForget": "¿Olvidaste tu",
+    "fieldObligatory": "Campo obligatorio",
+    "charactersRequired": "mínimo 3 caracteres requeridos"
+  },
+  "account": {
+    "acPerfil": "Perfil de Usuario",
+    "acEdit": "Editar Perfil",
+    "acChange": "Cambiar Foto",
+    "acUser": "Usuario",
+    "acName": "Nombre Completo",
+    "acEmail": "Correo",
+    "acPhone": "Celular",
+    "changePassword": "Cambiar Contraseña",
+    "personalInformation": "Información Personal",
+    "accountPreferences": "Preferencias de Cuenta",
+    "Birthdate": "Fecha de Nacimiento",
+    "gender": "Género",
+    "address": "Dirección",
+    "postalCode": "Código Postal"
+  },
+  "editPerfil": {
+    "epEditar": "Editar",
+    "epDataU": "Datos de Usuario",
+    "epUsr": "Usuario",
+    "epName": "Nombre",
+    "epLastN": "Apellido",
+    "epEmail": "Correo",
+    "epPhone": "Teléfono",
+    "epDate": "Fecha de Nacimiento",
+    "epGener": "Género",
+    "epDirection": "Dirección",
+    "epCodeP": "Código Postal",
+    "epSave": "Guardar datos",
+    "epCancel": "Cancelar",
+    "female": "Femenino",
+    "male": "Masculino"
+  },
+  "ChangeImg": {
+    "ciChange": "Cambia foto de perfil",
+    "ciSelect": "Escoger imagen",
+    "ciSave": "Guardar Cambios"
+  },
+  "Preference": {
+    "notifications": "Notificaciones",
+    "emailNotifications": "Notificaciones de Email",
+    "save": "Guardar Configuración",
+    "cancel": "Cancelar",
+
+    "activeNotificationNewCourse": "Notificarme de nuevos cursos",
+    "activeNotificationCourseUpdate": "Notificar cursos actilizados",
+    "activeNotificationFreeCourse": "Notificarme de cursos gratis",
+    "activeNotificationChat": "Notificación de Chat",
+    "activeNotificationCertificate": "Notificación de Certificado",
+
+    "activeEmailNewCourse": "Notificar nuevos cursos",
+    "activeEmailCourseUpdate": "Notificar cursos actualizados",
+    "activeEmailFreeCourse": "Notificar cursos gratis",
+    "activeEmailChat": "Notificarme de actividad del chat",
+    "activeEmailCertificate": "Notificar mis Certificados",
+
+    "activeChat": "Recibir mensajes al chat",
+    "sesionTimeLogout": "Tiempo máximo de sesión",
+
+    "change": "Cambiar",
+    "changePassword": "Cambiar Contraseña",
+    "fieldObligatory": "Campo obligatorio",
+    "charactersRequired": "mínimo 3 caracteres requeridos",
+    "oldPassword": "Antigua Contraseña",
+    "newPassword": "Nueva Contraseña",
+    "repeatPassword": "Repetir Contraseña"
+  },
+  "Inicio": {
+    "courses": "Cursos",
+    "coursesOffer": "Cursos en Oferta",
+    "coursesRecommended": "Cursos Recomendados"
+  },
+  "CourseCard": {
+    "title": "SQL para el análisis de datos",
+    "price": "US$19",
+    "information": "Infromación"
+  },
+  "Register": {
+    "fieldObligatory": "Campo obligatorio",
+    "charactersRequired": "mínimo 3 caracteres requeridos",
+    "invalidEmail": "dirección de correo electrónico no válida",
+    "signIn": "Registarse",
+    "user": "Usuario",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "createAccount": "Crear cuenta"
+  },
+  "category": {
+    "categories": "Categorías",
+    "title": "Desarrollo de Sistemas",
+    "cont": "56 Cursos"
+  }
+}

@@ -1,0 +1,15 @@
+.CardPink {
+  /* width: 150px; */
+  /* min-width: 150px; */
+  background: var(--color5);
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.CardPink__title {
+  font-weight: bold;
+}
