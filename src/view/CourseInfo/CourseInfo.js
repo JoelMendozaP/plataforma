@@ -1,10 +1,19 @@
 import "./CourseInfo.css";
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import ListCard from "../../components/Card/ListCard";
 import Loading from "../../components/animation/Loading";
 import CardModule from "../../components/Card/CardModule";
 import InfomationCourse from "../../components/Information/InfomationCourse"
 import { useStateValue } from "../../services/context/store";
+=======
+
+import { Loading } from "../../components/animation";
+import { InfomationCourse } from "../../components/layout/aside";
+import { ListCard, CardModule } from "../../components/card";
+import { connect } from "react-redux";
+import { changeInfo } from "../../store/actions";
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
 const datos = {
   id: 1,
   nombre: "SQL para el análisis de datos",
@@ -88,11 +97,20 @@ const datos = {
     },
   ],
   description: {
+<<<<<<< HEAD
     content: "Aprende Desarrollo Web con este curso 100% práctico, paso a paso y sin conocimientos previos, INCLUYE PROYECTO FINAL",
     certificate: true,
     level: "Curso Intermedio",
     language: "Español (Spanish)",
     subtitle: "Inglés (English)"
+=======
+    content:
+      "Aprende Desarrollo Web con este curso 100% práctico, paso a paso y sin conocimientos previos, INCLUYE PROYECTO FINAL",
+    certificate: true,
+    level: "Curso Intermedio",
+    language: "Español (Spanish)",
+    subtitle: "Inglés (English)",
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
   },
   teacher: {
     name: "Gabriel Gabellone",
@@ -101,6 +119,7 @@ const datos = {
     qualification: "4.6",
     courses: "25",
     reviews: "47.285",
+<<<<<<< HEAD
     students: "174.235"
   }
 };
@@ -116,6 +135,20 @@ function CourseInfo(props) {
       });
     }
   }, [curso, dispatch]);
+=======
+    students: "174.235",
+  },
+};
+
+function CourseInfo(props) {
+  const [curso, setCurso] = useState({});
+  useEffect(() => {
+    setCurso(datos);
+    if (curso) {
+      props.changeInfo(<InfomationCourse course={curso} />);
+    }
+  }, [curso, props]);
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
   const listModulo = () => {
     let list = [];
     if (curso) {
@@ -138,7 +171,11 @@ function CourseInfo(props) {
       <div className="CourseInfo__header">
         <div className="CourseInfo__title">
           <h2>{curso.nombre}</h2>
+<<<<<<< HEAD
           <i className="fas fa-bookmark"></i>
+=======
+          <i className="far fa-heart"></i>
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
         </div>
         <div className="CourseInfo__icons">
           <div className="CourseInfo__icon">
@@ -168,4 +205,11 @@ function CourseInfo(props) {
   );
 }
 
+<<<<<<< HEAD
 export default CourseInfo;
+=======
+const mapDispatchToProps = {
+  changeInfo,
+};
+export default connect(null, mapDispatchToProps)(CourseInfo);
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5

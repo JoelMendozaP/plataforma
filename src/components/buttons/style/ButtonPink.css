@@ -1,0 +1,9 @@
+.ButtonPink {
+  color: var(--color6);
+  border: none;
+  height: 25px;
+  width: 100%;
+  background: var(--color4);
+  border-radius: 5px;
+  cursor: pointer;
+}

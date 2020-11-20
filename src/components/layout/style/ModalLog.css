@@ -1,0 +1,32 @@
+.title__option {
+  color: var(--color4);
+  filter: grayscale(100%) opacity(0.4);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: larger;
+}
+.title__option:hover {
+  filter: grayscale(0%) opacity(1);
+  /* text-shadow: 0px 0px 10px var(--secondary); */
+  text-shadow: 0px 0px 20px var(--color5);
+  /* text-shadow: 0px 0px 20px rgba(245, 9, 180, 0.5); */
+}
+.LoginForm__titleAc {
+  filter: grayscale(0%) opacity(1);
+  text-shadow: 0px 0px 20px var(--color5);
+}
+.LoginForm__titleSpan {
+  color: var(--color4);
+  filter: grayscale(100%) opacity(0.4);
+  font-size: larger;
+  font-weight: bold;
+}
+.LoginForm__change {
+  color: var(--color2);
+  /* color: gray; */
+}
+@media screen and (max-width: 425px) {
+  .LoginForm__title {
+    justify-self: start;
+  }
+}

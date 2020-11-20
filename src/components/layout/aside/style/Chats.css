@@ -1,0 +1,44 @@
+.Chats__Link {
+  text-decoration: none;
+}
+.Chats__option {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Chats__option span {
+  font-size: 20px;
+}
+.Chats__option i {
+  font-size: 20px;
+  margin: 0 8px;
+}
+.Chats__plus {
+  background-color: var(--color5);
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Chats__body {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.Chats__addInput {
+  margin: 5%;
+}
+.Chats__addForm {
+  align-items: center;
+  display: flex;
+}
+.Chats__addForm button {
+  height: 30px;
+  width: 40px;
+  margin-left: 10px;
+  border: none;
+  background: var(--color5);
+  color: var(--color3);
+  border-radius: 8px;
+}

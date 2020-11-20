@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import Message from "../../components/Card/Message";
 import user from "../../assets/img/user.jpg";
@@ -181,5 +182,12 @@ function Chat(props) {
     return data;
   }
 }
+=======
+import React from "react";
+
+const Chat = () => {
+  return <div>Chat</div>;
+};
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
 
 export default Chat;

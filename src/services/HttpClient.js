@@ -19,6 +19,10 @@ const requestGeneric = {
   get: (url) => axios.get(url),
   post: (url, body) => axios.post(url, body),
   put: (url, body) => axios.put(url, body),
+<<<<<<< HEAD
   delete: (url) => axios.delete(url),
+=======
+  // delete: (url) => axios.delete(url),
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
 };
 export default requestGeneric;

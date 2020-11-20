@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import Home from "./view/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
@@ -18,11 +19,31 @@ function App(props) {
       obtenerUsuarioActual(idLs, dispatch)
         .then((response) => {
           console.log("Se inicio", response);
+=======
+import { Template } from "./components/layout";
+import "./assets/style/globalStyle.css";
+import Theme from "./components/theme";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./translate/i18n";
+import { useEffect } from "react";
+import { obtenerUsuarioActual } from "./services/action/UserAuthAction";
+import { startSession } from "./store/actions";
+import { connect } from "react-redux";
+const App = (props) => {
+  useEffect(() => {
+    const idLs = window.localStorage.getItem("id");
+    if (idLs) {
+      obtenerUsuarioActual(idLs)
+        .then((response) => {
+          console.log(response);
+          props.startSession(response.data.userToReturn, true);
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
         })
         .catch((err) => {
           console.log("Error", err);
         });
     }
+<<<<<<< HEAD
   }, [dispatch]);
 
   return (
@@ -77,3 +98,19 @@ function App(props) {
 }
 
 export default App;
+=======
+  }, [props]);
+  return (
+    <I18nextProvider i18n={i18n}>
+      <Theme>
+        <Template />
+      </Theme>
+    </I18nextProvider>
+  );
+};
+
+const mapDispatchToProps = {
+  startSession,
+};
+export default connect(null, mapDispatchToProps)(App);
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5

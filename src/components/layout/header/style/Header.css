@@ -1,0 +1,27 @@
+.navlist {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+  .navlist__title h1 {
+    color: var(--color3);
+    font-size: 3.5rem;
+    font-weight: 450;
+    margin: 0;
+  }
+  .navlist__options {
+    width: 100%;
+    justify-content: center;
+  }
+  @media screen and (max-width: 900px) {
+    .navlist {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .navlist__title {
+      display: none;
+    }
+  }
+  

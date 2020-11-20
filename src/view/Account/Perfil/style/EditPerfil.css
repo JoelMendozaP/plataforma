@@ -1,0 +1,106 @@
+.EditPerfil {
+  margin: 0 8%;
+}
+.EditPerfil h2 {
+  margin: 0;
+}
+.EditPerfil h3 {
+  text-align: start;
+  margin: 0;
+}
+.EditPerfil__btn {
+  margin-bottom: 20px;
+}
+.EditPerfil__btn button {
+  padding: 6px 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color6);
+  font-size: 14px;
+  border: none;
+}
+.EditPerfil__btnG {
+  background: linear-gradient(var(--color4), var(--color3));
+}
+.EditPerfil__btnC {
+  background: linear-gradient(var(--color3), var(--color2));
+}
+.form__InputDate {
+  width: 95%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 5px 0 5px 15px;
+  margin: 15px 0;
+  border-bottom: 1px solid var(--color4);
+}
+.form__InputDate .formControl {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 15px;
+  width: 100%;
+}
+.PhoneInput {
+  display: flex;
+  width: 100%;
+}
+.PhoneInputCountry {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.PhoneInputCountrySelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.PhoneInputCountryIcon {
+  width: 30px;
+}
+.PhoneInputCountrySelectArrow {
+  display: block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  margin-left: 5px;
+  border: solid;
+  border-top-width: 0;
+  border-bottom-width: 3px;
+  border-left-width: 0;
+  border-right-width: 3px;
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+
+.EditPerfil .PhoneInput {
+  margin: 20px 40px 20px 0;
+  border-bottom: solid var(--color4) 1px;
+  padding-bottom: 6px;
+}
+.EditPerfil .PhoneInput input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.form__InputSelect {
+  overflow: hidden;
+  font-size: 20px;
+  padding: 5px 0;
+  margin: 15px 0;
+  border-bottom: 1px solid var(--color4);
+}
+.form__InputSelect .fselect {
+  width: 95%;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}

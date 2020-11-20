@@ -1,0 +1,26 @@
+.CardModule {
+  /* border: solid 2px var(--color5); */
+  margin: 5px 5%;
+}
+.CardModule__title {
+  padding: 10px 1.5% 10px 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color5);
+  cursor: pointer;
+  border-radius: 8px;
+}
+.CardModule__title span {
+  /* font-weight: bolder; */
+  font-size: 20px;
+}
+.CardModule__title i {
+  background: var(--color6);
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color3);
+}
+.CardModule__list {
+  margin-left: 2%;
+}

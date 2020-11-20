@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+.CourseInfo {
+  margin: 15px 0 30px;
+}
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
 .CourseInfo__title {
   display: flex;
   justify-content: space-between;

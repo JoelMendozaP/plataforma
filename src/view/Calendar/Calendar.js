@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+<<<<<<< HEAD
 import Prueba from "../../components/Information/Prueba";
 import { useStateValue } from "../../services/context/store";
 import Span from "../../components/typography/Span";
@@ -32,3 +33,20 @@ function Calendar(props) {
 }
 
 export default Calendar;
+=======
+import { connect } from "react-redux";
+import { changeInfo } from "../../store/actions";
+import { Prueba } from "../../components/layout";
+
+const Calendar = (props) => {
+  useEffect(() => {
+    props.changeInfo(<Prueba>Calendar</Prueba>);
+  }, [props]);
+  return <div>Calendar</div>;
+};
+
+const mapDispatchToProps = {
+  changeInfo,
+};
+export default connect(null, mapDispatchToProps)(Calendar);
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5

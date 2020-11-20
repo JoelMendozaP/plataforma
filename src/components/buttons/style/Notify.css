@@ -1,0 +1,63 @@
+.Notify {
+  position: relative;
+}
+.Notify i {
+  color: var(--color3);
+  font-size: 30px;
+  cursor: pointer;
+}
+.Notify__icon {
+  position: relative;
+}
+.Notify__circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color4);
+  position: absolute;
+  right: 0;
+  top: 0%;
+}
+.Notify__header {
+  color: var(--color3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+.Notify__header i {
+  font-size: 16px;
+}
+.notify__list {
+  width: 300px;
+  position: absolute;
+  background: var(--color5);
+  margin-top: 15px;
+  border-radius: 5px;
+  right: -50px;
+  padding: 10px;
+}
+.notify__list .Notify__ul {
+  padding: 0;
+}
+.notify__list .Notify__li {
+  color: var(--color3);
+  list-style: none;
+  margin: 5px 0;
+  border: 1px solid var(--color6);
+  background: var(--color6);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Notify__li i {
+  font-size: 20px;
+}
+
+.notify__span {
+  color: var(--color6);
+  font-size: 15px;
+}

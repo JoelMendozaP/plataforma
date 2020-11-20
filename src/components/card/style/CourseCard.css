@@ -1,0 +1,102 @@
+.CourseCard {
+  display: flex;
+  width: 100%;
+  margin: 5px 0 20px;
+}
+.CourseCard__main {
+  display: flex;
+  width: calc(100% - 40px);
+  margin-right: 5px;
+  border: solid 1px var(--color5);
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+.CourseCard__information {
+  margin-right: 20px;
+  min-width: 50%;
+}
+.CourseCard__Infh3 {
+  margin: 0;
+}
+.CourseCard__price {
+  margin: 15px 0 10px;
+}
+.CourseCard__price h3 {
+  color: var(--color4);
+  margin: 0;
+}
+.CourseCard__discount {
+  display: flex;
+  font-size: 15px;
+}
+.CourseCard__discount p {
+  font-weight: bolder;
+  margin: 0;
+  margin-right: 15px;
+}
+.CourseCard__video {
+  text-align: center;
+  width: 60%;
+  min-width: 45%;
+  background: var(--color5);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.CourseCard__vTitle {
+  font-weight: bold;
+  margin-top: 5px;
+}
+.CourseCard__play i {
+  color: var(--color6);
+  font-size: 25px;
+}
+.CourseCard__vIcons {
+  display: flex;
+  justify-content: space-around;
+  font-size: small;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 15px 15px;
+  height: 15px;
+  padding: 5px 0;
+}
+.CourseCard__Icon i {
+  margin-right: 5px;
+}
+.CourseCard__Icon .fa-star {
+  color: #f58f09;
+}
+.CourseCard__Icon .fa-user-friends {
+  color: var(--color4);
+}
+.CourseCard__options {
+  border: var(--color5) solid 1px;
+  width: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--color4);
+}
+@media screen and (max-width: 475px) {
+  .CourseCard__Icon {
+    display: none;
+  }
+  .CourseCard__main {
+    width: 90%;
+  }
+  .CourseCard {
+    flex-direction: column;
+  }
+  .CourseCard__options {
+    flex-direction: row;
+    height: 40px;
+    margin-top: 5px;
+    width: 100%;
+  }
+  .CourseCard__discount {
+    display: block;
+  }
+}

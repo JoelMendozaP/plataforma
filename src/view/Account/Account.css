@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 .Account__titleBtn {
   padding: 6px 20px;
   margin-right: 20px;
+=======
+.Account {
+  margin: 20px 5% 30px;
+}
+.Account__titleBtn {
+  padding: 6px 20px;
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
   border-radius: 10px;
   text-decoration: none;
   background: linear-gradient(var(--color4), var(--color3));
@@ -8,10 +16,15 @@
   font-size: 14px;
   float: right;
   border: none;
+<<<<<<< HEAD
+=======
+  cursor: pointer;
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
 }
 .Account__titleSpn {
   font-weight: bold;
   font-size: 1.6em;
+<<<<<<< HEAD
   margin-left: 100px;
 }
 .Account__title {
@@ -30,6 +43,20 @@
   color: var(--color6);
   font-size: 14px;
   border: none;
+=======
+}
+.Account__title {
+  margin-bottom: 15px;
+}
+.Account__data {
+  border: solid 2px var(--color3);
+  border-radius: 20px;
+  padding: 15px 0;
+}
+.Account__dataBtn {
+  margin: 15px 0;
+  text-align: center;
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
 }
 .Account__span {
   color: var(--color4);
@@ -39,5 +66,12 @@
   margin-bottom: 10px;
 }
 .Account__perfil {
+<<<<<<< HEAD
   margin-bottom: 20px;
+=======
+  margin: 0 20px;
+}
+.Account__info {
+  margin: 10px 20px;
+>>>>>>> 50b97f97b20f2b7792f87f8685c179aaf55e8fd5
 }

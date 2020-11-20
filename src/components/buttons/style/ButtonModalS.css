@@ -1,0 +1,64 @@
+.ButtonModalS {
+  border: none;
+  background: var(--color3);
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: var(--color6);
+  font-size: 16px;
+  height: 40px;
+  text-decoration: none;
+}
+.ButtonModalS__text {
+  margin-right: 5px;
+}
+@media screen and (max-width: 1029px) {
+  .ButtonModalS__text {
+    display: none;
+  }
+}
+.userPhoto__img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 2px var(--color6);
+  box-shadow: 0 0 20px var(--color1);
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.514); */
+}
+.userPhoto .userPhoto__ul {
+  list-style: none;
+  display: flex;
+  display: none;
+  padding: 0 10px;
+  border-radius: 5px;
+  background: var(--fondo2);
+  width: 160px;
+  border: 1px solid var(--color5);
+}
+.userPhoto .userPhoto__img:hover + ul,
+.userPhoto ul:hover {
+  position: absolute;
+  display: block;
+}
+.userPhoto__ul a {
+  text-decoration: none;
+}
+.userPhoto__ul i {
+  float: right;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.userPhoto__li,
+.userPhoto__li a {
+  color: var(--color3);
+  width: 160px;
+  margin: 15px 0;
+}
+.userPhoto__li:hover,
+.userPhoto__li a:hover {
+  cursor: pointer;
+  /* color: #bd81b0; */
+  color: var(--color5);
+}
